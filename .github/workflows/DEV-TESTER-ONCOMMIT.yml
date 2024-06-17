@@ -18,7 +18,7 @@
                   uses: actions/checkout@v3  
             
 
-        #---------------- DOCKER
+        #---------------- Docker
           DOCKERHUB:
            needs: [build]
            runs-on: ubuntu-latest
@@ -39,7 +39,7 @@
                   tags: suriyakanth1/dockerimagebuild:main
             
 
-    #---------------- SONARQUBE
+    #---------------- Sonarqube
           SONARQUBE:
             needs: [DOCKERHUB]
             runs-on: ubuntu-latest
@@ -50,3 +50,14 @@
             env:
                 SONAR_TOKEN: squ_8c5e7438e05474ebcb879b70892d439619fe4daa
                 SONAR_HOST_URL: http://158.220.107.63:9000/
+
+      #---------------- VM
+          VIRTUAL_MACHINE:
+            runs-on: ubuntu-latest
+            needs: [SONARQUBE]
+            steps:
+               - name: Checkout code
+                 uses: actions/checkout@v3
+               - name: Deploy to Linux Server
+                 run: |
+                     sshpass -p ClearC0de20S4 ssh -o StrictHostKeyChecking=no root@158.220.107.63 "docker pull suriyakanth1/dockerimagebuild:main && docker run --rm -p 3000:3000 -d suriyakanth1/dockerimagebuild:main"
