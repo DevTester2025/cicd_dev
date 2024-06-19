@@ -3,7 +3,8 @@ const app = express();
 const port = 3000;
 
 app.get('/', (req, res) => {
-  res.send('Manual trigger cicd pipeline test on 09 May 2024 7.50 PM');
+  const currentDateTime = new Date().toLocaleString();
+  res.send(`Manual trigger CICD pipeline test on ${currentDateTime}`);
 });
 
 app.listen(port, () => {
