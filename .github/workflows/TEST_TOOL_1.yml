@@ -12,15 +12,15 @@
                 - name: Check out the repo
                   uses: actions/checkout@v3  
             
-------------------JMETER
-           JMETER
-           runs-on: undefined
+#------------------JMETER
+          JMETER
+           runs-on: ubuntu-latest
            steps:
             - name: Empty Step
               run: echo "This is an JMETER job"
-------------------SELENIUM
-           SELENIUM
-           runs-on: undefined
+#------------------SELENIUM
+          SELENIUM
+           runs-on: ubuntu-latest
            steps:
             - name: Empty Step
               run: echo "This is an SELENIUM job"
