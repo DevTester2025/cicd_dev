@@ -13,13 +13,13 @@
                   uses: actions/checkout@v3  
             
 #------------------JMETER
-          JMETER
+          JMETER:
            runs-on: ubuntu-latest
            steps:
             - name: Empty Step
               run: echo "This is an JMETER job"
 #------------------SELENIUM
-          SELENIUM
+          SELENIUM:
            runs-on: ubuntu-latest
            steps:
             - name: Empty Step
