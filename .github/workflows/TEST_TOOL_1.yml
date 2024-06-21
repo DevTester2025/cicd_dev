@@ -14,12 +14,14 @@
             
 #------------------JMETER
           JMETER:
+           needs: [build]
            runs-on: ubuntu-latest
            steps:
             - name: Empty Step
               run: echo "This is an JMETER job"
 #------------------SELENIUM
           SELENIUM:
+           needs: [JMETER]
            runs-on: ubuntu-latest
            steps:
             - name: Empty Step
