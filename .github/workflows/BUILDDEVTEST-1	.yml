@@ -23,5 +23,5 @@
                    sshpass -p "CmCICD#2024#" ssh -o StrictHostKeyChecking=no ubuntu@13.51.7.24 <<EOF
                               cd ~/projects/script_test/javaproject/Spring-Boot-main
                               mvn clean
-                              mvn install 1 
+                              mvn install 
                    EOF
