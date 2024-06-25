@@ -15,16 +15,23 @@ jobs:
     needs: [build]
     runs-on: ubuntu-latest
     steps:
-      - name: Install Maven
+      - name: Install Maven 3.6.3
         run: |
           sudo apt update
-          sudo apt install -y maven
+          sudo apt install -y openjdk-11-jdk
+          wget https://archive.apache.org/dist/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.tar.gz
+          tar -xvf apache-maven-3.6.3-bin.tar.gz
+          sudo mv apache-maven-3.6.3 /usr/local/maven
+          sudo update-alternatives --install /usr/bin/mvn maven /usr/local/maven/bin/mvn 1
 
       - name: Run script on the VM
         run: |
           sshpass -p "CmCICD#2024#" ssh -o StrictHostKeyChecking=no ubuntu@13.51.7.24 <<EOF
             source ~/.bashrc
             cd ~/projects/script_test/javaproject/Spring-Boot-main
+            export M2_HOME=/usr/local/maven
+            export MAVEN_HOME=/usr/local/maven
+            export PATH=${M2_HOME}/bin:${PATH}
             mvn -version
             mvn clean
             mvn install 
