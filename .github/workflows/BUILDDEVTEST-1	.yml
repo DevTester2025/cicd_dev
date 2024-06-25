@@ -15,6 +15,11 @@ jobs:
     needs: [build]
     runs-on: ubuntu-latest
     steps:
+      - name: Install Maven
+        run: |
+          sudo apt update
+          sudo apt install -y maven
+
       - name: Run script on the VM
         run: |
           sshpass -p "CmCICD#2024#" ssh -o StrictHostKeyChecking=no ubuntu@13.51.7.24 <<EOF
