@@ -41,7 +41,7 @@
               run: echo "This is an JUNIT job"
 #------------------JMETER
           JMETER:
-           needs: [JUNIT]
+           needs: [DOCKERHUB]
            runs-on: ubuntu-latest
            steps:
             - name: Empty Step
