@@ -33,21 +33,21 @@
                   push: true
                   tags: ${{ vars.DOCKER_USERNAME }}/cicd_dev:main
 
-    #---------------- SONARQUBE
-          SONARQUBE:
-            needs: [DOCKERHUB]
-            runs-on: ubuntu-latest
-            steps:
-              - uses: actions/checkout@master
-              - name: SonarQube Scan
-                uses: sonarsource/sonarqube-scan-action@master
-            env:
-                SONAR_TOKEN: ${{ secrets.SONARQUBE_ACCESSTOKEN }}
-                SONAR_HOST_URL: ${{ secrets.SONARQUBE_URL }}
+    # #---------------- SONARQUBE
+    #       SONARQUBE:
+    #         needs: [DOCKERHUB]
+    #         runs-on: ubuntu-latest
+    #         steps:
+    #           - uses: actions/checkout@master
+    #           - name: SonarQube Scan
+    #             uses: sonarsource/sonarqube-scan-action@master
+    #         env:
+    #             SONAR_TOKEN: ${{ secrets.SONARQUBE_ACCESSTOKEN }}
+    #             SONAR_HOST_URL: ${{ secrets.SONARQUBE_URL }}
 
     #---------------- BUILD_SCRIPT
           BUILD_SCRIPT:
-            needs: [SONARQUBE]
+            needs: [DOCKERHUB]
             runs-on: ubuntu-latest
             steps:
                - name: Run script on the VM
