@@ -1,0 +1,192 @@
+        name: CICD_TEST
+
+        on:
+          workflow_dispatch:
+
+
+        jobs:
+          build:
+           name: GITHUB
+           runs-on: ubuntu-latest
+           steps:
+                - name: Check out the repo
+                  uses: actions/checkout@v3  
+            
+        jobs:
+          build:
+           name: GITHUB
+           runs-on: ubuntu-latest
+           steps:
+                - name: Check out the repo
+                  uses: actions/checkout@v3  
+            
+
+        #---------------- DOCKER
+          DOCKERHUB:
+           needs: [build]
+           runs-on: ubuntu-latest
+           steps:
+             - name: Checkout code
+               uses: actions/checkout@v2
+             - name: Set up Docker Buildx
+               uses: docker/setup-buildx-action@v3
+             - name: Login to Docker Hub
+               uses: docker/login-action@v2
+               with:
+                 username: devtester2025
+                 password: dckr_pat_W9cx0PiYuv_5BgW54h7oBv1viCU
+             - name: Build and push
+               uses: docker/build-push-action@v5
+               with:
+                  push: true
+                  tags: devtester2025/cicd_dev:main
+            
+
+        #---------------- DOCKER
+          DOCKERHUB:
+           needs: [DOCKERHUB]
+           runs-on: ubuntu-latest
+           steps:
+             - name: Checkout code
+               uses: actions/checkout@v2
+             - name: Set up Docker Buildx
+               uses: docker/setup-buildx-action@v3
+             - name: Login to Docker Hub
+               uses: docker/login-action@v2
+               with:
+                 username: devtester2025
+                 password: dckr_pat_W9cx0PiYuv_5BgW54h7oBv1viCU
+             - name: Build and push
+               uses: docker/build-push-action@v5
+               with:
+                  push: true
+                  tags: devtester2025/cicd_dev:main
+            
+
+    #---------------- SONARQUBE
+          SONARQUBE:
+            needs: [DOCKERHUB]
+            runs-on: ubuntu-latest
+            steps:
+              - uses: actions/checkout@master
+              - name: SonarQube Scan
+                uses: sonarsource/sonarqube-scan-action@master
+            env:
+                SONAR_TOKEN: sqp_e3502cd244a813520d59a3b4a9ce500400701144
+                SONAR_HOST_URL: http://13.51.7.24:9000/
+
+    #---------------- SONARQUBE
+          SONARQUBE:
+            needs: [SONARQUBE]
+            runs-on: ubuntu-latest
+            steps:
+              - uses: actions/checkout@master
+              - name: SonarQube Scan
+                uses: sonarsource/sonarqube-scan-action@master
+            env:
+                SONAR_TOKEN: sqp_e3502cd244a813520d59a3b4a9ce500400701144
+                SONAR_HOST_URL: http://13.51.7.24:9000/
+
+    #---------------- BUILD_SCRIPT
+          BUILD_SCRIPT:
+            needs: [SONARQUBE]
+            runs-on: ubuntu-latest
+            steps:
+               - name: Run script on the VM
+                 run: |
+                   sshpass -p "CmCICD#2024#" ssh -o StrictHostKeyChecking=no ubuntu@13.51.7.24 <<EOF
+                              cd ~/projects/script_test/javaproject/Spring-Boot-main
+                              sudo mvn clean
+                              sudo mvn install 
+                   EOF
+
+    #---------------- BUILD_SCRIPT
+          BUILD_SCRIPT:
+            needs: [BUILD_SCRIPT]
+            runs-on: ubuntu-latest
+            steps:
+               - name: Run script on the VM
+                 run: |
+                   sshpass -p "CmCICD#2024#" ssh -o StrictHostKeyChecking=no ubuntu@13.51.7.24 <<EOF
+                              cd ~/projects/script_test/javaproject/Spring-Boot-main
+                              sudo mvn clean
+                              sudo mvn install 
+                   EOF
+ 
+    #---------------- APPROVAL_WORKFLOW
+          APPROVAL_WORKFLOW:
+            needs: [BUILD_SCRIPT]
+            runs-on: ubuntu-latest
+            permissions:
+               issues: write
+            steps:
+               - uses: trstringer/manual-approval@v1
+                 with:
+                   secret: ${{ secrets.GITHUB_TOKEN }}
+                   approvers: DevTester2025
+                   issue-title: "Manual Approval"
+                   issue-body: "run_id: ${{ github.run_id }}"
+ 
+    #---------------- APPROVAL_WORKFLOW
+          APPROVAL_WORKFLOW:
+            needs: [APPROVAL_WORKFLOW]
+            runs-on: ubuntu-latest
+            permissions:
+               issues: write
+            steps:
+               - uses: trstringer/manual-approval@v1
+                 with:
+                   secret: ${{ secrets.GITHUB_TOKEN }}
+                   approvers: DevTester2025
+                   issue-title: "Manual Approval"
+                   issue-body: "run_id: ${{ github.run_id }}"
+ 
+    #---------------- ORCHESTRATION
+          ORCHESTRATION:
+            needs: [APPROVAL_WORKFLOW]
+            runs-on: ubuntu-latest
+            permissions:
+               issues: write
+            steps:
+               - uses: trstringer/manual-approval@v1
+                 with:
+                   secret: ${{ secrets.GITHUB_TOKEN }}
+                   approvers: DevTester2025
+                   issue-title: "Orchestration"
+                   issue-body: "run_id: ${{ github.run_id }}"
+ 
+    #---------------- ORCHESTRATION
+          ORCHESTRATION:
+            needs: [ORCHESTRATION]
+            runs-on: ubuntu-latest
+            permissions:
+               issues: write
+            steps:
+               - uses: trstringer/manual-approval@v1
+                 with:
+                   secret: ${{ secrets.GITHUB_TOKEN }}
+                   approvers: DevTester2025
+                   issue-title: "Orchestration"
+                   issue-body: "run_id: ${{ github.run_id }}"
+
+      #---------------- VIRTUAL_MACHINE
+          VIRTUAL_MACHINE:
+            runs-on: ubuntu-latest
+            needs: [ORCHESTRATION]
+            steps:
+               - name: Checkout code
+                 uses: actions/checkout@v3
+               - name: Deploy to Linux Server
+                 run: |
+                     sshpass -p CmCICD#2024# ssh -o StrictHostKeyChecking=no ubuntu@13.51.7.24 "sudo docker pull devtester2025/cicd_dev:main && sudo docker run --rm -p 3000:3000 -d devtester2025/cicd_dev:main"
+
+      #---------------- VIRTUAL_MACHINE
+          VIRTUAL_MACHINE:
+            runs-on: ubuntu-latest
+            needs: [VIRTUAL_MACHINE]
+            steps:
+               - name: Checkout code
+                 uses: actions/checkout@v3
+               - name: Deploy to Linux Server
+                 run: |
+                     sshpass -p CmCICD#2024# ssh -o StrictHostKeyChecking=no ubuntu@13.51.7.24 "sudo docker pull devtester2025/cicd_dev:main && sudo docker run --rm -p 3000:3000 -d devtester2025/cicd_dev:main"
