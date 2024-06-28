@@ -1,0 +1,105 @@
+        name: TEST-RELEASE-1
+
+        on:
+          workflow_dispatch:
+
+
+        jobs:
+          build:
+           name: GITHUB
+           runs-on: ubuntu-latest
+           steps:
+                - name: Check out the repo
+                  uses: actions/checkout@v3  
+            
+
+    #---------------- SONARQUBE
+          SONARQUBE:
+            needs: [build]
+            runs-on: ubuntu-latest
+            environment:
+              name: DEVELOPMENT
+            steps:
+              - uses: actions/checkout@master
+              - name: SonarQube Scan
+                uses: sonarsource/sonarqube-scan-action@master
+            env:
+                SONAR_TOKEN: sqp_e3502cd244a813520d59a3b4a9ce500400701144
+                SONAR_HOST_URL: http://13.51.7.24:9000/
+#------------------JUNIT
+          JUNIT:
+           needs: [SONARQUBE]
+           runs-on: ubuntu-latest
+           steps:
+            - name: Empty Step
+              run: echo "This is an JUNIT job"
+#------------------SELENIUM
+          SELENIUM:
+           needs: [JUNIT]
+           runs-on: ubuntu-latest
+           steps:
+            - name: Empty Step
+              run: echo "This is an SELENIUM job"
+#------------------JMETER
+          JMETER:
+           needs: [SELENIUM]
+           runs-on: ubuntu-latest
+           steps:
+            - name: Empty Step
+              run: echo "This is an JMETER job"
+ 
+    #---------------- ORCHESTRATION
+          ORCHESTRATION:
+            needs: [JMETER]
+            runs-on: ubuntu-latest
+            permissions:
+               issues: write
+            steps:
+               - uses: trstringer/manual-approval@v1
+                 with:
+                   secret: ${{ secrets.GITHUB_TOKEN }}
+                   approvers: DevTester2025
+                   issue-title: "Orchestration"
+                   issue-body: "run_id: ${{ github.run_id }}"
+ 
+    #---------------- ORCHESTRATION
+          ORCHESTRATION:
+            needs: [ORCHESTRATION]
+            runs-on: ubuntu-latest
+            permissions:
+               issues: write
+            steps:
+               - uses: trstringer/manual-approval@v1
+                 with:
+                   secret: ${{ secrets.GITHUB_TOKEN }}
+                   approvers: DevTester2025
+                   issue-title: "Orchestration"
+                   issue-body: "run_id: ${{ github.run_id }}"
+ 
+    #---------------- ORCHESTRATION
+          ORCHESTRATION:
+            needs: [ORCHESTRATION]
+            runs-on: ubuntu-latest
+            permissions:
+               issues: write
+            steps:
+               - uses: trstringer/manual-approval@v1
+                 with:
+                   secret: ${{ secrets.GITHUB_TOKEN }}
+                   approvers: DevTester2025
+                   issue-title: "Orchestration"
+                   issue-body: "run_id: ${{ github.run_id }}"
+ 
+    #---------------- ORCHESTRATION
+          ORCHESTRATION:
+            needs: [ORCHESTRATION]
+            runs-on: ubuntu-latest
+            permissions:
+               issues: write
+            steps:
+               - uses: trstringer/manual-approval@v1
+                 with:
+                   secret: ${{ secrets.GITHUB_TOKEN }}
+                   approvers: DevTester2025
+                   issue-title: "Orchestration"
+                   issue-body: "run_id: ${{ github.run_id }}"
