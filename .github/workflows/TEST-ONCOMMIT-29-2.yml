@@ -2,12 +2,7 @@
 
         on:
           workflow_dispatch:
-          push:
-           paths-ignore:
-             - '.github/workflows/**'
-             - '**/Dockerfile'
-             - '**/sonar-project.properties'
-  
+
 
         jobs:
           build:
@@ -41,22 +36,22 @@
                   tags: devtester2025/cicd_dev:main
             
 
-    #---------------- SONARQUBE
-          SONARQUBE:
-            needs: [DOCKERHUB]
-            runs-on: ubuntu-latest
-            environment:
-              name: DEVELOPMENT
-            steps:
-              - uses: actions/checkout@master
-              - name: SonarQube Scan
-                uses: sonarsource/sonarqube-scan-action@master
-            env:
-                SONAR_TOKEN: sqp_e3502cd244a813520d59a3b4a9ce500400701144
-                SONAR_HOST_URL: http://13.51.7.24:9000/
+    # #---------------- SONARQUBE
+    #       SONARQUBE:
+    #         needs: [DOCKERHUB]
+    #         runs-on: ubuntu-latest
+    #         environment:
+    #           name: DEVELOPMENT
+    #         steps:
+    #           - uses: actions/checkout@master
+    #           - name: SonarQube Scan
+    #             uses: sonarsource/sonarqube-scan-action@master
+    #         env:
+    #             SONAR_TOKEN: sqp_e3502cd244a813520d59a3b4a9ce500400701144
+    #             SONAR_HOST_URL: http://13.51.7.24:9000/
 #------------------JUNIT
           JUNIT:
-           needs: [SONARQUBE]
+           needs: [DOCKERHUB]
            runs-on: ubuntu-latest
            steps:
             - name: Empty Step
@@ -68,17 +63,17 @@
            steps:
             - name: Empty Step
               run: echo "This is an SELENIUM job"
-#------------------JMETER
-          JMETER:
-           needs: [SELENIUM]
-           runs-on: ubuntu-latest
-           steps:
-            - name: Empty Step
-              run: echo "This is an JMETER job"
+# #------------------JMETER
+#           JMETER:
+#            needs: [SELENIUM]
+#            runs-on: ubuntu-latest
+#            steps:
+#             - name: Empty Step
+#               run: echo "This is an JMETER job"
 
     #---------------- BUILD_SCRIPT
           BUILD_SCRIPT:
-            needs: [JMETER]
+            needs: [SELENIUM]
             runs-on: ubuntu-latest
             steps:
                - name: Run script on the VM
