@@ -1,14 +1,7 @@
-        name: TEST-ONCOMMIT-29-1
+        name: TEST-ONCOMMIT-29-1	
 
         on:
           workflow_dispatch:
-          push:
-           paths-ignore:
-             - '.github/workflows/**'
-             - '**/Dockerfile'
-             - '**/sonar-project.properties'
-
-
 
 
         jobs:
@@ -58,14 +51,14 @@
                 SONAR_HOST_URL: http://13.51.7.24:9000/
 #------------------JUNIT
           JUNIT:
-           needs: [JMETER]
+           needs: [SONARQUBE]
            runs-on: ubuntu-latest
            steps:
             - name: Empty Step
               run: echo "This is an JUNIT job"
 #------------------SELENIUM
           SELENIUM:
-           needs: [SONARQUBE]
+           needs: [JUNIT]
            runs-on: ubuntu-latest
            steps:
             - name: Empty Step
