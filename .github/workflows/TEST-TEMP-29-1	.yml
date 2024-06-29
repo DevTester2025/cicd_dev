@@ -51,14 +51,14 @@
                 SONAR_HOST_URL: http://13.51.7.24:9000/
 #------------------JUNIT
           JUNIT:
-           needs: [SONARQUBE]
+           needs: [JMETER]
            runs-on: ubuntu-latest
            steps:
             - name: Empty Step
               run: echo "This is an JUNIT job"
 #------------------SELENIUM
           SELENIUM:
-           needs: [JUNIT]
+           needs: [SONARQUBE]
            runs-on: ubuntu-latest
            steps:
             - name: Empty Step
