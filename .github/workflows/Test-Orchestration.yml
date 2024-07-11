@@ -1,0 +1,28 @@
+        name: Test-Orchestration
+
+        on:
+          workflow_dispatch:
+
+
+        jobs:
+          build:
+           name: GITHUB
+           runs-on: ubuntu-latest
+           steps:
+                - name: Check out the repo
+                  uses: actions/checkout@v3  
+            
+ 
+    #---------------- ORCHESTRATION
+          ORCHESTRATION:
+            needs: [build]
+            runs-on: ubuntu-latest
+            permissions:
+               issues: write
+            steps:
+               - uses: trstringer/manual-approval@v1
+                 with:
+                   secret: ${{ secrets.GITHUB_TOKEN }}
+                   approvers: DevTester2025
+                   issue-title: "Orchestration"
+                   issue-body: "run_id: ${{ github.run_id }}"
