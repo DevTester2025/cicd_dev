@@ -1,0 +1,79 @@
+        name: Workflow _release_01
+
+        on:
+          workflow_dispatch:
+
+
+        jobs:
+          build:
+           name: GITHUB
+           runs-on: ubuntu-latest
+           steps:
+                - name: Check out the repo
+                  uses: actions/checkout@v3  
+            
+
+        #---------------- DOCKER
+          DOCKERHUB:
+           needs: [build]
+           runs-on: ubuntu-latest
+           environment:
+              name: DEVELOPMENT
+           steps:
+             - name: Checkout code
+               uses: actions/checkout@v2
+             - name: Set up Docker Buildx
+               uses: docker/setup-buildx-action@v3
+             - name: Login to Docker Hub
+               uses: docker/login-action@v2
+               with:
+                 username: devtester2025
+                 password: dckr_pat_W9cx0PiYuv_5BgW54h7oBv1viCU
+             - name: Build and push
+               uses: docker/build-push-action@v5
+               with:
+                  push: true
+                  tags: devtester2025/cicd_dev:main
+            
+
+    #---------------- SONARQUBE
+          SONARQUBE:
+            needs: [DOCKERHUB]
+            runs-on: ubuntu-latest
+            environment:
+              name: DEVELOPMENT
+            steps:
+              - uses: actions/checkout@master
+              - name: SonarQube Scan
+                uses: sonarsource/sonarqube-scan-action@master
+            env:
+                SONAR_TOKEN: sqp_e3502cd244a813520d59a3b4a9ce500400701144
+                SONAR_HOST_URL: http://13.51.7.24:9000/
+ 
+    #---------------- APPROVAL_WORKFLOW
+          APPROVAL_WORKFLOW:
+            needs: [SONARQUBE]
+            runs-on: ubuntu-latest
+            permissions:
+               issues: write
+            steps:
+               - uses: trstringer/manual-approval@v1
+                 with:
+                   secret: ${{ secrets.GITHUB_TOKEN }}
+                   approvers: DevTester2025
+                   issue-title: "Manual Approval"
+                   issue-body: "run_id: ${{ github.run_id }}"
+ 
+    #---------------- ORCHESTRATION
+          ORCHESTRATION:
+            needs: [APPROVAL_WORKFLOW]
+            runs-on: ubuntu-latest
+            permissions:
+               issues: write
+            steps:
+               - uses: trstringer/manual-approval@v1
+                 with:
+                   secret: ${{ secrets.GITHUB_TOKEN }}
+                   approvers: DevTester2025
+                   issue-title: "Orchestration"
+                   issue-body: "run_id: ${{ github.run_id }}"
