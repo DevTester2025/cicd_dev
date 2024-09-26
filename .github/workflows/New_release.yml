@@ -18,7 +18,7 @@
             needs: [build]
             runs-on: ubuntu-latest
             environment:
-              name: DEVELOPMENT
+              name: PRODUCTION
             steps:
               - uses: actions/checkout@master
               - name: SonarQube Scan
