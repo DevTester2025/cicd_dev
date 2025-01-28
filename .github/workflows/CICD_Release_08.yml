@@ -2,7 +2,12 @@
 
         on:
           workflow_dispatch:
-
+          push:
+           paths-ignore:
+             - '.github/workflows/**'
+             - '**/Dockerfile'
+             - '**/sonar-project.properties'
+  
 
         jobs:
           build:
@@ -18,7 +23,7 @@
             needs: [build]
             runs-on: ubuntu-latest
             environment:
-              name: PRODUCTION
+              name: DEVELOPMENT
             steps:
               - uses: actions/checkout@master
               - name: SonarQube Scan
