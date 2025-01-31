@@ -2,7 +2,9 @@
 
         on:
           workflow_dispatch:
-
+          schedule:
+            - cron: '13 10 * * *'
+  
 
         jobs:
           build:
@@ -30,6 +32,8 @@
           DOCKERHUB:
            needs: [BUILD_SCRIPT]
            runs-on: ubuntu-latest
+           environment:
+              name: DEVELOPMENT
            steps:
              - name: Checkout code
                uses: actions/checkout@v2
@@ -50,6 +54,8 @@
       #---------------- VIRTUAL_MACHINE
           VIRTUAL_MACHINE:
             runs-on: ubuntu-latest
+            environment:
+              name: DEVELOPMENT
             needs: [DOCKERHUB]
             steps:
                - name: Checkout code
