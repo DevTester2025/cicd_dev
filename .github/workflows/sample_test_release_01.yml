@@ -2,11 +2,8 @@
 
         on:
           workflow_dispatch:
-          push:
-           paths-ignore:
-             - '.github/workflows/**'
-             - '**/Dockerfile'
-             - '**/sonar-project.properties'
+          schedule:
+            - cron: '13 10 * * *'
   
 
         jobs:
