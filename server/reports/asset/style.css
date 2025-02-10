@@ -1,0 +1,179 @@
+.list {
+  font-family: Helvetica, Arial, sans-serif;
+  color: #646060;
+  letter-spacing: 1px;
+  padding: 5px;
+  font-size: 70%;
+}
+
+.list table {
+  border-top: 1px solid #f0f0f0;
+}
+
+.list .branch {
+  text-align: left;
+  border-top: 1px solid #f0f0f0;
+  border-bottom: 1px solid #f0f0f0;
+  font-weight: bold;
+  font-size: 90%;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.list .border {
+  border: 1px solid #f0f0f0;
+}
+
+.list .total {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-weight: bold;
+  font-size: 95%;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.p-t-3 {
+  padding-top: 3%;
+}
+
+.p-b-3 {
+  padding-bottom: 3%;
+}
+
+.p-t-10 {
+  padding-top: 10%;
+}
+
+.normal-tbl {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 140%;
+}
+
+.border-table {
+  text-align: left;
+  border-collapse: collapse;
+  border: 0.5px solid #f2f2f2;
+  width: 100%;
+  font-size: 80%;
+  border-top: 0.5px solid #f0f0f0;
+}
+
+.border-table tr {
+  border: 0.5px solid #f2f2f2;
+}
+
+.border-table td {
+  border: 0.5px solid #f2f2f2;
+}
+
+.border-table th {
+  border: 0.5px solid #f2f2f2;
+}
+
+.profile {
+  text-align: left;
+  font-size: 150% !important;
+}
+
+.profile .head {
+  width: 16%;
+  font-weight: bold;
+  font-size: 75%;
+}
+
+.profile .address {
+  font-size: 95% !important;
+  line-height: 2;
+}
+
+.profile .body {
+  font-size: 80%;
+}
+
+.profile .header {
+  font-size: 110%;
+  font-weight: bold;
+  padding-top: 20px;
+}
+
+.profile .nodata {
+  font-weight: bold;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.text-right {
+  text-align: right !important;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.border-table {
+  text-align: left;
+  border-collapse: collapse;
+  border: 1px solid #f2f2f2;
+  width: 100%;
+  font-size: 80%;
+  border-top: 1px solid #f0f0f0;
+}
+
+.detail-ledger {
+  text-align: center;
+  width: 100%;
+  border-collapse: collapse;
+  border-top: 1px solid #f0f0f0;
+}
+
+.detail-ledger td {
+  border-top: 1px solid #f0f0f0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.detail-ledger .parent {
+  font-weight: bold;
+  font-size: 85%;
+}
+
+.detail-ledger .child2 {
+  padding-left: 6% !important;
+  font-size: 75%;
+}
+
+.detail-ledger .child1 {
+  padding-left: 3% !important;
+  font-size: 80%;
+}
+
+.detail-ledger .child1_data {
+  font-size: 80%;
+}
+
+.detail-ledger .child2_data {
+  font-size: 75%;
+}
+
+.expense_tbl {
+  display: inline-block;
+  width: 50%;
+}
+
+.income_tbl {
+  display: inline;
+  position: absolute;
+  padding-left: 14px;
+  width: 47%;
+}
+
+.empty-row {
+  height: 15px;
+}

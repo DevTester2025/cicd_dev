@@ -1,0 +1,30 @@
+version: '3'
+
+name: "app"
+
+services:
+  cm-api:
+    container_name: cm-api
+    build:
+      context: .
+      args:
+        ENV: prod
+    networks:
+      - internal
+    ports:
+      - 127.0.0.1:3000:3000
+
+  cm-redis:
+    hostname: "redis"
+    environment:
+      - ALLOW_EMPTY_PASSWORD=yes
+    image: bitnami/redis
+    networks:
+      - internal
+    ports:
+      - 127.0.0.1:6379:6379
+
+networks:
+  internal:
+    external: true
+    name: internal

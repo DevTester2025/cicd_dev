@@ -1,0 +1,2700 @@
+swagger: "2.0"
+info:
+  version: 1.0.0
+  title: cloudmatiq-ecl-api
+  description: CloudMatiq ECL APIs
+basePath: /cloudmatiq/ecl2
+tags:
+  - name: Examples
+    description: Simple example endpoints
+
+consumes:
+  - application/json
+produces:
+  - application/json
+
+definitions:
+  ecl2firewalls:
+    type: object
+    title: ecl2firewalls
+    description:
+    properties:
+      ecl2firewallid:
+        type: string
+        description: ecl2firewallid
+      tenantid:
+        type: integer
+        description: tenantid
+      firewallname:
+        type: string
+        description: firewallname
+      availabilityzone:
+        type: string
+        description: availabilityzone
+      defaultgateway:
+        type: string
+        description: defaultgateway
+      description:
+        type: string
+        description: description
+      firewallplanid:
+        type: string
+        description: firewallplanid
+      zoneid:
+        type: number
+        description: zoneid
+      status:
+        type: string
+        description: status
+      createdby:
+        type: string
+        description: createdby
+      createddt:
+        type: string
+        description: Record created timestamp
+      lastupdatedby:
+        type: string
+        description: The user who updated the record last time
+      lastupdateddt:
+        type: string
+        description: Record last updated timestamp
+  ecl2internetgateways:
+    type: object
+    title: AWS Cost Visual
+    description:
+    properties:
+      ecl2gatewayid:
+        type: string
+        description: ecl2gatewayid
+      tenantid:
+        type: integer
+        description: tenantid
+      gatewayname:
+        type: string
+        description: gatewayname
+      description:
+        type: string
+        description: description
+      internetserviceid:
+        type: number
+        description: internetserviceid
+      qosoptionid:
+        type: number
+        description: qosoptionid
+      zoneid:
+        type: number
+        description: qosoptionid
+      status:
+        type: string
+        description: status
+      createdby:
+        type: string
+        description: createdby
+      createddt:
+        type: string
+        description: Record created timestamp
+      lastupdatedby:
+        type: string
+        description: The user who updated the record last time
+      lastupdateddt:
+        type: string
+        description: Record last updated timestamp
+  ecl2iginterface:
+    type: object
+    title: ecl2iginterface
+    description:
+    properties:
+      ecl2iginterfaceid:
+        type: string
+        description: ecl2iginterfaceid
+      tenantid:
+        type: integer
+        description: tenantid
+      interfacename:
+        type: string
+        description: interfacename
+      description:
+        type: string
+        description: description
+      internetgatewayid:
+        type: integer
+        description: internetgatewayid
+      netmask:
+        type: number
+        description: netmask
+      networkid:
+        type: integer
+        description: networkid
+      gwvipv4:
+        type: string
+        description: gwvipv4
+      primaryipv4:
+        type: string
+        description: primaryipv4
+      secondaryipv4:
+        type: string
+        description: secondaryipv4
+      servicetype:
+        type: string
+        description: servicetype
+      vrid:
+        type: integer
+        description: status
+      zoneid:
+        type: integer
+        description: qosoptionid
+      notes:
+        type: string
+        description: notes
+      status:
+        type: string
+        description: status
+      createdby:
+        type: string
+        description: createdby
+      createddt:
+        type: string
+        description: Record created timestamp
+      lastupdatedby:
+        type: string
+        description: The user who updated the record last time
+      lastupdateddt:
+        type: string
+        description: Record last updated timestamp
+  ecl2igglobalip:
+    type: object
+    title: ecl2igglobalip
+    description:
+    properties:
+      ecl2igglobalipid:
+        type: string
+        description: ecl2igglobalipid
+      tenantid:
+        type: integer
+        description: tenantid
+      globalipname:
+        type: string
+        description: globalipname
+      description:
+        type: string
+        description: description
+      internetgatewayid:
+        type: number
+        description: internetgatewayid
+      submasklength:
+        type: number
+        description: submasklength
+      cidr:
+        type: string
+        description: cidr
+      gwvipv4:
+        type: string
+        description: gwvipv4
+      primaryipv4:
+        type: string
+        description: primaryipv4
+      secondaryipv4:
+        type: string
+        description: secondaryipv4
+      servicetype:
+        type: string
+        description: servicetype
+      vrid:
+        type: string
+        description: status
+      zoneid:
+        type: number
+        description: qosoptionid
+      notes:
+        type: string
+        description: notes
+      status:
+        type: string
+        description: status
+      createdby:
+        type: string
+        description: createdby
+      createddt:
+        type: string
+        description: Record created timestamp
+      lastupdatedby:
+        type: string
+        description: The user who updated the record last time
+      lastupdateddt:
+        type: string
+        description: Record last updated timestamp
+  ecl2igstaticip:
+    type: object
+    title: ecl2igstaticip
+    description:
+    properties:
+      ecl2igstaticipid:
+        type: string
+        description: ecl2igstaticipid
+      tenantid:
+        type: integer
+        description: tenantid
+      staticipname:
+        type: string
+        description: staticipname
+      description:
+        type: string
+        description: description
+      internetgatewayid:
+        type: number
+        description: internetgatewayid
+      servicetype:
+        type: string
+        description: servicetype
+      destination:
+        type: string
+        description: destination
+      nexthop:
+        type: string
+        description: nexthop
+      zoneid:
+        type: number
+        description: qosoptionid
+      notes:
+        type: string
+        description: notes
+      status:
+        type: string
+        description: status
+      createdby:
+        type: string
+        description: createdby
+      createddt:
+        type: string
+        description: Record created timestamp
+      lastupdatedby:
+        type: string
+        description: The user who updated the record last time
+      lastupdateddt:
+        type: string
+        description: Record last updated timestamp
+  ecl2loadbalancers:
+    type: object
+    title: AWS Cost Visual
+    description:
+    properties:
+      ecl2loadbalancerid:
+        type: string
+        description: ecl2loadbalancerid
+      tenantid:
+        type: integer
+        description: tenantid
+      lbname:
+        type: string
+        description: lbname
+      availabilityzone:
+        type: string
+        description: availabilityzone
+      description:
+        type: string
+        description: description
+      loadbalancerplanid:
+        type: string
+        description: loadbalancerplanid
+      loadbalancerplan:
+        type: string
+        description: loadbalancerplan
+      solutionid:
+        type: integer
+        description: solutionid
+      zoneid:
+        type: integer
+        description: zoneid
+      status:
+        type: string
+        description: status
+      createdby:
+        type: string
+        description: createdby
+      createddt:
+        type: string
+        description: Record created timestamp
+      lastupdatedby:
+        type: string
+        description: The user who updated the record last time
+      lastupdateddt:
+        type: string
+        description: Record last updated timestamp
+  ecl2networks:
+    type: object
+    title: AWS Cost Visual
+    description:
+    properties:
+      ecl2networkid:
+        type: string
+        description: ecl2networkid
+      tenantid:
+        type: integer
+        description: tenantid
+      networkname:
+        type: string
+        description: networkname
+      adminstateup:
+        type: string
+        description: adminstateup
+      description:
+        type: string
+        description: description
+      plane:
+        type: string
+        description: plane
+      zoneid:
+        type: integer
+        description: zoneid
+      status:
+        type: string
+        description: status
+      createdby:
+        type: string
+        description: createdby
+      createddt:
+        type: string
+        description: Record created timestamp
+      lastupdatedby:
+        type: string
+        description: The user who updated the record last time
+      lastupdateddt:
+        type: string
+        description: Record last updated timestamp
+  ecl2ports:
+    type: object
+    title: AWS Cost Visual
+    description:
+    properties:
+      ecl2portid:
+        type: string
+        description: ecl2portid
+      tenantid:
+        type: integer
+        description: tenantid
+      portname:
+        type: string
+        description: portname
+      adminstateup:
+        type: string
+        description: adminstateup
+      allowedaddresspairs:
+        type: string
+        description: allowedaddresspairs
+      ipaddress:
+        type: string
+        description: ipaddress
+      macaddress:
+        type: string
+        description: macaddress
+      deviceid:
+        type: string
+        description: deviceid
+      deviceowner:
+        type: string
+        description: deviceowner
+      fixedips:
+        type: string
+        description: fixedips
+      networkid:
+        type: integer
+        description: networkid
+      ecl2networkid:
+        type: string
+        description: networkid
+      segmentationid:
+        type: string
+        description: segmentationid
+      segmentationtype:
+        type: string
+        description: segmentationtype
+      zoneid:
+        type: integer
+        description: zoneid
+      status:
+        type: string
+        description: status
+      createdby:
+        type: string
+        description: createdby
+      createddt:
+        type: string
+        description: Record created timestamp
+      lastupdatedby:
+        type: string
+        description: The user who updated the record last time
+      lastupdateddt:
+        type: string
+        description: Record last updated timestamp
+  ecl2solutions:
+    type: object
+    title: AWS Cost Visual
+    description:
+    properties:
+      solutionid:
+        type: integer
+        description: ecl2solutionid
+      tenantid:
+        type: integer
+        description: tenantid
+      instancename:
+        type: string
+        description: instancename
+      diskconfig:
+        type: string
+        description: diskconfig
+      flavorid:
+        type: integer
+        description: flavorid
+      imageid:
+        type: integer
+        description: imageid
+      mincount:
+        type: string
+        description: mincount
+      maxcount:
+        type: string
+        description: maxcount
+      availabilityzone:
+        type: string
+        description: availabilityzone
+      configdrive:
+        type: string
+        description: configdrive
+      keyid:
+        type: integer
+        description: keyid
+      scriptid:
+        type: integer
+        description: scriptid
+      userdata:
+        type: string
+        description: userdata
+      blockdevicemapping:
+        type: string
+        description: blockdevicemapping
+      blockdevicemappingv2:
+        type: string
+        description: blockdevicemappingv2
+      metadata:
+        type: string
+        description: metadata
+      networkid:
+        type: array
+        items:
+          oneOf:
+            - type: string
+            - type: integer
+        description: networks
+      volumeid:
+        type: string
+        description: volumeid
+      notes:
+        type: string
+        description: notes
+      status:
+        type: string
+        description: status
+      createdby:
+        type: string
+        description: createdby
+      createddt:
+        type: string
+        description: Record created timestamp
+      lastupdatedby:
+        type: string
+        description: The user who updated the record last time
+      lastupdateddt:
+        type: string
+        description: Record last updated timestamp
+      ecl2networks:
+        type: string
+        description: Record last updated timestamp
+  ecl2subnets:
+    type: object
+    title: AWS Cost Visual
+    description:
+    properties:
+      ecl2subnetid:
+        type: string
+        description: ecl2subnetid
+      tenantid:
+        type: integer
+        description: tenantid
+      subnetname:
+        type: string
+        description: subnetname
+      allocationpools:
+        type: string
+        description: allocationpools
+      subnetcidr:
+        type: string
+        description: subnetcidr
+      description:
+        type: string
+        description: description
+      dnsnameservers:
+        type: string
+        description: dnsnameservers
+      enabledhcp:
+        type: string
+        description: enabledhcp
+      gatewayip:
+        type: string
+        description: gatewayip
+      hostroutes:
+        type: string
+        description: hostroutes
+      ipversion:
+        type: string
+        description: ipversion
+      networkid:
+        type: integer
+        description: networkid
+      ecl2networkid:
+        type: string
+        description: networkid
+      ntpservers:
+        type: string
+        description: ntpservers
+      zoneid:
+        type: integer
+        description: zoneid
+      status:
+        type: string
+        description: status
+      createdby:
+        type: string
+        description: createdby
+      createddt:
+        type: string
+        description: Record created timestamp
+      lastupdatedby:
+        type: string
+        description: The user who updated the record last time
+      lastupdateddt:
+        type: string
+        description: Record last updated timestamp
+  ecl2tags:
+    type: object
+    title: AWS Cost Visual
+    description:
+    properties:
+      tenantid:
+        type: integer
+        description: tenantid
+      tagkey:
+        type: string
+        description: tagkey
+      tagvalue:
+        type: string
+        description: tagvalue
+      resourcetype:
+        type: string
+        description: resourcetype
+      resourceid:
+        type: string
+        description: resourceid
+      status:
+        type: string
+        description: status
+      createdby:
+        type: string
+        description: createdby
+      createddt:
+        type: string
+        description: Record created timestamp
+      lastupdatedby:
+        type: string
+        description: The user who updated the record last time
+      lastupdateddt:
+        type: string
+        description: Record last updated timestamp
+  ecl2images:
+    type: object
+    title: ecl2images
+    description:
+    properties:
+      imagename:
+        type: string
+        description: imagename
+      tenantid:
+        type: integer
+        description: tenantid
+      ecl2imageid:
+        type: string
+        description: ecl2imageid
+      platform:
+        type: string
+        description: platform
+      notes:
+        type: string
+        description: notes
+      status:
+        type: string
+        description: status
+      createdby:
+        type: string
+        description: createdby
+      createddt:
+        type: string
+        description: Record created timestamp
+      lastupdatedby:
+        type: string
+        description: The user who updated the record last time
+      lastupdateddt:
+        type: string
+        description: Record last updated timestamp
+  ecl2instancetype:
+    type: object
+    title: ecl2instancetype
+    description:
+    properties:
+      instancetypename:
+        type: string
+        description: instancetypename
+      vcpu:
+        type: string
+        description: vcpu
+      memory:
+        type: string
+        description: memory
+      storage:
+        type: string
+        description: storage
+      notes:
+        type: string
+        description: notes
+      status:
+        type: string
+        description: status
+      createdby:
+        type: string
+        description: createdby
+      createddt:
+        type: string
+        description: Record created timestamp
+      lastupdatedby:
+        type: string
+        description: The user who updated the record last time
+      lastupdateddt:
+        type: string
+        description: Record last updated timestamp
+  ecl2zones:
+    type: object
+    title: ECL2 Zones
+    description:
+    properties:
+      tenantid:
+        type: number
+        description: Reference Number from tenant model
+      zonename:
+        type: string
+        description: Key Name
+      ecl2zoneid:
+        type: string
+        description: Key Name
+      region:
+        type: string
+        description: region
+      notes:
+        type: string
+        description: Key Name
+      status:
+        type: string
+        description: Status
+      createdby:
+        type: string
+        description: The user who created the record
+      createddt:
+        type: string
+        description: Record created timestamp
+      lastupdatedby:
+        type: string
+        description: The user who updated the record last time
+      lastupdateddt:
+        type: string
+        description: Record last updated timestamp
+  ecl2volumes:
+    type: object
+    title: ECL2 Zones
+    description:
+    properties:
+      ecl2volumeid:
+        type: string
+        description: ecl2volumeid
+      tenantid:
+        type: number
+        description: tenantid
+      volumename:
+        type: string
+        description: volumename
+      description:
+        type: string
+        description: description
+      iopspergb:
+        type: string
+        description: iopspergb
+      size:
+        type: number
+        description: volumename
+      initiatoriqns:
+        type: string
+        description: initiatoriqns
+      zoneid:
+        type: number
+        description: zoneid
+      virtualstorageid:
+        type: string
+        description: virtualstorageid
+      notes:
+        type: string
+        description: Key Name
+      status:
+        type: string
+        description: Status
+      createdby:
+        type: string
+        description: The user who created the record
+      createddt:
+        type: string
+        description: Record created timestamp
+      lastupdatedby:
+        type: string
+        description: The user who updated the record last time
+      lastupdateddt:
+        type: string
+        description: Record last updated timestamp
+  ecl2keys:
+    type: object
+    title: ECL2 Keys
+    description:
+    properties:
+      tenantid:
+        type: number
+        description: tenantid
+      keyname:
+        type: string
+        description: keyname
+      publickey:
+        type: string
+        description: publickey
+      fingerprint:
+        type: string
+        description: fingerprint
+      userid:
+        type: string
+        description: userid
+      zoneid:
+        type: integer
+        description: zoneid
+      notes:
+        type: string
+        description: Key Name
+      status:
+        type: string
+        description: Status
+      createdby:
+        type: string
+        description: The user who created the record
+      createddt:
+        type: string
+        description: Record created timestamp
+      lastupdatedby:
+        type: string
+        description: The user who updated the record last time
+      lastupdateddt:
+        type: string
+        description: Record last updated timestamp
+  firewallplans:
+    type: object
+    title: ECL2 Firewall plans
+    description:
+    properties:
+      ecl2firewallplanid:
+        type: string
+        description: ecl2firewallplanid
+      firewallplanname:
+        type: string
+        description: firewallplanname
+      description:
+        type: string
+        description: description
+      vendor:
+        type: string
+        description: vendor
+      version:
+        type: string
+        description: version
+      enabled:
+        type: string
+        description: enabled
+      status:
+        type: string
+        description: Status
+      createdby:
+        type: string
+        description: The user who created the record
+      createddt:
+        type: string
+        description: Record created timestamp
+      lastupdatedby:
+        type: string
+        description: The user who updated the record last time
+      lastupdateddt:
+        type: string
+        description: Record last updated timestamp
+  internetservices:
+    type: object
+    title: ECL2 internetservices
+    description:
+    properties:
+      ecl2internetservicesid:
+        type: string
+        description: ecl2internetservicesid
+      tenantid:
+        type: integer
+        description: tenantid
+      servicename:
+        type: string
+        description: servicename
+      description:
+        type: string
+        description: description
+      minimalsubmasklength:
+        type: integer
+        description: minimalsubmasklength
+      zoneid:
+        type: integer
+        description: zoneid
+      status:
+        type: string
+        description: Status
+      createdby:
+        type: string
+        description: The user who created the record
+      createddt:
+        type: string
+        description: Record created timestamp
+      lastupdatedby:
+        type: string
+        description: The user who updated the record last time
+      lastupdateddt:
+        type: string
+        description: Record last updated timestamp
+
+  qosoptions:
+    type: object
+    title: ECL2 qosoptions
+    description:
+    properties:
+      ecl2qosoptionid:
+        type: string
+        description: ecl2qosoptionid
+      qosoptionname:
+        type: string
+        description: qosoptionname
+      description:
+        type: string
+        description: description
+      awsserviceid:
+        type: string
+        description: awsserviceid
+      azureserviceid:
+        type: string
+        description: azureserviceid
+      bandwidth:
+        type: integer
+        description: bandwidth
+      gcpserviceid:
+        type: string
+        description: gcpserviceid
+      interdcserviceid:
+        type: string
+        description: interdcserviceid
+      internetserviceid:
+        type: string
+        description: internetserviceid
+      qostype:
+        type: string
+        description: qostype
+      servicetype:
+        type: string
+        description: servicetype
+      vpnserviceid:
+        type: string
+        description: vpnserviceid
+      status:
+        type: string
+        description: Status
+      createdby:
+        type: string
+        description: The user who created the record
+      createddt:
+        type: string
+        description: Record created timestamp
+      lastupdatedby:
+        type: string
+        description: The user who updated the record last time
+      lastupdateddt:
+        type: string
+        description: Record last updated timestamp
+
+  ecl2commonfunctiongateway:
+    type: object
+    title: Common function gateway
+    properties:
+      ecl2cfgatewayid:
+        type: string
+        description: ecl2cfgatewayid
+      tenantid:
+        type: number
+        description: tenantid
+      cfpoolid:
+        type: number
+        description: cfpoolid
+      cfgatewayname:
+        type: string
+        description: cfgatewayname
+      description:
+        type: string
+        description: description
+      zoneid:
+        type: number
+        description: zoneid
+      notes:
+        type: string
+        description: notes
+      status:
+        type: string
+        description: status
+      createdby:
+        type: string
+        description: The user who created the record
+      createddt:
+        type: string
+        description: Record created timestamp
+      lastupdatedby:
+        type: string
+        description: The user who updated the record last time
+      lastupdateddt:
+        type: string
+        description: Record last updated timestamp
+
+  ecl2commonfunctionpool:
+    type: object
+    title: Common function pool
+    properties:
+      ecl2cfpoolid:
+        type: string
+        description: ecl2cfpoolid
+      tenantid:
+        type: number
+        description: tenantid
+      cfpoolname:
+        type: string
+        description: cfpoolname
+      description:
+        type: string
+        description: description
+      zoneid:
+        type: number
+        description: zoneid
+      notes:
+        type: string
+        description: notes
+      status:
+        type: string
+        description: status
+      createdby:
+        type: string
+        description: The user who created the record
+      createddt:
+        type: string
+        description: Record created timestamp
+      lastupdatedby:
+        type: string
+        description: The user who updated the record last time
+      lastupdateddt:
+        type: string
+        description: Record last updated timestamp
+
+  ecl2vsrx:
+    type: object
+    title: vSRX
+    properties:
+      ecl2vsrxid:
+        type: string
+        description: ecl2vsrxid
+      tenantid:
+        type: number
+        description: tenantid
+      vsrxname:
+        type: string
+        description: vsrxname
+      description:
+        type: string
+        description: description
+      defaultgateway:
+        type: string
+        description: defaultgateway
+      vsrxplanid:
+        type: number
+        description: vsrxplanid
+      username:
+        type: string
+        description: username
+      password:
+        type: string
+        description: password
+      zoneid:
+        type: number
+        description: zoneid
+      notes:
+        type: string
+        description: notes
+      status:
+        type: string
+        description: status
+      createdby:
+        type: string
+        description: The user who created the record
+      createddt:
+        type: string
+        description: Record created timestamp
+      lastupdatedby:
+        type: string
+        description: The user who updated the record last time
+      lastupdateddt:
+        type: string
+        description: Record last updated timestamp
+
+  ecl2vsrxplan:
+    type: object
+    title: vSRX Plan
+    properties:
+      ecl2vsrxplanid:
+        type: string
+        description: ecl2vsrxplanid
+      tenantid:
+        type: number
+        description: tenantid
+      vsrxplanname:
+        type: string
+        description: vsrxplanname
+      description:
+        type: string
+        description: description
+      appliancetype:
+        type: string
+        description: appliancetype
+      region:
+        type: string
+        description: region
+      notes:
+        type: string
+        description: notes
+      status:
+        type: string
+        description: status
+      createdby:
+        type: string
+        description: The user who created the record
+      createddt:
+        type: string
+        description: Record created timestamp
+      lastupdatedby:
+        type: string
+        description: The user who updated the record last time
+      lastupdateddt:
+        type: string
+        description: Record last updated timestamp
+
+paths:
+  /firewall/create:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Create a firewall
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2firewalls"
+      responses:
+        200:
+          description: Returns all examples
+  /firewall/update:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Update firewall
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2firewalls"
+      responses:
+        200:
+          description: Returns all examples
+  /firewall/list:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: List all firewalls
+      parameters:
+        - name: where
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2firewalls"
+      responses:
+        200:
+          description: Returns parameters
+  /firewall/{id}:
+    get:
+      tags:
+        - Deploymets-ECL2
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: The id of the entity to retrieve
+          type: integer
+      responses:
+        200:
+          description: Return the example with the specified id
+        404:
+          description: Example not
+  /firewall/delete:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Delete firewall
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2firewalls"
+      responses:
+        200:
+          description: Returns all examples
+  /gateway/create:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Create a gateway
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2internetgateways"
+      responses:
+        200:
+          description: Returns all examples
+  /gateway/update:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Update gateway
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2internetgateways"
+      responses:
+        200:
+          description: Returns all examples
+  /gateway/list:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: List all gateway
+      parameters:
+        - name: where
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2internetgateways"
+      responses:
+        200:
+          description: Returns parameters
+  /gateway/{id}:
+    get:
+      tags:
+        - Deploymets-ECL2
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: The id of the entity to retrieve
+          type: integer
+      responses:
+        200:
+          description: Return the example with the specified id
+        404:
+          description: Example not
+  /gateway/delete:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Delete gateway
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2internetgateways"
+      responses:
+        200:
+          description: Returns all examples
+  /network/create:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Create a network
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2networks"
+      responses:
+        200:
+          description: Returns all examples
+  /network/update:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Update network
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2networks"
+      responses:
+        200:
+          description: Returns all examples
+  /network/delete:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Delete network
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2networks"
+      responses:
+        200:
+          description: Returns all examples
+  /network/list:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: List all network
+      parameters:
+        - name: where
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2networks"
+      responses:
+        200:
+          description: Returns parameters
+  /network/{id}:
+    get:
+      tags:
+        - Deploymets-ECL2
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: The id of the entity to retrieve
+          type: integer
+      responses:
+        200:
+          description: Return the example with the specified id
+        404:
+          description: Example not
+
+  /port/create:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Create a port
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2ports"
+      responses:
+        200:
+          description: Returns all examples
+  /port/update:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Update port
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2ports"
+  /port/delete:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Delete port
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2ports"
+      responses:
+        200:
+          description: Returns all examples
+  /port/list:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: List all port
+      parameters:
+        - name: where
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2ports"
+      responses:
+        200:
+          description: Returns parameters
+  /port/{id}:
+    get:
+      tags:
+        - Deploymets-ECL2
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: The id of the entity to retrieve
+          type: integer
+      responses:
+        200:
+          description: Return the example with the specified id
+        404:
+          description: Example not
+
+  /subnet/create:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Create a subnet
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2subnets"
+      responses:
+        200:
+          description: Returns all examples
+  /subnet/update:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Update subnet
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2subnets"
+      responses:
+        200:
+          description: Returns all examples
+  /subnet/delete:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Delete subnet
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2subnets"
+      responses:
+        200:
+          description: Returns all examples
+  /subnet/list:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: List all subnet
+      parameters:
+        - name: where
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2subnets"
+      responses:
+        200:
+          description: Returns parameters
+  /subnet/{id}:
+    get:
+      tags:
+        - Deploymets-ECL2
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: The id of the entity to retrieve
+          type: integer
+      responses:
+        200:
+          description: Return the example with the specified id
+        404:
+          description: Example not
+
+  /loadbalancer/create:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Create a loadbalancer
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2loadbalancers"
+      responses:
+        200:
+          description: Returns all examples
+  /loadbalancer/update:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Update loadbalancer
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2loadbalancers"
+      responses:
+        200:
+          description: Returns all examples
+  /loadbalancer/delete:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Delete loadbalancer
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2loadbalancers"
+      responses:
+        200:
+          description: Returns all examples
+  /loadbalancer/list:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: List all loadbalancer
+      parameters:
+        - name: where
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2loadbalancers"
+      responses:
+        200:
+          description: Returns parameters
+  /loadbalancer/{id}:
+    get:
+      tags:
+        - Deploymets-ECL2
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: The id of the entity to retrieve
+          type: integer
+      responses:
+        200:
+          description: Return the example with the specified id
+        404:
+          description: Example not
+
+  /tags/create:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Create a tags
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2tags"
+      responses:
+        200:
+          description: Returns all examples
+  /tags/update:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Update tags
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2tags"
+      responses:
+        200:
+          description: Returns all examples
+  /tags/list:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: List all tags
+      parameters:
+        - name: where
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2tags"
+      responses:
+        200:
+          description: Returns parameters
+  /tags/{id}:
+    get:
+      tags:
+        - Deploymets-ECL2
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: The id of the entity to retrieve
+          type: integer
+      responses:
+        200:
+          description: Return the example with the specified id
+        404:
+          description: Example not
+
+  /solution/create:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Create a solution
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2solutions"
+      responses:
+        200:
+          description: Returns all examples
+  /solution/update:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Update solution
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2solutions"
+      responses:
+        200:
+          description: Returns all examples
+  /solution/list:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: List all solution
+      parameters:
+        - name: where
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2solutions"
+      responses:
+        200:
+          description: Returns parameters
+  /solution/{id}:
+    get:
+      tags:
+        - Deploymets-ECL2
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: The id of the entity to retrieve
+          type: integer
+      responses:
+        200:
+          description: Return the example with the specified id
+        404:
+          description: Example not
+
+  /image/create:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Create a image
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2images"
+      responses:
+        200:
+          description: Returns all examples
+  /image/update:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Update image
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2images"
+      responses:
+        200:
+          description: Returns all examples
+  /image/list:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: List all image
+      parameters:
+        - name: where
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2images"
+      responses:
+        200:
+          description: Returns parameters
+  /image/{id}:
+    get:
+      tags:
+        - Deploymets-ECL2
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: The id of the entity to retrieve
+          type: integer
+      responses:
+        200:
+          description: Return the example with the specified id
+        404:
+          description: Example not
+
+  /instancetype/create:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Create a instancetype
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2instancetype"
+      responses:
+        200:
+          description: Returns all examples
+  /instancetype/update:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Update instancetype
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2instancetype"
+      responses:
+        200:
+          description: Returns all examples
+  /instancetype/list:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: List all image
+      parameters:
+        - name: where
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2instancetype"
+      responses:
+        200:
+          description: Returns parameters
+  /instancetype/{id}:
+    get:
+      tags:
+        - Deploymets-ECL2
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: The id of the entity to retrieve
+          type: integer
+      responses:
+        200:
+          description: Return the example with the specified id
+        404:
+          description: Example not
+  /zone/create:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Create a Zone
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2zones"
+      responses:
+        200:
+          description: Returns all examples
+  /zone/update:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Update Zone
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2zones"
+      responses:
+        200:
+          description: Returns all examples
+  /zone/list:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: List all Zone
+      parameters:
+        - name: where
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2zones"
+      responses:
+        200:
+          description: Returns parameters
+  /zone/{id}:
+    get:
+      tags:
+        - Deploymets-ECL2
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: The id of the entity to retrieve
+          type: integer
+      responses:
+        200:
+          description: Return the example with the specified id
+        404:
+          description: Example not
+
+  /volume/create:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Create a Volume
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2volumes"
+      responses:
+        200:
+          description: Returns all examples
+  /volume/update:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Update Volume
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2volumes"
+      responses:
+        200:
+          description: Returns all examples
+  /volume/list:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: List all Volume
+      parameters:
+        - name: where
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2volumes"
+      responses:
+        200:
+          description: Returns parameters
+  /volume/{id}:
+    get:
+      tags:
+        - Deploymets-ECL2
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: The id of the entity to retrieve
+          type: integer
+      responses:
+        200:
+          description: Return the example with the specified id
+        404:
+          description: Example not
+
+  /key/create:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Create a key
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2keys"
+      responses:
+        200:
+          description: Returns all examples
+  /key/update:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Update key
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2keys"
+      responses:
+        200:
+          description: Returns all examples
+  /key/list:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: List all key
+      parameters:
+        - name: where
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2keys"
+      responses:
+        200:
+          description: Returns parameters
+  /key/{id}:
+    get:
+      tags:
+        - Deploymets-ECL2
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: The id of the entity to retrieve
+          type: integer
+      responses:
+        200:
+          description: Return the example with the specified id
+        404:
+          description: Example not
+
+  /firewallplans/create:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Create a Firewall plan
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/firewallplans"
+      responses:
+        200:
+          description: Returns all examples
+  /firewallplans/update:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Update firewallplans
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/firewallplans"
+      responses:
+        200:
+          description: Returns all examples
+  /firewallplans/list:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: List all firewallplans
+      parameters:
+        - name: where
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/firewallplans"
+      responses:
+        200:
+          description: Returns parameters
+  /firewallplans/{id}:
+    get:
+      tags:
+        - Deploymets-ECL2
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: The id of the entity to retrieve
+          type: integer
+      responses:
+        200:
+          description: Return the example with the specified id
+        404:
+          description: Example not
+
+  /internetservices/create:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Create a internetservices
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/internetservices"
+      responses:
+        200:
+          description: Returns all examples
+  /internetservices/update:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Update internetservices
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/internetservices"
+      responses:
+        200:
+          description: Returns all examples
+  /internetservices/list:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: List all internetservices
+      parameters:
+        - name: where
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/internetservices"
+      responses:
+        200:
+          description: Returns parameters
+  /internetservices/{id}:
+    get:
+      tags:
+        - Deploymets-ECL2
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: The id of the entity to retrieve
+          type: integer
+      responses:
+        200:
+          description: Return the example with the specified id
+        404:
+          description: Example not
+
+  /qosoptions/create:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Create a qosoptions
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/qosoptions"
+      responses:
+        200:
+          description: Returns all examples
+  /qosoptions/update:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Update qosoptions
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/qosoptions"
+      responses:
+        200:
+          description: Returns all examples
+  /qosoptions/list:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: List all qosoptions
+      parameters:
+        - name: where
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/qosoptions"
+      responses:
+        200:
+          description: Returns parameters
+  /qosoptions/{id}:
+    get:
+      tags:
+        - Deploymets-ECL2
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: The id of the entity to retrieve
+          type: integer
+      responses:
+        200:
+          description: Return the example with the specified id
+        404:
+          description: Example not
+  /gateway/interface/create:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Create a gateway interface
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2iginterface"
+      responses:
+        200:
+          description: Returns all examples
+  /gateway/interface/update:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Update gateway interface
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2iginterface"
+      responses:
+        200:
+          description: Returns all examples
+  /gateway/interface/list:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: List all gateway interface
+      parameters:
+        - name: where
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2iginterface"
+      responses:
+        200:
+          description: Returns parameters
+  /gateway/interface/{id}:
+    get:
+      tags:
+        - Deploymets-ECL2
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: The id of the entity to retrieve
+          type: integer
+      responses:
+        200:
+          description: Return the example with the specified id
+        404:
+          description: Example not
+  /gateway/interface/delete:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Delete gateway interface
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2iginterface"
+      responses:
+        200:
+          description: Returns all examples
+  /gateway/globalip/create:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Create a gateway globalip
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2igglobalip"
+      responses:
+        200:
+          description: Returns all examples
+  /gateway/globalip/update:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Update gateway globalip
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2igglobalip"
+      responses:
+        200:
+          description: Returns all examples
+  /gateway/globalip/list:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: List all gateway globalip
+      parameters:
+        - name: where
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2igglobalip"
+      responses:
+        200:
+          description: Returns parameters
+  /gateway/globalip/{id}:
+    get:
+      tags:
+        - Deploymets-ECL2
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: The id of the entity to retrieve
+          type: integer
+      responses:
+        200:
+          description: Return the example with the specified id
+        404:
+          description: Example not
+  /gateway/globalip/delete:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Delete gateway globalip
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2igglobalip"
+      responses:
+        200:
+          description: Returns all examples
+  /gateway/staticip/create:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Create a gateway staticip
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2igstaticip"
+      responses:
+        200:
+          description: Returns all examples
+  /gateway/staticip/update:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Update gateway staticip
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2igstaticip"
+      responses:
+        200:
+          description: Returns all examples
+  /gateway/staticip/list:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: List all gateway staticip
+      parameters:
+        - name: where
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2igstaticip"
+      responses:
+        200:
+          description: Returns parameters
+  /gateway/staticip/{id}:
+    get:
+      tags:
+        - Deploymets-ECL2
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: The id of the entity to retrieve
+          type: integer
+      responses:
+        200:
+          description: Return the example with the specified id
+        404:
+          description: Example not
+  /gateway/staticip/delete:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Delete gateway staticip
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2igstaticip"
+      responses:
+        200:
+          description: Returns all examples
+  /commonfunctiongateway/create:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Create a common function gateway
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2commonfunctiongateway"
+      responses:
+        200:
+          description: Returns all examples
+  /commonfunctiongateway/update:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Update common function gateway
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2commonfunctiongateway"
+      responses:
+        200:
+          description: Returns all examples
+  /commonfunctiongateway/list:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: List all common function gateways
+      parameters:
+        - name: where
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2commonfunctiongateway"
+      responses:
+        200:
+          description: Returns parameters
+  /commonfunctiongateway/{id}:
+    get:
+      tags:
+        - Deploymets-ECL2
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: Get a common function gateway
+          type: integer
+      responses:
+        200:
+          description: Return the example with the specified id
+        404:
+          description: Example not
+  /commonfunctiongateway/delete:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Delete common function gateway
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2commonfunctiongateway"
+      responses:
+        200:
+          description: Returns all examples
+
+  /commonfunctionpool/create:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Create a common function pool
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2commonfunctionpool"
+      responses:
+        200:
+          description: Returns all examples
+  /commonfunctionpool/update:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Update common function pool
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2commonfunctionpool"
+      responses:
+        200:
+          description: Returns all examples
+  /commonfunctionpool/list:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: List all common function pool
+      parameters:
+        - name: where
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2commonfunctionpool"
+      responses:
+        200:
+          description: Returns parameters
+  /commonfunctionpool/{id}:
+    get:
+      tags:
+        - Deploymets-ECL2
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: Get a common function pool
+          type: integer
+      responses:
+        200:
+          description: Return the example with the specified id
+        404:
+          description: Example not
+  /commonfunctionpool/delete:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Delete common function pool
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2commonfunctionpool"
+      responses:
+        200:
+          description: Returns all examples
+
+  /vsrx/create:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Create a vsrx
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2vsrx"
+      responses:
+        200:
+          description: Returns all examples
+  /vsrx/update:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Update vsrx
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2vsrx"
+      responses:
+        200:
+          description: Returns all examples
+  /vsrx/list:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: List all vsrx
+      parameters:
+        - name: where
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2vsrx"
+      responses:
+        200:
+          description: Returns parameters
+  /vsrx/{id}:
+    get:
+      tags:
+        - Deploymets-ECL2
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: Get a vsrx
+          type: integer
+      responses:
+        200:
+          description: Return the example with the specified id
+        404:
+          description: Example not
+  /vsrx/delete:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Delete vsrx
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2vsrx"
+      responses:
+        200:
+          description: Returns all examples
+
+  /vsrxplan/create:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Create a vsrxplan
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2vsrxplan"
+      responses:
+        200:
+          description: Returns all examples
+  /vsrxplan/update:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Update vsrxplan
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2vsrxplan"
+      responses:
+        200:
+          description: Returns all examples
+  /vsrxplan/list:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: List all vsrxplans
+      parameters:
+        - name: where
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2vsrxplan"
+      responses:
+        200:
+          description: Returns parameters
+  /vsrxplan/{id}:
+    get:
+      tags:
+        - Deploymets-ECL2
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: Get a vsrxplan
+          type: integer
+      responses:
+        200:
+          description: Return the example with the specified id
+        404:
+          description: Example not
+  /vsrxplan/delete:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Delete vsrxplan
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2vsrxplan"
+      responses:
+        200:
+          description: Returns all examples

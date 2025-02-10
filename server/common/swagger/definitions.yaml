@@ -1,0 +1,8014 @@
+Users:
+  type: object
+  title: Users
+  properties:
+    tenantid:
+      type: number
+      description: Tenant Reference number
+    customerid:
+      type: number
+      description: The example name
+    password:
+      type: string
+      description: Password of the user
+    fullname:
+      type: string
+      description: Name of the user
+    email:
+      type: string
+      description: Email Id of the user
+    phone:
+      type: string
+      description: Phone number of the user
+    secondaryphoneno:
+      type: string
+      description: Secondary phone number of the user
+    roleid:
+      type: number
+      description: Role of the User
+    lastlogin:
+      type: string
+      description: Record last updated timestamp
+    status:
+      type: string
+      description: Record status
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+UserRoles:
+  type: object
+  title: UserRoles
+  properties:
+    tenantid:
+      type: number
+      description: Tenant Reference number
+    rolename:
+      type: string
+      description: The example name
+    permissions:
+      type: string
+      description: The example name
+    status:
+      type: string
+      description: Record status
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+    accessid:
+      type: string
+      description: The example name
+Screens:
+  type: object
+  title: Screens
+  properties:
+    screencode:
+      type: string
+      description: Reference code
+    screenname:
+      type: string
+      description: The example name
+    screenurl:
+      type: string
+      description: The example name
+    screenicon:
+      type: string
+      description: The example name
+    displayorder:
+      type: number
+      description: The example name
+    status:
+      type: string
+      description: Record status
+    events:
+      type: string
+      description: screen events
+ScreenActions:
+  type: object
+  title: ScreenActions
+  properties:
+    screenid:
+      type: number
+      description: Reference number
+    actions:
+      type: string
+      description: The example name
+    status:
+      type: string
+      description: Record status
+RoleAccess:
+  type: object
+  title: RoleAccess
+  properties:
+    roleid:
+      type: number
+      description: Tenant Reference number
+    screenid:
+      type: number
+      description: The example name
+    actionid:
+      type: number
+      description: The example name
+    status:
+      type: string
+      description: Record status
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+LookUp:
+  type: object
+  title: Look Up
+  properties:
+    tenantid:
+      type: number
+      description: Tenant Reference number
+    lookupkey:
+      type: string
+      description: The name of Reference
+    keyname:
+      type: string
+      description: The name of Reference key
+    keydesc:
+      type: string
+      description: Description of Reference key
+    keyvalue:
+      type: string
+      description: Value of Reference key
+    datatype:
+      type: string
+      description: Datatype of Reference key
+    defaultvalue:
+      type: string
+      description: Default value of Reference key
+    status:
+      type: string
+      description: Record status
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+Tags:
+  type: object
+  title: Tags
+  properties:
+    tenantid:
+      type: number
+      description: Tenant Reference number
+    resourcetype:
+      type: string
+      description: Resource type
+    tagname:
+      type: string
+      description: Tag name
+    tagtype:
+      type: string
+      description: Tag type
+    description:
+      type: string
+      description: Description
+    lookupvalues:
+      type: string
+      description: lookupvalues
+    attributeid:
+      type: string
+      description: CMDB attribute ID
+    resourceid:
+      type: string
+      description: CMDB resource ID
+    status:
+      type: string
+      description: Record status
+    required:
+      type: boolean
+      description: true if mandatory
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+TagGroup:
+  type: object
+  title: Tag Group
+  properties:
+    tenantid:
+      type: number
+      description: Tenant Reference number
+    resourcetype:
+      type: string
+      description: Resource type
+    groupname:
+      type: string
+      description: Group name
+    status:
+      type: string
+      description: Record status
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+
+TagValues:
+  type: object
+  title: Tag Values
+  properties:
+    tenantid:
+      type: number
+      description: Tenant Reference number
+    cloudprovider:
+      type: string
+      description: Cloud provider
+    resourcetype:
+      type: string
+      description: Resource type
+    resourcerefid:
+      type: string
+      description: Resource type
+    resourceid:
+      type: number
+      description: Resourceid
+    taggroupid:
+      type: number
+      description: Taggroupid
+    tagid:
+      type: number
+      description: Tagid
+    tagorder:
+      type: number
+      description: Tag Order
+    attributerefid:
+      type: string
+      description: Attribute Reference ID
+    tagvalue:
+      type: string
+      description: Tag value
+    tnregionid:
+      type: number
+      description: Tenant region
+    status:
+      type: string
+      description: Record status
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+CloudAssets:
+  type: object
+  title: CloudAssets
+  properties:
+    assetid:
+      type: number
+      description: Asset ID
+    tenantid:
+      type: number
+      description: The Tenant ID
+    tnregionid:
+      type: number
+      description: The Tenant region ID
+    assetname:
+      type: string
+      description: The Asset name
+    cloudprovider:
+      type: string
+      description: cloudprovider
+    assettype:
+      type: string
+      description: The Asset Type
+    assetdata:
+      type: string
+      description: The Asset data
+    reftable:
+      type: string
+      description: The reference table
+    refkey:
+      type: string
+      description: The reference Key
+    remarks:
+      type: string
+      description: The Remarks
+    status:
+      type: string
+      description: Record status
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+
+AssetsHdr:
+  type: object
+  title: AssetsHdr
+  properties:
+    id:
+      type: number
+      description: Asset ID
+    tenantid:
+      type: number
+      description: The Tenant ID
+    crn:
+      type: number
+      description: Cloudmatiq resource name
+    fieldkey:
+      type: string
+      description: Field key
+    fieldtype:
+      type: string
+      description: TEXT, INT, BOOL, DATE, JSON, _TEXT, _INT
+    protected:
+      type: bool
+      description: If protected the value are masked
+    defaultval:
+      type: string
+      description: Default value for the field
+    showbydefault:
+      type: string
+      description: Check, if needs to be shown on table by default
+    status:
+      type: string
+      description: Record status
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+
+AssetsDtl:
+  type: object
+  title: AssetsDtl
+  properties:
+    id:
+      type: number
+      description: Asset ID
+    tenantid:
+      type: number
+      description: The Tenant ID
+    crn:
+      type: number
+      description: Cloudmatiq resource name
+    fieldkey:
+      type: string
+      description: Field key
+    fieldvalue:
+      type: string
+      description: Value of the respective key
+    resourceid:
+      type: string
+      description: Resourceid
+    status:
+      type: string
+      description: Record status
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+
+CostVisual:
+  type: object
+  title: Tag Values
+  properties:
+    cloudprovider:
+      type: string
+      description: Cloud provider
+    region:
+      type: string
+      description: Region
+    resourcetype:
+      type: string
+      description: Resource Type
+    plantype:
+      type: string
+      description: Plan Type
+    unit:
+      type: string
+      description: Unit
+    priceperunit:
+      type: string
+      description: Price per unit
+    image:
+      type: string
+      description: Image
+    currency:
+      type: string
+      description: Image
+    version:
+      type: number
+      description: version
+    pricingmodel:
+      type: string
+      description: Pricing Model
+    status:
+      type: string
+      description: Record status
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+
+Parameters:
+  type: object
+  title: Parameters
+  properties:
+    paramtype:
+      type: string
+      description: The example name
+    referencetype:
+      type: string
+      description: The example name
+    tenantid:
+      type: number
+      description: The example name
+    customerid:
+      type: number
+      description: The example name
+    templateid:
+      type: number
+      description: The example name
+    scriptid:
+      type: number
+      description: The example name
+    referenceid:
+      type: number
+      description: The example name
+    fieldname:
+      type: string
+      description: The example name
+    fieldlabel:
+      type: string
+      description: The example name
+    fieldvalue:
+      type: string
+      description: The example name
+    datatype:
+      type: string
+      description: The example name
+    fieldoptions:
+      type: string
+      description: The example name
+    fieldwidth:
+      type: string
+      description: The example name
+    defaultvalue:
+      type: string
+      description: The example name
+    forminput:
+      type: string
+      description: The example name
+    orderno:
+      type: number
+      description: The example name
+    showinexport:
+      type: string
+      description: The example name
+    showinreport:
+      type: string
+      description: The example name
+    isunique:
+      type: string
+      description: Is this value unique across application
+    notes:
+      type: string
+      description: The example name
+    status:
+      type: string
+      description: Record status
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+Customer:
+  type: object
+  title: Sub Tenant
+  properties:
+    tenantid:
+      type: number
+      description: The example name
+    customername:
+      type: string
+      description: The example name
+    customeraddress:
+      type: string
+      description: The example name
+    customercode:
+      type: string
+      description: The example name
+    postcode:
+      type: string
+      description: The example name
+    phoneno:
+      type: string
+      description: The example name
+    secondaryphoneno:
+      type: string
+      description: Secondary phoneno
+    contactperson:
+      type: string
+      description: The example name
+    contactemail:
+      type: string
+      description: The example name
+    ecl2tenantid:
+      type: string
+      description: ecl2tenantid
+    awsaccountid:
+      type: string
+      description: awsaccountid
+    ecl2region:
+      type: string
+      description: ecl2region
+    ecl2contractid:
+      type: string
+      description: ecl2contractid
+    slatemplateid:
+      type: integer
+      description: SLA
+    status:
+      type: string
+      description: Record status
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+CustomerAccount:
+  type: object
+  title: Customer Account
+  properties:
+    id:
+      type: number
+      description: The example name
+    tenantid:
+      type: number
+      description: The example name
+    name:
+      type: string
+      description: The example name
+    rolename:
+      type: string
+      description: The example name
+    cloudprovider:
+      type: string
+      description: The example name
+    customerid:
+      type: number
+      description: The example name
+    accountref:
+      type: string
+      description: Account Reference
+    resourceid:
+      type: string
+      description: CMDB Reference
+    apiversion:
+      type: string
+      description: API Version
+    lastsyncdt:
+      type: string
+      description: The example name
+    status:
+      type: string
+      description: Record status
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+Scripts:
+  type: object
+  title: Scripts
+  properties:
+    scriptname:
+      type: string
+      description: The script name
+    tenantid:
+      type: number
+      description: Tenant reference number
+    scripttype:
+      type: string
+      description: Type of the script
+    filename:
+      type: string
+      format: base64
+      description: File name of the script
+    commandblock:
+      type: string
+      description: The example name
+    authtype:
+      type: string
+      description: Authentication type
+    conntype:
+      type: string
+      description: Connection type
+    status:
+      type: string
+      description: Record status
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+Tenants:
+  type: object
+  title: Tenants
+  properties:
+    tenantname:
+      type: string
+      description: Name of the tenant/admin
+    tenantaddress:
+      type: string
+      description: Address description of the tenant
+    postcode:
+      type: string
+      description: Postal code of the tenant
+    phoneno:
+      type: string
+      description: Phone number of the tenant
+    contactperson:
+      type: string
+      description: Contact person name of the tenant/company
+    contactemail:
+      type: string
+      description: Contact Emailid of the tenant/company
+    tenant_logo:
+      type: string
+      description: File name of the Logo
+    status:
+      type: string
+      description: Record status
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+Tenantregion:
+  type: object
+  title: Tenants Region
+  properties:
+    tenantid:
+      type: number
+      description: ID of the tenant/admin
+    cloudprovider:
+      type: string
+      description: Cloud provider name
+    customerid:
+      type: number
+      description: Customer Id
+    _accountid:
+      type: number
+      description: Customer account id
+    region:
+      type: string
+      description: Region
+    tenantrefid:
+      type: string
+      description: Region ref
+    status:
+      type: string
+      description: Record status
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+Solutions:
+  type: object
+  title: Solutions
+  properties:
+    tenantid:
+      type: number
+      description: Tenant Reference number
+    solutionname:
+      type: string
+      description: Solution name/ template name
+    cloudprovider:
+      type: string
+      description: Provider name of the solution like (AWS/ECL2/GOOGLE)
+    slaname:
+      type: string
+      description: SLA name of the solution
+    zoneid:
+      type: number
+      description: Zone name of ECL2
+    clientid:
+      type: number
+      description: The example name
+    status:
+      type: string
+      description: Record status
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+SLA:
+  type: object
+  title: SLA
+  properties:
+    slaname:
+      type: string
+      description: SLA Name
+    priority:
+      type: number
+      description:
+    responsetimemins:
+      type: number
+      description:
+    uptimeprcnt:
+      type: number
+      description:
+    workinghrs:
+      type: number
+      description:
+    creditsprcnt:
+      type: number
+      description:
+    replacementhrs:
+      type: number
+      description:
+    notes:
+      type: string
+      description:
+    status:
+      type: string
+      description: Record status
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+
+AssetMapping:
+  type: object
+  title: Asset Mapping
+  properties:
+    tenantid:
+      type: number
+      description: tenant id
+    cloudprovider:
+      type: string
+      description: cloud provider
+    resourcetype:
+      type: string
+      description: resource type
+    resourceid:
+      type: number
+      description: resource id
+    customerid:
+      type: number
+      description: customerid
+    status:
+      type: string
+      description: Record status
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+
+ExptrMapping:
+  type: object
+  title: Exporter Mapping
+  properties:
+    exptrid:
+      type: number
+      description: exporter id
+    tenantid:
+      type: number
+      description: tenant id
+    exprtorchid:
+      type: number
+      description: exporter orchestration id
+    instancerefid:
+      type: string
+      description: instance id
+    exptrstatus:
+      type: string
+      description: exporter status
+    metadata:
+      type: string
+      description: meta data
+    status:
+      type: string
+      description: Record status
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+
+ExptrOrchMapping:
+  type: object
+  title: Exporter Orchestration Mapping
+  properties:
+    exprtorchid:
+      type: number
+      description: exporter orchestration id
+    tenantid:
+      type: number
+      description: tenant id
+    cloudprovider:
+      type: string
+      description: Provider name
+    exprtrname:
+      type: string
+      description: exporter name
+    exptrtype:
+      type: string
+      description: exporter type
+    exptrport:
+      type: string
+      description: Exporter Port
+    exprturl:
+      type: string
+      description: exporter name
+    instlorchid:
+      type: number
+      description: orchestration id to add exporter
+    rmvorchid:
+      type: number
+      description: orchestration id to remove exporter
+    status:
+      type: string
+      description: Record status
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+
+DeploymentScript:
+  type: object
+  title: Asset Mapping
+  properties:
+    tenantid:
+      type: number
+      description: tenant id
+    cloudprovider:
+      type: string
+      description: cloud provider
+    reftype:
+      type: string
+      description: ref type
+    refid:
+      type: number
+      description: ref id
+    scriptid:
+      type: number
+      description: script id
+    orderno:
+      type: number
+      description: order no
+    status:
+      type: string
+      description: Record status
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+
+AWSAMI:
+  type: object
+  title: AWS AMI
+  description: Store the list of AWS AMI available for launching
+  properties:
+    aminame:
+      type: string
+      description: Readable name of the AMI
+    awsamiid:
+      type: string
+      description: AWS AMI Reference number
+    platform:
+      type: string
+      description: Name of the Platform, like Windows 10, Ubuntu, etc
+    notes:
+      type: string
+      description: Short note about the AMI
+    status:
+      type: string
+      description: Status of the AMI
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+awsinsttype:
+  type: object
+  title: AWS Instance type
+  description:
+  properties:
+    instancetypename:
+      type: string
+      description:
+    vcpu:
+      type: string
+      description:
+    version:
+      type: number
+      description:
+    memory:
+      type: number
+      description:
+    storage:
+      type: string
+      description:
+    cpucredithour:
+      type: number
+      description:
+    priceperhour:
+      type: number
+      description:
+    pricepermonth:
+      type: number
+      description:
+    notes:
+      type: string
+      description:
+    status:
+      type: string
+      description: Status of the AMI
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+awskeys:
+  type: object
+  title: AWS Keys
+  description:
+  properties:
+    tenantid:
+      type: number
+      description: Reference Number from tenant model
+    keyname:
+      type: string
+      description: Key Name
+    status:
+      type: string
+      description: Status of the AMI
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+awslb:
+  type: object
+  title: AWS Load Balancer
+  description:
+  properties:
+    tenantid:
+      type: number
+      description: Reference Number from tenant model
+    lbname:
+      type: string
+      description: Load Balancer name
+    listeners:
+      type: array
+      items:
+        oneOf:
+          - type: string
+          - type: integer
+          - type: object
+      description:
+    vpcid:
+      type: number
+      description:
+    subnetid:
+      type: number
+      description:
+    certificatearn:
+      type: string
+      description:
+    securitypolicy:
+      type: string
+      description:
+    securitygroupid:
+      type: number
+      description:
+    hcport:
+      type: number
+      description:
+    hcinterval:
+      type: number
+      description:
+    hctimeout:
+      type: number
+      description:
+    hchealthythreshold:
+      type: number
+      description:
+    hcunhealthythreshold:
+      type: number
+      description:
+    solutionid:
+      type: number
+      description:
+    notes:
+      type: string
+      description:
+    status:
+      type: string
+      description: Status of the AMI
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+awssecgrp:
+  type: object
+  title: AWS Security group
+  description:
+  properties:
+    tenantid:
+      type: number
+      description: Reference Number from tenant model
+    securitygroupname:
+      type: string
+      description: Key Name
+    awssecuritygroupid:
+      type: string
+      description:
+    vpcid:
+      type: number
+      description:
+    notes:
+      type: string
+      description:
+    status:
+      type: string
+      description: Status of the AMI
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+awssgrules:
+  type: object
+  title: AWS SG Rules
+  description:
+  properties:
+    tenantid:
+      type: number
+      description: Reference Number from tenant model
+    type:
+      type: string
+      description: Key Name
+    securitygroupid:
+      type: number
+      description: The rule belongs to the security group
+    protocol:
+      type: string
+      description:
+    portrange:
+      type: string
+      description:
+    source:
+      type: string
+      description:
+    notes:
+      type: string
+      description:
+    status:
+      type: string
+      description: Status of the AMI
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+awsigw:
+  type: object
+  title: AWS Internet gateway
+  description:
+  properties:
+    internetgatewayid:
+      type: number
+      description: Reference Number
+    awsinternetgatewayid:
+      type: string
+      description: AWS Ref
+    tenantid:
+      type: number
+      description: Tenant ID
+    vpcid:
+      type: number
+      description: VPC
+    gatewayname:
+      type: string
+      description: Gateway name
+    tnregionid:
+      type: number
+      description: Region
+    customerid:
+      type: number
+      description: Customer
+    notes:
+      type: string
+      description:
+    status:
+      type: string
+      description: Status of the AMI
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+awssolution:
+  type: object
+  title: AWS Solutions
+  description:
+  properties:
+    solutionid:
+      type: number
+      description: Reference Number from tenant model
+    vpcid:
+      type: number
+      description: Key Name
+    amiid:
+      type: number
+      description:
+    instancetypeid:
+      type: number
+      description:
+    subnetid:
+      type: number
+      description:
+    securitygroupid:
+      type: number
+    instancename:
+      type: string
+      description:
+    awsamiid:
+      type: string
+      description:
+    awsvpcid:
+      type: string
+      description:
+    awssubnetd:
+      type: string
+      description:
+    awssecuritygroupid:
+      type: string
+      description:
+    keyid:
+      type: number
+      description:
+    lbid:
+      type: number
+      description:
+    scriptid:
+      type: number
+      description:
+    orchid:
+      type: number
+      description:
+    noofservers:
+      type: number
+      description:
+    publicipyn:
+      type: string
+      description:
+    shutdownbehaviour:
+      type: string
+      description:
+    terminationprotectionyn:
+      type: string
+      description:
+    monitoringyn:
+      type: string
+      description:
+    notes:
+      type: string
+      description:
+    status:
+      type: string
+      description: Status of the AMI
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+awssubnet:
+  type: object
+  title: AWS Sub net
+  description:
+  properties:
+    tenantid:
+      type: number
+      description: Reference Number from tenant model
+    subnetname:
+      type: string
+      description: Key Name
+    awssubnetd:
+      type: string
+      description:
+    vpcid:
+      type: number
+      description:
+    zoneid:
+      type: number
+      description:
+    ipv4cidr:
+      type: string
+      description:
+    notes:
+      type: string
+      description:
+    status:
+      type: string
+      description: Status of the AMI
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+awstags:
+  type: object
+  title: AWS Tags
+  description:
+  properties:
+    tenantid:
+      type: number
+      description: Reference Number from tenant model
+    tagkey:
+      type: string
+      description: Key Name
+    tagvalue:
+      type: string
+      description:
+    resourcetype:
+      type: string
+      description:
+    resourceid:
+      type: number
+      description:
+    status:
+      type: string
+      description: Status of the AMI
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+awsvolumes:
+  type: object
+  title: AWS Volumes
+  description:
+  properties:
+    tenantid:
+      type: number
+      description: Reference Number from tenant model
+    awssolutionid:
+      type: number
+      description: Reference Number from AWS Solution model
+    volumetype:
+      type: string
+      description: Key Name
+    sizeingb:
+      type: number
+      description:
+    delontermination:
+      type: string
+      description: Flag to delete or retain the volumn while instance is terminated
+    encryptedyn:
+      type: string
+      description:
+    notes:
+      type: string
+      description:
+    status:
+      type: string
+      description: Status of the AMI
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+awsvpc:
+  type: object
+  title: AWS VPC
+  description:
+  properties:
+    tenantid:
+      type: number
+      description: Reference Number from tenant model
+    vpcname:
+      type: string
+      description: Key Name
+    awsvpcid:
+      type: string
+      description:
+    ipv4cidr:
+      type: string
+      description:
+    notes:
+      type: string
+      description:
+    status:
+      type: string
+      description: Status of the AMI
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+awszone:
+  type: object
+  title: AWS Zones
+  description:
+  properties:
+    tenantid:
+      type: number
+      description: Reference Number from tenant model
+    zonename:
+      type: string
+      description: Key Name
+    displayname:
+      type: string
+      description: Display Name
+    awszoneid:
+      type: string
+      description:
+    notes:
+      type: string
+      description:
+    status:
+      type: string
+      description: Status of the AMI
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+notifications:
+  type: object
+  title: Notifications
+  description:
+  properties:
+    tenantid:
+      type: number
+      description: Reference Number from tenant model
+    solutionid:
+      type: integer
+      description:
+    userid:
+      type: integer
+      description:
+    txnid:
+      type: integer
+      description:
+    txntype:
+      type: string
+      description:
+    txnstatus:
+      type: string
+      description:
+    content:
+      type: string
+      description:
+    eventtype:
+      type: array
+      items:
+        type: string
+      description: Type of Event
+    modeofnotification:
+      type: array
+      items:
+        type: string
+      description: Notification mode
+    configuration:
+      type: array
+      items:
+        type: string
+      description:
+    notes:
+      type: string
+      description:
+    interval:
+      type: number
+      description:
+    status:
+      type: string
+      description: Status of the Notification
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+notificationsetup:
+  type: object
+  title: Notifications Setup
+  description:
+  properties:
+    ntfcsetupid:
+      type: number
+      description: Primary Key
+    tenantid:
+      type: number
+      description: Reference Number from tenant model
+    module:
+      type: string
+      description:
+    event:
+      type: string
+      description:
+    ntftype:
+      type: string
+      description:
+    template:
+      type: string
+      description:
+    receivers:
+      type: string
+      description:
+    notes:
+      type: string
+      description:
+    status:
+      type: string
+      description: Status of the Notification
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+deployments:
+  type: object
+  title: Deployments
+  description:
+  properties:
+    solutionid:
+      type: number
+      description: Reference Number from solution model
+    tenantid:
+      type: number
+      description: Reference Number from tenant model
+    requestid:
+      type: number
+      description:
+    zoneid:
+      type: number
+      description:
+    tnregionid:
+      type: number
+      description:
+    clientid:
+      type: number
+      description:
+    cloudprovider:
+      type: string
+      description:
+    notes:
+      type: string
+      description:
+    status:
+      type: string
+      description: Status of the deployment
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+servicecatalog:
+  type: object
+  title: Service Catalog
+  description:
+  properties:
+    catalogid:
+      type: number
+      description: Primary Key, Auto generated
+    tenantid:
+      type: number
+      description: Reference Number from tenant model
+    solutionid:
+      type: number
+      description: Reference to the solution template
+    referenceid:
+      type: number
+      description: Reference to the respective module
+    wrkflowid:
+      type: number
+      description: Workflow id
+    groupname:
+      type: string
+      description: Catalog grouping
+    catalogname:
+      type: string
+      description: catalog name
+    catalogimage:
+      type: string
+      description: Visual representaion for the catalog
+    catalogola:
+      type: string
+      description: Visual representaion for catalog Operation Level Agreement
+    startdate:
+      type: string
+      description: Start date for catalog availability
+    publishdate:
+      type: string
+      description: Published date of the catalog
+    enddate:
+      type: string
+      description: Expiry date of the catalog
+    archdiagram:
+      type: string
+      description: Visual representaion of the architecture
+    ha:
+      type: string
+      description: High Availability in terms of percentage
+    description:
+      type: string
+      description: Description of the overall solution
+    estimatedcost:
+      type: number
+      description: Estimated cost of the solution
+    setupcost:
+      type: number
+      description: Setup cost
+    runningcost:
+      type: number
+      description: Running cost
+    othercost:
+      type: number
+      description: Other costs
+    autodeployyn:
+      type: string
+      description: Auto deployment flag. Y / N
+    approvalyn:
+      type: string
+      description: Approval required flag. Y / N
+    noofapprovers:
+      type: number
+      description: No of approvers, if approval is required
+    notes:
+      type: string
+      description: Any others notes for the catalog
+    publishstatus:
+      type: string
+      description: Catalog publish status
+    plannedpublishdate:
+      type: string
+      description: Planned publish date. Input from Ops / Approver
+    plannedenddate:
+      type: string
+      description: Planned expiry date. Input from Ops / Approver
+    status:
+      type: string
+      description: Status of the catalog
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+servicecatalogapprover:
+  type: object
+  title: Service Catalog Approvers
+  description:
+  properties:
+    catalogapprovid:
+      type: number
+      description: Primary Key, Auto generated
+    catalogid:
+      type: number
+      description: Reference to the service catalog
+    userid:
+      type: number
+      description: Approver user id
+    approverlevel:
+      type: number
+      description: Approver level no
+servicerequest:
+  type: object
+  title: Service Request
+  description:
+  properties:
+    srvrequestid:
+      type: number
+      description: Primary Key, Auto generated
+    tenantid:
+      type: number
+      description: Reference to the tenant model
+    catalogid:
+      type: number
+      description: Reference to the catalog model
+    wrkflowid:
+      type: number
+      description: Reference to the workflow model
+    userid:
+      type: number
+      description: User who raised the service request
+    assignedto:
+      type: number
+      description: User who owns the request
+    reporter:
+      type: number
+      description: Reporter of the request
+    department:
+      type: string
+      description: Department who owns the service request
+    environment:
+      type: string
+      description: Environment of the request
+    priority:
+      type: string
+      description: Priority of the request
+    requesttype:
+      type: string
+      description: Request type, Catalog or Generice
+    requestdate:
+      type: string
+      description: Request raised date
+    duedate:
+      type: string
+      description: Due date of the request
+    subject:
+      type: string
+      description: Subject of the request
+    description:
+      type: string
+      description: Detailed description of the request
+    clientid:
+      type: number
+      description: Linked customer to this request if applicable
+    referenceno:
+      type: string
+      description: External reference number if applicable
+    requesturl:
+      type: string
+      description: Unique URL of the request, requester see the progress
+    emailyn:
+      type: string
+      description: Enable / Disable email communication about the request
+    urgentyn:
+      type: string
+      description: Urgency flag, possible values are Y / N
+    deploystdate:
+      type: string
+      description: Deployment start date
+    decommdate:
+      type: string
+      description: Decommission date
+    budgetyn:
+      type: string
+      description: Budget availability
+    golivedate:
+      type: string
+      description: Go live
+    expecteddt:
+      type: string
+      description: Expected available date. Input from Ops team
+    progresspercent:
+      type: number
+      description: The percentage completed
+    assetid:
+      type: number
+      description: Asset id
+    costvisualid:
+      type: number
+      description: Cost visualid
+    proposedcostvisualid:
+      type: number
+      description: Proposed cost visualid
+    notes:
+      type: string
+      description: Note from Ops team
+    status:
+      type: string
+      description: Status of the deployment
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+    autodeployyn:
+      type: string
+      description: Automated Deployment
+    custmorprjyn:
+      type: string
+      description: Internal or Customer Project
+    srstatus:
+      type: string
+      description: Action Status
+servicerequestactions:
+  type: object
+  title: Service Request Actions
+  description:
+  properties:
+    sractionsid:
+      type: number
+      description: Primary Key, Auto generated
+    srvrequestid:
+      type: number
+      description: Reference to the service request
+    actiontype:
+      type: string
+      description: Type of action, like followup, approvals, progress
+    fromuserid:
+      type: number
+      description: User who is followup
+    touserid:
+      type: number
+      description: User who needs to address or work on the status
+    duedate:
+      type: string
+      description: Expected due date for approval or an open item
+    srstatus:
+      type: string
+      description: Status of the service request
+    apprvstatus:
+      type: string
+      description: Status of the SR approvals based on the service catalog
+    approverlevel:
+      type: number
+      description: Approver level
+    notes:
+      type: string
+      description: Note from the user
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+awsdeploymentvolumes:
+  type: object
+  title: AWS Deployment Volumes
+  description:
+  properties:
+    awsdeploymentid:
+      type: number
+      description: Reference Number from AWS Deployment model
+    tenantid:
+      type: number
+      description: Reference Number from tenant model
+    volumetype:
+      type: string
+      description: Key Name
+    sizeingb:
+      type: number
+      description:
+    delontermination:
+      type: string
+      description: Flag to delete or retain the volumn while instance is terminated
+    encryptedyn:
+      type: string
+      description:
+    notes:
+      type: string
+      description:
+    status:
+      type: string
+      description: Status of the AMI
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+awsdeployments:
+  type: object
+  title: AWS Deployments
+  description:
+  properties:
+    solutionid:
+      type: number
+      description: Reference Number from Solution model
+    deploymentid:
+      type: number
+      description: Reference Number from Deployment model
+    instancename:
+      type: string
+      description: Name of the AWS instance
+    awssolutionid:
+      type: string
+      description: Reference Number from AWS Solution
+    tfmoduleid:
+      type: string
+      description: Key Name
+    vpcid:
+      type: number
+      description: Reference Number from VPC model
+    amiid:
+      type: string
+      description: Reference Number from AMI model
+    instancetypeid:
+      type: number
+      description: Key Name
+    subnetid:
+      type: number
+      description: Reference Number from Subnet model
+    securitygroupid:
+      type: number
+      description: Reference Number from Securitygroup model
+    volumeid:
+      type: string
+      description: Reference Number from Volume model
+    tagsid:
+      type: number
+      description: Reference Number from Tag model
+    keyid:
+      type: number
+      description: Reference Number from Key model
+    scriptid:
+      type: number
+      description: Reference Number from Script model
+    publicipyn:
+      type: string
+      description: Key Name
+    shutdownbehaviour:
+      type: string
+      description: Key Name
+    terminationprotectionyn:
+      type: string
+      description: Key Name
+    monitoringyn:
+      type: string
+      description: Key Name
+    publicipv4:
+      type: string
+      description: Key Name
+    privateipv4:
+      type: string
+      description: Key Name
+    publicdns:
+      type: string
+      description: Key Name
+    notes:
+      type: string
+      description: Key Name
+    instanceoutput:
+      type: string
+      description: Key Name
+    status:
+      type: string
+      description: Status of the AMI
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+awscostvisual:
+  type: object
+  title: AWS Cost Visual
+  description:
+  properties:
+    Rate_Code:
+      type: string
+      description: Reference
+    Term_Type:
+      type: string
+      description: Reference
+    Price_Description:
+      type: string
+      description: Price Description
+    Effective_Date:
+      type: string
+      description: Reference
+    Unit:
+      type: string
+      description: Key Name
+    PricePer_Unit:
+      type: number
+      description: Reference
+    Currency:
+      type: string
+      description: Reference
+    LeaseContract_length:
+      type: string
+      description: Key Name
+    Purchase_Option:
+      type: string
+      description: Reference
+    Offering_Class:
+      type: string
+      description: Reference
+    Product_Family:
+      type: string
+      description: Reference
+    Location:
+      type: string
+      description: Reference
+    Instance_Type:
+      type: string
+      description: Reference
+    Current_Generation:
+      type: string
+      description: Reference
+    Instance_Family:
+      type: string
+      description: Key Name
+    vCPU:
+      type: number
+      description: Key Name
+    Physical_Processor:
+      type: string
+      description: Key Name
+    Clock_Speed:
+      type: string
+      description: Key Name
+    Memory:
+      type: string
+      description: Key Name
+    Storage:
+      type: string
+      description: Key Name
+    Network_Performance:
+      type: string
+      description: Key Name
+    Processor_Architecture:
+      type: string
+      description: Key Name
+    Storage_Media:
+      type: string
+      description: Key Name
+    Volume_Type:
+      type: string
+      description: Key Name
+    Max_throughputvolume:
+      type: string
+      description: Key Name
+    Tenancy:
+      type: string
+      description: Key Name
+    EBS_Optimized:
+      type: string
+      description: Key Name
+    OperatingSystem:
+      type: string
+      description: Key Name
+    License_Model:
+      type: string
+      description: Key Name
+    Transfer_Type:
+      type: string
+      description: Key Name
+    From_Location:
+      type: string
+      description: Key Name
+    usageType:
+      type: string
+      description: Key Name
+    operation:
+      type: string
+      description: Key Name
+    Dedicated_EBS_Throughput:
+      type: string
+      description: Key Name
+    ECU:
+      type: string
+      description: Key Name
+    Physical_Cores:
+      type: string
+      description: Key Name
+    Pre_Installed_SW:
+      type: string
+      description: Key Name
+    Processor_Features:
+      type: string
+      description: Key Name
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+ecl2firewalls:
+  type: object
+  title: ECL2 Firewall
+  description:
+  properties:
+    ecl2firewallid:
+      type: string
+      description: ecl2firewallid
+    tenantid:
+      type: integer
+      description: tenantid
+    firewallname:
+      type: string
+      description: firewallname
+    availabilityzone:
+      type: string
+      description: availabilityzone
+    defaultgateway:
+      type: string
+      description: defaultgateway
+    description:
+      type: string
+      description: description
+    firewallplanid:
+      type: string
+      description: firewallplanid
+    zoneid:
+      type: number
+      description: zoneid
+    customerid:
+      type: number
+      description: customerid
+    status:
+      type: string
+      description: status
+    createdby:
+      type: string
+      description: createdby
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+ecl2internetgateways:
+  type: object
+  title: ECL2 Internet Gateway
+  description:
+  properties:
+    ecl2gatewayid:
+      type: string
+      description: ecl2gatewayid
+    tenantid:
+      type: integer
+      description: tenantid
+    gatewayname:
+      type: string
+      description: gatewayname
+    description:
+      type: string
+      description: description
+    internetserviceid:
+      type: number
+      description: internetserviceid
+    qosoptionid:
+      type: number
+      description: qosoptionid
+    zoneid:
+      type: number
+      description: qosoptionid
+    customerid:
+      type: number
+      description: customerid
+    status:
+      type: string
+      description: status
+    createdby:
+      type: string
+      description: createdby
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+ecl2iginterface:
+  type: object
+  title: ECL2 Gateway Interface
+  description:
+  properties:
+    ecl2iginterfaceid:
+      type: string
+      description: ecl2iginterfaceid
+    tenantid:
+      type: integer
+      description: tenantid
+    interfacename:
+      type: string
+      description: interfacename
+    description:
+      type: string
+      description: description
+    internetgatewayid:
+      type: integer
+      description: internetgatewayid
+    netmask:
+      type: number
+      description: netmask
+    networkid:
+      type: integer
+      description: networkid
+    gwvipv4:
+      type: string
+      description: gwvipv4
+    primaryipv4:
+      type: string
+      description: primaryipv4
+    secondaryipv4:
+      type: string
+      description: secondaryipv4
+    servicetype:
+      type: string
+      description: servicetype
+    vrid:
+      type: integer
+      description: status
+    zoneid:
+      type: integer
+      description: qosoptionid
+    customerid:
+      type: number
+      description: customerid
+    notes:
+      type: string
+      description: notes
+    status:
+      type: string
+      description: status
+    createdby:
+      type: string
+      description: createdby
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+ecl2igglobalip:
+  type: object
+  title: ECL2 Gateway Global IP
+  description:
+  properties:
+    ecl2igglobalipid:
+      type: string
+      description: ecl2igglobalipid
+    tenantid:
+      type: integer
+      description: tenantid
+    globalipname:
+      type: string
+      description: globalipname
+    description:
+      type: string
+      description: description
+    internetgatewayid:
+      type: number
+      description: internetgatewayid
+    submasklength:
+      type: number
+      description: submasklength
+    cidr:
+      type: string
+      description: cidr
+    gwvipv4:
+      type: string
+      description: gwvipv4
+    primaryipv4:
+      type: string
+      description: primaryipv4
+    secondaryipv4:
+      type: string
+      description: secondaryipv4
+    servicetype:
+      type: string
+      description: servicetype
+    vrid:
+      type: string
+      description: status
+    zoneid:
+      type: number
+      description: qosoptionid
+    customerid:
+      type: number
+      description: customerid
+    notes:
+      type: string
+      description: notes
+    status:
+      type: string
+      description: status
+    createdby:
+      type: string
+      description: createdby
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+ecl2igstaticip:
+  type: object
+  title: ECL2 Static Route
+  description:
+  properties:
+    ecl2igstaticipid:
+      type: string
+      description: ecl2igstaticipid
+    tenantid:
+      type: integer
+      description: tenantid
+    staticipname:
+      type: string
+      description: staticipname
+    description:
+      type: string
+      description: description
+    internetgatewayid:
+      type: number
+      description: internetgatewayid
+    servicetype:
+      type: string
+      description: servicetype
+    destination:
+      type: string
+      description: destination
+    nexthop:
+      type: string
+      description: nexthop
+    zoneid:
+      type: number
+      description: zoneid
+    customerid:
+      type: number
+      description: customerid
+    notes:
+      type: string
+      description: notes
+    status:
+      type: string
+      description: status
+    createdby:
+      type: string
+      description: createdby
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+ecl2loadbalancers:
+  type: object
+  title: ECL2 Load Balancers
+  description:
+  properties:
+    ecl2loadbalancerid:
+      type: string
+      description: ecl2loadbalancerid
+    tenantid:
+      type: integer
+      description: tenantid
+    lbname:
+      type: string
+      description: lbname
+    availabilityzone:
+      type: string
+      description: availabilityzone
+    description:
+      type: string
+      description: description
+    loadbalancerplanid:
+      type: integer
+      description: loadbalancerplanid
+    loadbalancerplan:
+      type: string
+      description: loadbalancerplan
+    attachedservers:
+      type: array
+      items:
+        oneOf:
+          - type: string
+          - type: integer
+      description: attachedservers
+    solutionid:
+      type: integer
+      description: solutionid
+    ecl2solutionid:
+      type: array
+      items:
+        oneOf:
+          - type: string
+          - type: integer
+      description: ecl2solutionid
+    zoneid:
+      type: integer
+      description: zoneid
+    customerid:
+      type: number
+      description: customerid
+    defaultgateway:
+      type: string
+      description: defaultgateway
+    availablesubnets:
+      type: integer
+      description: availablesubnets
+    adminusername:
+      type: string
+      description: adminusername
+    adminpassword:
+      type: string
+      description: adminpassword
+    username:
+      type: string
+      description: username
+    userpassword:
+      type: string
+      description: userpassword
+    status:
+      type: string
+      description: status
+    createdby:
+      type: string
+      description: createdby
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+ecl2networks:
+  type: object
+  title: ECL2 Networks
+  description:
+  properties:
+    ecl2networkid:
+      type: string
+      description: ecl2networkid
+    tenantid:
+      type: integer
+      description: tenantid
+    networkname:
+      type: string
+      description: networkname
+    adminstateup:
+      type: string
+      description: adminstateup
+    description:
+      type: string
+      description: description
+    plane:
+      type: string
+      description: plane
+    zoneid:
+      type: integer
+      description: zoneid
+    customerid:
+      type: number
+      description: customerid
+    shared:
+      type: array
+      items:
+        oneOf:
+          - type: string
+          - type: object
+      description: shared
+    status:
+      type: string
+      description: status
+    createdby:
+      type: string
+      description: createdby
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+ecl2ports:
+  type: object
+  title: ECL2 Ports
+  description:
+  properties:
+    ecl2portid:
+      type: string
+      description: ecl2portid
+    tenantid:
+      type: integer
+      description: tenantid
+    portname:
+      type: string
+      description: portname
+    adminstateup:
+      type: string
+      description: adminstateup
+    allowedaddresspairs:
+      type: string
+      description: allowedaddresspairs
+    ipaddress:
+      type: string
+      description: ipaddress
+    macaddress:
+      type: string
+      description: macaddress
+    deviceid:
+      type: string
+      description: deviceid
+    deviceowner:
+      type: string
+      description: deviceowner
+    fixedips:
+      type: string
+      description: fixedips
+    networkid:
+      type: integer
+      description: networkid
+    ecl2networkid:
+      type: string
+      description: networkid
+    segmentationid:
+      type: string
+      description: segmentationid
+    segmentationtype:
+      type: string
+      description: segmentationtype
+    zoneid:
+      type: integer
+      description: zoneid
+    customerid:
+      type: number
+      description: customerid
+    status:
+      type: string
+      description: status
+    createdby:
+      type: string
+      description: createdby
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+ecl2solutions:
+  type: object
+  title: ECL2 Solutions
+  description:
+  properties:
+    solutionid:
+      type: integer
+      description: ecl2solutionid
+    tenantid:
+      type: integer
+      description: tenantid
+    instancename:
+      type: string
+      description: instancename
+    ecl2imageid:
+      type: string
+      description: Image
+    ecl2networkid:
+      type: array
+      items:
+        type: string
+      description: Network
+    ecl2volumeid:
+      type: array
+      items:
+        type: string
+      description: Volume
+    ecl2internetgatewayid:
+      type: string
+      description: Gateway
+    ecl2vsrxid:
+      type: string
+      description: VSRX
+    ecl2loadbalancerid:
+      type: string
+      description: LB
+    diskconfig:
+      type: string
+      description: diskconfig
+    flavorid:
+      type: integer
+      description: flavorid
+    imageid:
+      type: integer
+      description: imageid
+    mincount:
+      type: string
+      description: mincount
+    maxcount:
+      type: string
+      description: maxcount
+    availabilityzone:
+      type: string
+      description: availabilityzone
+    configdrive:
+      type: string
+      description: configdrive
+    keyid:
+      type: integer
+      description: keyid
+    scriptid:
+      type: integer
+      description: scriptid
+    orchid:
+      type: number
+      description:
+    userdata:
+      type: string
+      description: userdata
+    blockdevicemapping:
+      type: string
+      description: blockdevicemapping
+    blockdevicemappingv2:
+      type: string
+      description: blockdevicemappingv2
+    metadata:
+      type: string
+      description: metadata
+    networkid:
+      type: array
+      items:
+        oneOf:
+          - type: string
+          - type: integer
+      description: networks
+    volumeid:
+      type: array
+      items:
+        oneOf:
+          - type: string
+          - type: integer
+      description: networks
+    customerid:
+      type: number
+      description: customerid
+    notes:
+      type: string
+      description: notes
+    status:
+      type: string
+      description: status
+    createdby:
+      type: string
+      description: createdby
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+    ecl2networks:
+      type: string
+      description: ecl2networks
+    internetgatewayid:
+      type: integer
+      description: internetgatewayid
+    vsrxid:
+      type: integer
+      description: vsrxid
+    sharedtenants:
+      type: array
+      items:
+        oneOf:
+          - type: string
+          - type: object
+      description: sharedtenants
+    loadbalancerid:
+      type: integer
+ecl2subnets:
+  type: object
+  title: ECL2 Subnets
+  description:
+  properties:
+    ecl2subnetid:
+      type: string
+      description: ecl2subnetid
+    tenantid:
+      type: integer
+      description: tenantid
+    subnetname:
+      type: string
+      description: subnetname
+    allocationpools:
+      type: string
+      description: allocationpools
+    subnetcidr:
+      type: string
+      description: subnetcidr
+    description:
+      type: string
+      description: description
+    dnsnameservers:
+      type: string
+      description: dnsnameservers
+    enabledhcp:
+      type: string
+      description: enabledhcp
+    gatewayip:
+      type: string
+      description: gatewayip
+    hostroutes:
+      type: string
+      description: hostroutes
+    ipversion:
+      type: string
+      description: ipversion
+    networkid:
+      type: integer
+      description: networkid
+    ecl2networkid:
+      type: string
+      description: networkid
+    ntpservers:
+      type: string
+      description: ntpservers
+    zoneid:
+      type: integer
+      description: zoneid
+    customerid:
+      type: number
+      description: customerid
+    status:
+      type: string
+      description: status
+    createdby:
+      type: string
+      description: createdby
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+    unallocatedips:
+      type: array
+      items:
+        oneOf:
+          - type: string
+          - type: integer
+      description: unallocatedips
+    allocatedips:
+      type: array
+      items:
+        oneOf:
+          - type: string
+          - type: integer
+      description: allocatedips
+ecl2tags:
+  type: object
+  title: ECL2 Tags
+  description:
+  properties:
+    tenantid:
+      type: integer
+      description: tenantid
+    tagkey:
+      type: string
+      description: tagkey
+    tagvalue:
+      type: string
+      description: tagvalue
+    resourcetype:
+      type: string
+      description: resourcetype
+    resourceid:
+      type: string
+      description: resourceid
+    status:
+      type: string
+      description: status
+    createdby:
+      type: string
+      description: createdby
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+ecl2images:
+  type: object
+  title: ECL2 Images
+  description:
+  properties:
+    imagename:
+      type: string
+      description: imagename
+    tenantid:
+      type: integer
+      description: tenantid
+    region:
+      type: string
+      description: region
+    ecl2imageid:
+      type: string
+      description: ecl2imageid
+    platform:
+      type: string
+      description: platform
+    notes:
+      type: string
+      description: notes
+    status:
+      type: string
+      description: status
+    createdby:
+      type: string
+      description: createdby
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+ecl2instancetype:
+  type: object
+  title: ECL2 Instance Type
+  description:
+  properties:
+    instancetypename:
+      type: string
+      description: instancetypename
+    version:
+      type: number
+      description:
+    vcpu:
+      type: string
+      description: vcpu
+    memory:
+      type: string
+      description: memory
+    storage:
+      type: string
+      description: storage
+    notes:
+      type: string
+      description: notes
+    status:
+      type: string
+      description: status
+    createdby:
+      type: string
+      description: createdby
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+ecl2zones:
+  type: object
+  title: ECL2 Zones
+  description:
+  properties:
+    tenantid:
+      type: number
+      description: Reference Number from tenant model
+    zonename:
+      type: string
+      description: Key Name
+    ecl2zoneid:
+      type: string
+      description: Key Name
+    region:
+      type: string
+      description: region
+    notes:
+      type: string
+      description: Key Name
+    status:
+      type: string
+      description: Status
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+ecl2volumes:
+  type: object
+  title: ECL2 Zones
+  description:
+  properties:
+    ecl2volumeid:
+      type: string
+      description: ecl2volumeid
+    tenantid:
+      type: number
+      description: tenantid
+    volumename:
+      type: string
+      description: volumename
+    description:
+      type: string
+      description: description
+    iopspergb:
+      type: string
+      description: iopspergb
+    size:
+      type: number
+      description: volumename
+    initiatoriqns:
+      type: string
+      description: initiatoriqns
+    zoneid:
+      type: number
+      description: zoneid
+    customerid:
+      type: number
+      description: customerid
+    virtualstorageid:
+      type: string
+      description: virtualstorageid
+    ecl2solutionid:
+      type: number
+      description: zoneid
+    ecl2deploymentid:
+      type: number
+      description: zoneid
+    notes:
+      type: string
+      description: Key Name
+    status:
+      type: string
+      description: Status
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+ecl2keys:
+  type: object
+  title: ECL2 Keys
+  description:
+  properties:
+    tenantid:
+      type: number
+      description: tenantid
+    keyname:
+      type: string
+      description: keyname
+    publickey:
+      type: string
+      description: publickey
+    fingerprint:
+      type: string
+      description: fingerprint
+    userid:
+      type: string
+      description: userid
+    zoneid:
+      type: integer
+      description: zoneid
+    customerid:
+      type: number
+      description: customerid
+    notes:
+      type: string
+      description: Key Name
+    status:
+      type: string
+      description: Status
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+firewallplans:
+  type: object
+  title: ECL2 Firewall plans
+  description:
+  properties:
+    ecl2firewallplanid:
+      type: string
+      description: ecl2firewallplanid
+    tenantid:
+      type: number
+      description: tenantid
+    region:
+      type: string
+      description: region
+    firewallplanname:
+      type: string
+      description: firewallplanname
+    description:
+      type: string
+      description: description
+    vendor:
+      type: string
+      description: vendor
+    version:
+      type: string
+      description: version
+    enabled:
+      type: string
+      description: enabled
+    status:
+      type: string
+      description: Status
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+internetservices:
+  type: object
+  title: ECL2 internetservices
+  description:
+  properties:
+    ecl2internetservicesid:
+      type: string
+      description: ecl2internetservicesid
+    tenantid:
+      type: integer
+      description: tenantid
+    region:
+      type: string
+      description: region
+    servicename:
+      type: string
+      description: servicename
+    description:
+      type: string
+      description: description
+    minimalsubmasklength:
+      type: integer
+      description: minimalsubmasklength
+    zoneid:
+      type: integer
+      description: zoneid
+    customerid:
+      type: number
+      description: customerid
+    status:
+      type: string
+      description: Status
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+
+qosoptions:
+  type: object
+  title: ECL2 qosoptions
+  description:
+  properties:
+    ecl2qosoptionid:
+      type: string
+      description: ecl2qosoptionid
+    tenantid:
+      type: number
+      description: tenantid
+    region:
+      type: string
+      description: region
+    qosoptionname:
+      type: string
+      description: qosoptionname
+    description:
+      type: string
+      description: description
+    awsserviceid:
+      type: string
+      description: awsserviceid
+    azureserviceid:
+      type: string
+      description: azureserviceid
+    bandwidth:
+      type: integer
+      description: bandwidth
+    gcpserviceid:
+      type: string
+      description: gcpserviceid
+    interdcserviceid:
+      type: string
+      description: interdcserviceid
+    internetserviceid:
+      type: string
+      description: internetserviceid
+    qostype:
+      type: string
+      description: qostype
+    servicetype:
+      type: string
+      description: servicetype
+    vpnserviceid:
+      type: string
+      description: vpnserviceid
+    status:
+      type: string
+      description: Status
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+ecl2commonfunctiongateway:
+  type: object
+  title: ECL2 Common function gateway
+  properties:
+    ecl2cfgatewayid:
+      type: string
+      description: ecl2cfgatewayid
+    tenantid:
+      type: number
+      description: tenantid
+    cfpoolid:
+      type: number
+      description: cfpoolid
+    cfgatewayname:
+      type: string
+      description: cfgatewayname
+    description:
+      type: string
+      description: description
+    zoneid:
+      type: number
+      description: zoneid
+    customerid:
+      type: number
+      description: customerid
+    notes:
+      type: string
+      description: notes
+    status:
+      type: string
+      description: status
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+
+ecl2commonfunctionpool:
+  type: object
+  title: ECL2 Common function pool
+  properties:
+    ecl2cfpoolid:
+      type: string
+      description: ecl2cfpoolid
+    tenantid:
+      type: number
+      description: tenantid
+    cfpoolname:
+      type: string
+      description: cfpoolname
+    description:
+      type: string
+      description: description
+    region:
+      type: string
+      description: region
+    notes:
+      type: string
+      description: notes
+    status:
+      type: string
+      description: status
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+
+ecl2vsrx:
+  type: object
+  title: ECL2 vSRX
+  properties:
+    ecl2vsrxid:
+      type: string
+      description: ecl2vsrxid
+    tenantid:
+      type: number
+      description: tenantid
+    vsrxname:
+      type: string
+      description: vsrxname
+    description:
+      type: string
+      description: description
+    defaultgateway:
+      type: string
+      description: defaultgateway
+    vsrxplanid:
+      type: number
+      description: vsrxplanid
+    username:
+      type: string
+      description: username
+    password:
+      type: string
+      description: password
+    zoneid:
+      type: number
+      description: zoneid
+    customerid:
+      type: number
+      description: customerid
+    securityzone:
+      type: string
+      description: securityzone
+    securitypolicy:
+      type: string
+      description: securitypolicy
+    sourcenat:
+      type: string
+      description: sourcenat
+    destinationnat:
+      type: string
+      description: destinationnat
+    proxyarpnat:
+      type: string
+      description: proxyarpnat
+    addressbooks:
+      type: string
+      description: addressbooks
+    notes:
+      type: string
+      description: notes
+    status:
+      type: string
+      description: status
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+
+ecl2vsrxplan:
+  type: object
+  title: ECL2 vSRX Plan
+  properties:
+    ecl2vsrxplanid:
+      type: string
+      description: ecl2vsrxplanid
+    tenantid:
+      type: number
+      description: tenantid
+    vsrxplanname:
+      type: string
+      description: vsrxplanname
+    description:
+      type: string
+      description: description
+    appliancetype:
+      type: string
+      description: appliancetype
+    region:
+      type: string
+      description: region
+    notes:
+      type: string
+      description: notes
+    status:
+      type: string
+      description: status
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+
+ecl2lbplan:
+  type: object
+  title: ECL2 Loadbalancer Plan
+  properties:
+    ecl2lbplanid:
+      type: string
+      description: ecl2lbplanid
+    tenantid:
+      type: number
+      description: tenantid
+    region:
+      type: string
+      description: region
+    lbplanname:
+      type: string
+      description: lbplanname
+    description:
+      type: string
+      description: description
+    vendor:
+      type: string
+      description: vendor
+    version:
+      type: string
+      description: version
+    maximumsyslogservers:
+      type: number
+      description: maximumsyslogservers
+    enabled:
+      type: string
+      description: enabled
+    notes:
+      type: string
+      description: notes
+    status:
+      type: string
+      description: status
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+
+ecl2firewallinterface:
+  type: object
+  title: ECL2 Firewall Interface
+  properties:
+    ecl2fwinterfaceid:
+      type: string
+      description: ecl2fwinterfaceid
+    tenantid:
+      type: number
+      description: tenantid
+    firewallid:
+      type: number
+      description: firewallid
+    ipaddress:
+      type: string
+      description: ipaddress
+    fwinterfacename:
+      type: string
+      description: fwinterfacename
+    description:
+      type: string
+      description: description
+    region:
+      type: string
+      description: region
+    networkid:
+      type: number
+      description: networkid
+    slotnumber:
+      type: number
+      description: slotnumber
+    virtualipaddress:
+      type: string
+      description: virtualipaddress
+    protocol:
+      type: string
+      description: protocol
+    vrid:
+      type: number
+      description: vrid
+    notes:
+      type: string
+      description: notes
+    status:
+      type: string
+      description: status
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+
+ecl2lbinterface:
+  type: object
+  title: ECL2 Loadbalancer Interface
+  properties:
+    ecl2lbinterfaceid:
+      type: string
+      description: ecl2lbinterfaceid
+    tenantid:
+      type: number
+      description: tenantid
+    region:
+      type: string
+      description: region
+    loadbalancerid:
+      type: number
+      description: loadbalancerid
+    ipaddress:
+      type: string
+      description: ipaddress
+    lbinterfacename:
+      type: string
+      description: lbinterfacename
+    description:
+      type: string
+      description: description
+    networkid:
+      type: number
+      description: networkid
+    slotnumber:
+      type: number
+      description: slotnumber
+    virtualipaddress:
+      type: string
+      description: virtualipaddress
+    protocol:
+      type: string
+      description: protocol
+    vrid:
+      type: number
+      description: vrid
+    vmac:
+      type: string
+      description: vmac
+    ip:
+      type: string
+      description: ip
+    type:
+      type: string
+      description: type
+    notes:
+      type: string
+      description: notes
+    status:
+      type: string
+      description: status
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+
+ecl2lbsyslogserver:
+  type: object
+  title: ECL2 Loadbalancer Syslogserver
+  properties:
+    ecl2lbsyslogserverid:
+      type: string
+      description: ecl2lbsyslogserverid
+    tenantid:
+      type: number
+      description: tenantid
+    region:
+      type: string
+      description: region
+    loadbalancerid:
+      type: number
+      description: loadbalancerid
+    lbsyslogservername:
+      type: string
+      description: lbsyslogservername
+    description:
+      type: string
+      description: description
+    ipaddress:
+      type: string
+      description: ipaddress
+    acllogging:
+      type: string
+      description: acllogging
+    appflowlogging:
+      type: string
+      description: appflowlogging
+    dateformat:
+      type: string
+      description: dateformat
+    logfacility:
+      type: string
+      description: logfacility
+    loglevel:
+      type: string
+      description: loglevel
+    portnumber:
+      type: number
+      description: portnumber
+    priority:
+      type: number
+      description: priority
+    tcplogging:
+      type: string
+      description: tcplogging
+    timezone:
+      type: string
+      description: timezone
+    transporttype:
+      type: string
+      description: transporttype
+    userconfigurablelogmessages:
+      type: string
+      description: userconfigurablelogmessages
+    notes:
+      type: string
+      description: notes
+    status:
+      type: string
+      description: status
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+
+ecl2vsrxinterface:
+  type: object
+  title: ECL2 vSRX Interface
+  properties:
+    ecl2vsrxinterfaceid:
+      type: string
+      description: ecl2vsrxinterfaceid
+    vsrxid:
+      type: number
+      description: vsrxid
+    vsrxinterfacename:
+      type: string
+      description: vsrxinterfacename
+    description:
+      type: string
+      description: description
+    networkid:
+      type: number
+      description: networkid
+    ipaddress:
+      type: string
+      description: ipaddress
+    defaultgateway:
+      type: string
+      description: defaultgateway
+    vsrxinterfaceslot:
+      type: string
+      description: vsrxinterfaceslot
+    vsrxinterfaceunitslot:
+      type: string
+      description: vsrxinterfaceunitslot
+    ecl2subnetid:
+      type: string
+      description: ecl2subnetid
+    allowedaddresspairs:
+      type: string
+      description: allowedaddresspairs
+    slotname:
+      type: string
+      description: slotname
+    securityzone:
+      type: string
+      description: securityzone
+    securityunit:
+      type: string
+      description: securityunit
+    notes:
+      type: string
+      description: notes
+    status:
+      type: string
+      description: status
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+
+ecl2lbsettings:
+  type: object
+  title: ECL2 LB Settings
+  properties:
+    tenantid:
+      type: number
+      description: tenantid
+    loadbalancerid:
+      type: number
+      description: loadbalancerid
+    solutionid:
+      type: number
+      description: solutionid
+    servicegroup:
+      type: string
+      description: servicegroup
+    servicegroupmemberbindings:
+      type: string
+      description: servicegroupmemberbindings
+    lbserver:
+      type: string
+      description: lbserver
+    lbvserver:
+      type: string
+      description: lbvserver
+    servicegroupmonitorbindings:
+      type: string
+      description: servicegroupmonitorbindings
+    lbvserversgbindings:
+      type: string
+      description: lbvserversgbindings
+    lbvservermethodbindings:
+      type: string
+      description: lbvservermethodbindings
+    notes:
+      type: string
+      description: notes
+    status:
+      type: string
+      description: status
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+
+ecl2deployments:
+  type: object
+  title: ECL2 Deployments
+  properties:
+    deploymentid:
+      type: number
+      description: deploymentid
+    solutionid:
+      type: number
+      description: solutionid
+    ecl2solutionid:
+      type: number
+      description: ecl2solutionid
+    ecl2serverid:
+      type: string
+      description: ecl2serverid
+    ecl2serverpwd:
+      type: string
+      description: ecl2serverpwd
+    instancename:
+      type: string
+      description: instancename
+    networkid:
+      type: array
+      items:
+        oneOf:
+          - type: string
+          - type: integer
+      description: networkid
+    imageid:
+      type: number
+      description: imageid
+    instancetypeid:
+      type: number
+      description: instancetypeid
+    securitygroupid:
+      type: number
+      description: securitygroupid
+    volumeid:
+      type: array
+      items:
+        oneOf:
+          - type: string
+          - type: integer
+      description: networks
+    tagsid:
+      type: number
+      description: tagsid
+    keyid:
+      type: number
+      description: keyid
+    scriptid:
+      type: number
+      description: scriptid
+    shutdownbehaviour:
+      type: string
+      description: shutdownbehaviour
+    publicipv4:
+      type: string
+      description: publicipv4
+    privateipv4:
+      type: string
+      description: privateipv4
+    publicdns:
+      type: string
+      description: publicdns
+    instanceoutput:
+      type: string
+      description: instanceoutput
+    serveraddresses:
+      type: array
+      items:
+        oneOf:
+          - type: string
+          - type: integer
+      description: serveraddresses
+    virtualipaddress:
+      type: string
+      description: virtualipaddress
+    fwconflictstatus:
+      type: string
+      description: fwconflictstatus
+    lbconflictstatus:
+      type: string
+      description: lbconflictstatus
+    notes:
+      type: string
+      description: notes
+    status:
+      type: string
+      description: status
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+
+ecl2tenantconnrequest:
+  type: object
+  title: ECL2 Tenant Connection Request
+  properties:
+    ecltenantconnrequestid:
+      type: string
+      description: ecltenantconnrequestid
+    tenantid:
+      type: number
+      description: tenantid
+    customerid:
+      type: number
+      description: customerid
+    networkid:
+      type: number
+      description: networkid
+    region:
+      type: string
+      description: region
+    name:
+      type: string
+      description: name
+    description:
+      type: string
+      description: description
+    approvalrequestid:
+      type: string
+      description: approvalrequestid
+    sourcecustomerid:
+      type: number
+      description: sourcecustomerid
+    keystoneuserid:
+      type: string
+      description: keystoneuserid
+    eclstatus:
+      type: string
+      description: eclstatus
+    notes:
+      type: string
+      description: notes
+    status:
+      type: string
+      description: status
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+
+ecl2tenantconnection:
+  type: object
+  title: ECL2 Tenant Connection
+  properties:
+    eclttenantconnectionid:
+      type: string
+      description: eclttenantconnectionid
+    tenantid:
+      type: number
+      description: tenantid
+    customerid:
+      type: number
+      description: customerid
+    tenantconnrequestid:
+      type: number
+      description: tenantconnrequestid
+    name:
+      type: string
+      description: name
+    description:
+      type: string
+      description: description
+    devicetype:
+      type: string
+      description: devicetype
+    deviceid:
+      type: number
+      description: deviceid
+    deviceinterfaceid:
+      type: string
+      description: deviceinterfaceid
+    notes:
+      type: string
+      description: notes
+    status:
+      type: string
+      description: status
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+aliimage:
+  type: object
+  title: ALI Images
+  properties:
+    aliimageid:
+      type: string
+      description: aliimageid
+    tenantid:
+      type: number
+      description: tenantid
+    imagename:
+      type: string
+      description: imagename
+    description:
+      type: string
+      description: description
+    imageowner:
+      type: string
+      description: imageowner
+    imagesize:
+      type: number
+      description: imagesize
+    zoneid:
+      type: number
+      description: zoneid
+    snapshotid:
+      type: string
+      description: snapshotid
+    ostype:
+      type: string
+      description: ostype
+    platform:
+      type: string
+      description: ostype
+    notes:
+      type: string
+      description: notes
+    status:
+      type: string
+      description: status
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+aliinstancetype:
+  type: object
+  title: ALI Instance Type
+  properties:
+    aliinstancetypeid:
+      type: string
+      description: aliinstancetypeid
+    instancetypename:
+      type: string
+      description: instancetypename
+    description:
+      type: string
+      description: description
+    cpucorecount:
+      type: number
+      description: cpucorecount
+    memory:
+      type: number
+      description: memory
+    supportedregion:
+      type: string
+      description: supportedregion
+    instancetypefamily:
+      type: string
+      description: instancetypefamily
+    notes:
+      type: string
+      description: notes
+    status:
+      type: string
+      description: status
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+alizones:
+  type: object
+  title: ALI Zones
+  properties:
+    zonename:
+      type: string
+      description: zonename
+    region:
+      type: string
+      description: region
+    notes:
+      type: string
+      description: notes
+    status:
+      type: string
+      description: status
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+alisecuritygroup:
+  type: object
+  title: ALI Security Group
+  properties:
+    alisecuritygroupid:
+      type: string
+      description: alisecuritygroupid
+    tenantid:
+      type: number
+      description: tenantid
+    securitygroupname:
+      type: string
+      description: securitygroupname
+    description:
+      type: string
+      description: description
+    vpcid:
+      type: number
+      description: vpcid
+    region:
+      type: string
+      description: region
+    notes:
+      type: string
+      description: notes
+    status:
+      type: string
+      description: status
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+alisgrules:
+  type: object
+  title: ALI Security Group Rules
+  properties:
+    alisgruleid:
+      type: string
+      description: alisecuritygroupid
+    tenantid:
+      type: number
+      description: tenantid
+    securitygroupid:
+      type: number
+      description: securitygroupid
+    sgrulename:
+      type: string
+      description: sgrulename
+    description:
+      type: string
+      description: description
+    nictype:
+      type: string
+      description: nictype
+    direction:
+      type: string
+      description: direction
+    ipprotocol:
+      type: string
+      description: ipprotocol
+    policy:
+      type: string
+      description: ipprotocol
+    portrange:
+      type: string
+      description: portrange
+    priority:
+      type: string
+      description: priority
+    notes:
+      type: string
+      description: notes
+    status:
+      type: string
+      description: status
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+alivpc:
+  type: object
+  title: ALI VPC
+  properties:
+    alivpcid:
+      type: string
+      description: alivpcid
+    tenantid:
+      type: number
+      description: tenantid
+    vpcname:
+      type: string
+      description: vpcname
+    description:
+      type: string
+      description: description
+    ipv4cidr:
+      type: string
+      description: ipv4cidr
+    region:
+      type: string
+      description: region
+    vrouterid:
+      type: string
+      description: vrouterid
+    isdefault:
+      type: string
+      description: isdefault
+    resourcegroupid:
+      type: string
+      description: resourcegroupid
+    notes:
+      type: string
+      description: notes
+    status:
+      type: string
+      description: status
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+alivswitch:
+  type: object
+  title: ALI VSwitch
+  properties:
+    alivswitchid:
+      type: string
+      description: alivswitchid
+    tenantid:
+      type: number
+      description: tenantid
+    vpcid:
+      type: number
+      description: vpcid
+    vswitchname:
+      type: string
+      description: vswitchname
+    description:
+      type: string
+      description: description
+    ipv4cidr:
+      type: string
+      description: ipv4cidr
+    isdefault:
+      type: string
+      description: isdefault
+    zoneid:
+      type: number
+      description: zoneid
+    notes:
+      type: string
+      description: notes
+    status:
+      type: string
+      description: status
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+alitags:
+  type: object
+  title: ALI Tag
+  properties:
+    tenantid:
+      type: number
+      description: tenantid
+    tagkey:
+      type: string
+      description: tagkey
+    tagvalue:
+      type: string
+      description: tagvalue
+    resourcetype:
+      type: string
+      description: resourcetype
+    resourceid:
+      type: number
+      description: resourceid
+    status:
+      type: string
+      description: status
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+alikeypairs:
+  type: object
+  title: ALI Key pairs
+  properties:
+    tenantid:
+      type: number
+      description: Reference Number from tenant model
+    keyname:
+      type: string
+      description: Key Name
+    status:
+      type: string
+      description: Status
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+alivolume:
+  type: object
+  title: ALI Volumes
+  properties:
+    alivolumeid:
+      type: string
+      description: alivolumeid
+    tenantid:
+      type: number
+      description: Reference Number from tenant model
+    alisolutionid:
+      type: string
+      description: alisolutionid
+    name:
+      type: string
+      description: name
+    description:
+      type: string
+      description: name
+    zoneid:
+      type: number
+      description: zoneid
+    sizeingb:
+      type: number
+      description: sizeingb
+    diskcategory:
+      type: string
+      description: diskcategory
+    encryptedyn:
+      type: string
+      description: encryptedyn
+    notes:
+      type: string
+      description: notes
+    status:
+      type: string
+      description: Status
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+alilb:
+  type: object
+  title: ALI Load Balancer
+  properties:
+    alilbid:
+      type: string
+      description: alilbid
+    tenantid:
+      type: number
+      description: Reference Number from tenant model
+    solutionid:
+      type: number
+      description: solutionid
+    vswitchid:
+      type: number
+      description: vswitchid
+    lbname:
+      type: string
+      description: lbname
+    description:
+      type: string
+      description: description
+    attachedservers:
+      type: array
+      items:
+        oneOf:
+          - type: integer
+      description: attachedservers
+    internet:
+      type: string
+      description: internet
+    internetchargetype:
+      type: string
+      description: internetchargetype
+    bandwidth:
+      type: string
+      description: bandwidth
+    specification:
+      type: string
+      description: specification
+    ipaddress:
+      type: string
+      description: ipaddress
+    notes:
+      type: string
+      description: notes
+    status:
+      type: string
+      description: Status
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+alilblistener:
+  type: object
+  title: ALI Load Balancer Listener
+  properties:
+    alilblistenerid:
+      type: string
+      description: alilblistenerid
+    tenantid:
+      type: number
+      description: Reference Number from tenant model
+    lbid:
+      type: number
+      description: lbid
+    frontendport:
+      type: number
+      description: frontendport
+    backendport:
+      type: number
+      description: backendport
+    protocol:
+      type: string
+      description: backendport
+    bandwidth:
+      type: string
+      description: bandwidth
+    description:
+      type: string
+      description: description
+    scheduler:
+      type: string
+      description: scheduler
+    persistencetimeout:
+      type: number
+      description: persistencetimeout
+    healthcheck:
+      type: string
+      description: healthcheck
+    healthchecktype:
+      type: string
+      description: healthchecktype
+    healthythreshold:
+      type: number
+      description: healthythreshold
+    unhealthythreshold:
+      type: number
+      description: unhealthythreshold
+    healthchecktimeout:
+      type: number
+      description: healthchecktimeout
+    healthcheckinterval:
+      type: number
+      description: healthcheckinterval
+    sslcertificate:
+      type: string
+      description: sslcertificate
+    aclname:
+      type: string
+      description: aclname
+    aclipversion:
+      type: string
+      description: aclipversion
+    aclstatus:
+      type: string
+      description: aclstatus
+    acltype:
+      type: string
+      description: acltype
+    aclid:
+      type: string
+      description: aclid
+    establishedtimeout:
+      type: number
+      description: establishedtimeout
+    notes:
+      type: string
+      description: notes
+    status:
+      type: string
+      description: Status
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+alisolution:
+  type: object
+  title: ALI Solution
+  properties:
+    serverid:
+      type: string
+      description: serverid
+    tenantid:
+      type: number
+      description: Reference Number from tenant model
+    instancename:
+      type: string
+      description: instancename
+    description:
+      type: string
+      description: description
+    solutionid:
+      type: number
+      description: solutionid
+    region:
+      type: string
+      description: region
+    zoneid:
+      type: number
+      description: zoneid
+    vswitchid:
+      type: number
+      description: vswitchid
+    imageid:
+      type: number
+      description: imageid
+    instancetypeid:
+      type: number
+      description: instancetypeid
+    vpcid:
+      type: number
+      description: instancetypeid
+    securitygroupid:
+      type: number
+      description: securitygroupid
+    volumeid:
+      type: number
+      description: volumeid
+    keyid:
+      type: number
+      description: keyid
+    scriptid:
+      type: number
+      description: scriptid
+    orchid:
+      type: number
+      description:
+    lbid:
+      type: number
+      description: lbid
+    instancechargetype:
+      type: string
+      description: instancechargetype
+    internetchargetype:
+      type: string
+      description: internetchargetype
+    internetmaxbandwidthin:
+      type: number
+      description: internetmaxbandwidthin
+    internetmaxbandwidthout:
+      type: number
+      description: internetmaxbandwidthout
+    noofservers:
+      type: number
+      description: noofservers
+    hostname:
+      type: string
+      description: hostname
+    adminusername:
+      type: string
+      description: adminusername
+    adminpassword:
+      type: string
+      description: adminpassword
+    deletionprotectionyn:
+      type: string
+      description: deletionprotectionyn
+    notes:
+      type: string
+      description: notes
+    status:
+      type: string
+      description: Status
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+alideployment:
+  type: object
+  title: ALI Deployement
+  properties:
+    deploymentid:
+      type: number
+      description: deploymentid
+    solutionid:
+      type: number
+      description: solutionid
+    alisolutionid:
+      type: number
+      description: alisolutionid
+    instancename:
+      type: string
+      description: instancename
+    vpcid:
+      type: number
+      description: vpcid
+    imageid:
+      type: number
+      description: imageid
+    instancetypeid:
+      type: number
+      description: instancetypeid
+    vswitchid:
+      type: number
+      description: vswitchid
+    securitygroupid:
+      type: number
+      description: securitygroupid
+    volumeid:
+      type: number
+      description: volumeid
+    tagsid:
+      type: number
+      description: tagsid
+    keyid:
+      type: number
+      description: keyid
+    scriptid:
+      type: number
+      description: scriptid
+    lbid:
+      type: number
+      description: lbid
+    publicipyn:
+      type: string
+      description: publicipyn
+    deletionprotectionyn:
+      type: string
+      description: deletionprotectionyn
+    publicipv4:
+      type: string
+      description: publicipv4
+    privateipv4:
+      type: string
+      description: privateipv4
+    publicdns:
+      type: string
+      description: publicdns
+    notes:
+      type: string
+      description: notes
+    instanceoutput:
+      type: string
+      description: instanceoutput
+    status:
+      type: string
+      description: Status
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+solutioncosts:
+  type: object
+  title: Solution Costs
+  properties:
+    solutioncostid:
+      type: integer
+      description: Primary Key
+    tenantid:
+      type: integer
+      description: Tenant
+    costvisualid:
+      type: integer
+      description: Cost Visual
+    solutionid:
+      type: integer
+      description: Solution
+    assetid:
+      type: integer
+      description: Assets
+    resourcetype:
+      type: string
+      description: Resource types
+    costtype:
+      type: string
+      description: Cost types
+    status:
+      type: string
+      description: Status
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+
+instances:
+  type: object
+  title: Instances
+  properties:
+    instanceid:
+      type: integer
+      description: Primary Key
+    tenantid:
+      type: integer
+      description: Tenant
+    customerid:
+      type: integer
+      description: Customer
+    cloudprovider:
+      type: string
+      description: Cloudprovider
+    lifecycle:
+      type: string
+      description: lifecycle
+    deploymentid:
+      type: integer
+      description: Deploymentid
+    rightsizegrpid:
+      type: integer
+      description: Group ID
+    instancerefid:
+      type: string
+      description: Instancerefid
+    instancename:
+      type: string
+      description: Instancename
+    hostname:
+      type: string
+      description: Host name
+    clusterid:
+      type: integer
+      description: Cluster ID
+    accountid:
+      type: integer
+      description: Account ID
+    metadata:
+      type: string
+      description: Meta Data
+    ssmsgentid:
+      type: string
+      description: SSM agent ID
+    ssmagenttype:
+      type: string
+      description: SSM agent type
+    status:
+      type: string
+      description: Status
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+
+recommendation:
+  type: object
+  title: Recommendation
+  properties:
+    recommendationid:
+      type: integer
+      description: Primary Key
+    recommendsetupid:
+      type: integer
+      description: Forign Key
+    cloudprovider:
+      type: string
+      description: Cloudprovider
+    resourcetype:
+      type: string
+      description: Resource type
+    region:
+      type: string
+      description: Resource type
+    pricetype:
+      type: string
+      description: Resource type
+    plantype:
+      type: integer
+      description: Current planid
+    utilrangemin:
+      type: integer
+      description: Range minimium
+    utilrangemax:
+      type: integer
+      description: Range maximium
+    cpuutilmin:
+      type: integer
+      description: Range minimium
+    cpuutilmax:
+      type: integer
+      description: Range maximium
+    memutilmin:
+      type: integer
+      description: Range minimium
+    memutilmax:
+      type: integer
+      description: Range maximium
+    discutilmin:
+      type: integer
+      description: Range minimium
+    discutilmax:
+      type: integer
+      description: Range maximium
+    netutilmin:
+      type: integer
+      description: Range minimium
+    netutilmax:
+      type: integer
+      description: Range maximium
+    duration:
+      type: string
+      description: Duration
+    recommendedplantype:
+      type: integer
+      description: Recommended planid
+    recommendationone:
+      type: integer
+      description: Recommended planid
+    recommendationtwo:
+      type: integer
+      description: Recommended planid
+    recommendationthree:
+      type: integer
+      description: Recommended planid
+    status:
+      type: string
+      description: Status
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+
+rightsizegroup:
+  type: object
+  title: Rightsize
+  properties:
+    rightsizegrpid:
+      type: integer
+      description: Primary Key
+    groupname:
+      type: string
+      description: Name
+    maintwindowids:
+      type: array
+      items:
+        type: integer
+      description: Resource type
+    cpuutil:
+      type: integer
+      description: Range minimium
+    memoryutil:
+      type: integer
+      description: Range maximium
+    duration:
+      type: integer
+      description: Range maximium
+    userids:
+      type: array
+      items:
+        type: integer
+      description: Notification
+    status:
+      type: string
+      description: Status
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+
+recommendationsetup:
+  type: object
+  title: Recommendation
+  properties:
+    recommendationid:
+      type: integer
+      description: Primary Key
+    cloudprovider:
+      type: string
+      description: Cloudprovider
+    region:
+      type: string
+      description: Resource type
+    pricetype:
+      type: string
+      description: Resource type
+    platform:
+      type: string
+      description: Cloudprovider
+    cpuutilmin:
+      type: integer
+      description: Range minimium
+    cpuutilmax:
+      type: integer
+      description: Range maximium
+    memutilmin:
+      type: integer
+      description: Range minimium
+    memutilmax:
+      type: integer
+      description: Range maximium
+    action:
+      type: string
+      description: Action
+    notes:
+      type: string
+      description: Status
+    status:
+      type: string
+      description: Status
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+
+workflow:
+  type: object
+  title: WorkFlow
+  properties:
+    aprvalwrkflowid:
+      type: integer
+      description: Primary Key
+    aprvalwrkflowname:
+      type: string
+      description: Workflow Name
+    status:
+      type: string
+      description: Status
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+
+workflowApprover:
+  type: object
+  title: WorkFlow Approver
+  properties:
+    wrkflowaprvrid:
+      type: integer
+      description: Primary Key
+    aprvalwrkflowid:
+      type: integer
+      description: Workflow id
+    userid:
+      type: integer
+      description: User id
+    aprvseqid:
+      type: integer
+      description: Approver sequence id
+    status:
+      type: string
+      description: Status
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+
+maintwindow:
+  type: object
+  title: Maintenance Window
+  properties:
+    maintwindowid:
+      type: integer
+      description: Primary Key
+    cloudprovider:
+      type: string
+      description: Cloudprovider
+    windowname:
+      type: string
+      description: Window name
+    region:
+      type: string
+      description: Region
+    startdate:
+      type: string
+      description: Start date
+    enddate:
+      type: string
+      description: End date
+    duration:
+      type: integer
+      description: Duration
+    monday:
+      type: object
+      title: Duration
+      properties:
+        start:
+          type: string
+          description: Start time
+        end:
+          type: string
+          description: End time
+    tuesday:
+      type: object
+      title: Duration
+      properties:
+        start:
+          type: string
+          description: Start time
+        end:
+          type: string
+          description: End time
+    wednesday:
+      type: object
+      title: Duration
+      properties:
+        start:
+          type: string
+          description: Start time
+        end:
+          type: string
+          description: End time
+    thursday:
+      type: object
+      title: Duration
+      properties:
+        start:
+          type: string
+          description: Start time
+        end:
+          type: string
+          description: End time
+    friday:
+      type: object
+      title: Duration
+      properties:
+        start:
+          type: string
+          description: Start time
+        end:
+          type: string
+          description: End time
+    saturday:
+      type: object
+      title: Duration
+      properties:
+        start:
+          type: string
+          description: Start time
+        end:
+          type: string
+          description: End time
+    sunday:
+      type: object
+      title: Duration
+      properties:
+        start:
+          type: string
+          description: Start time
+        end:
+          type: string
+          description: End time
+    status:
+      type: string
+      description: Status
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+
+maintwindowmap:
+  type: object
+  title: Maintenance Window Ref
+  properties:
+    id:
+      type: integer
+      description: Primary Key
+    tenantid:
+      type: integer
+      description: Tenant
+    maintwindowid:
+      type: integer
+      description: Window name
+    txnid:
+      type: integer
+      description: Transaction
+    txntype:
+      type: string
+      description: Transaction Type
+    notes:
+      type: string
+      description: Notes
+    metadata:
+      type: string
+      description: Notes
+    status:
+      type: string
+      description: Status
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+
+upgraderequest:
+  type: object
+  title: Upgrade Request
+  properties:
+    upgraderequestid:
+      type: integer
+      description: Primary Key
+    srvrequestid:
+      type: integer
+      description: Service Request ID
+    tenantid:
+      type: integer
+      description: Tenant ID
+    customerid:
+      type: integer
+      description: Customer ID
+    cloudprovider:
+      type: string
+      description: Cloudprovider
+    resourcetype:
+      type: string
+      description: Resource type
+    resourceid:
+      type: integer
+      description: Resource id
+    requestday:
+      type: string
+      description: Request Day
+    reqstarttime:
+      type: string
+      description: Request Start Time
+    reqendtime:
+      type: string
+      description: Request End time
+    resourcerefid:
+      type: string
+      description: Resource type
+    currplantype:
+      type: integer
+      description: Current Plan
+    upgradeplantype:
+      type: integer
+      description: Upgrade plan
+    maintwindowid:
+      type: integer
+      description: Maintaince window
+    restartreq:
+      type: string
+      description: Is restart required
+    autoimplementation:
+      type: string
+      description: Is auto implementation
+    implstartdt:
+      type: string
+      description: Is auto implementation
+    implenddt:
+      type: string
+      description: Is auto implementation
+    reqstatus:
+      type: string
+      description: Request status
+    notes:
+      type: string
+      description: Notes
+    status:
+      type: string
+      description: Status
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+
+schedulerequesthdr:
+  type: object
+  title: Schedule Request
+  properties:
+    scheduledreqhdrid:
+      type: integer
+      description: Primary Key
+    srvrequestid:
+      type: integer
+      description: Service Request ID
+    tenantid:
+      type: integer
+      description: Tenant ID
+    customerid:
+      type: integer
+      description: Customer ID
+    maintwindowid:
+      type: integer
+      description: maintwindow id
+    cloudprovider:
+      type: string
+      description: Cloudprovider
+    resourceid:
+      type: integer
+      description: Resource id
+    resourcerefid:
+      type: string
+      description: Resource type
+    reqstatus:
+      type: string
+      description: Request status
+    status:
+      type: string
+      description: Status
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+
+schedulerequestdtl:
+  type: object
+  title: Schedule Request
+  properties:
+    scheduledreqdtlid:
+      type: integer
+      description: Primary Key
+    scheduledreqhdrid:
+      type: integer
+      description: Service Request ID
+    upgradeplantype:
+      type: integer
+      description: Plan Type
+    requestday:
+      type: string
+      description: Request Day
+    execute:
+      type: string
+      description: Request Day
+    reqstarttime:
+      type: string
+      description: Request Start Time
+    reqendtime:
+      type: string
+      description: Request End time
+    status:
+      type: string
+      description: Status
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+
+orchestration:
+  type: object
+  title: orchestration
+  properties:
+    orchid:
+      type: integer
+      description: Primary Key
+    tenantid:
+      type: integer
+      description: Tenant id
+    categoryid:
+      type: integer
+      description: Category id
+    orchname:
+      type: string
+      description: Name
+    orchflow:
+      type: string
+      description: Flow
+    params:
+      type: string
+      description: Params
+    scripts:
+      type: string
+      description: Scripts
+    module:
+      type: string
+      description: module
+    status:
+      type: string
+      description: Status
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+
+alertconfig:
+  type: object
+  title: alertconfigs
+  properties:
+    id:
+      type: integer
+      description: Primary Key
+    tenantid:
+      type: integer
+      description: Tenant id
+    title:
+      type: string
+      description: Name
+    description:
+      type: string
+      description: Flow
+    _customer:
+      type: integer
+      description: Params
+    _account:
+      type: integer
+      description: Params
+    _instance:
+      type: integer
+      description: Params
+    instancetype:
+      type: string
+      description: Params
+    type:
+      type: string
+      description: Params
+    metric:
+      type: string
+      description: Params
+    level:
+      type: integer
+      description: Params
+    condition:
+      type: string
+      description: Params
+    threshold:
+      type: string
+      description: Params
+    duration:
+      type: string
+      description: Params
+    status:
+      type: string
+      description: Status
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+
+AssetBudget:
+  type: object
+  title: AssetBudget
+  properties:
+    budgetid:
+      type: integer
+      description: Primary Key
+    startdt:
+      type: string
+      description: Start date
+    enddt:
+      type: string
+      description: End date
+    instancerefid:
+      type: array
+      items:
+        type: string
+      description: Instance reference id
+    cloudprovider:
+      type: string
+      description: Cloud provider
+    customerid:
+      type: integer
+      description: Customer
+    _accountid:
+      type: integer
+      description: Account ID
+    tenantid:
+      type: integer
+      description: Tenant ID
+    resourcetype:
+      type: string
+      description: Resource type
+    resourceid:
+      type: array
+      items:
+        type: integer
+      description: Resource ID
+    tagid:
+      type: integer
+      description: Tag
+    tagvalue:
+      type: string
+      description: Tag value
+    currency:
+      type: string
+      description: Currency
+    budgetamount:
+      type: number
+      description: budget
+    notes:
+      type: string
+      description: Notes
+    status:
+      type: string
+      description: Status
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+AssetBilling:
+  type: object
+  title: AssetBilling
+  properties:
+    billingid:
+      type: integer
+      description: Primary Key
+    tenantid:
+      type: integer
+      description: Tenant ID
+    billingdt:
+      type: string
+      description: billing date
+    billingdates:
+      type: array
+      items:
+        type: string
+      description: billing date
+    instancerefid:
+      type: string
+      description: Instance reference id
+    cloudprovider:
+      type: string
+      description: Cloud provider
+    customerid:
+      type: integer
+      description: Customer
+    customername:
+      type: string
+      description: Customer Name
+    resourcetype:
+      type: string
+      description: Resource type
+    resourceid:
+      type: integer
+      description: Resource ID
+    currency:
+      type: string
+      description: Currency
+    billamount:
+      type: number
+      description: billing value
+    notes:
+      type: string
+      description: Notes
+    status:
+      type: string
+      description: Status
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+AssetDailyBilling:
+  type: object
+  title: AssetDailyBilling
+  properties:
+    billingdailyid:
+      type: integer
+      description: Primary Key
+    tenantid:
+      type: integer
+      description: Tenant ID
+    billingdt:
+      type: string
+      description: billing date
+    billingdates:
+      type: array
+      items:
+        type: string
+      description: billing date
+    instancerefid:
+      type: string
+      description: Instance reference id
+    cloudprovider:
+      type: string
+      description: Cloud provider
+    customerid:
+      type: integer
+      description: Customer
+    customername:
+      type: string
+      description: Customer Name
+    resourcetype:
+      type: string
+      description: Resource type
+    resourceid:
+      type: integer
+      description: Resource ID
+    currency:
+      type: string
+      description: Currency
+    billamount:
+      type: number
+      description: billing value
+    notes:
+      type: string
+      description: Notes
+    status:
+      type: string
+      description: Status
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+
+Eventlog:
+  type: object
+  title: Event Log
+  properties:
+    id:
+      type: number
+      description: ID
+    tenantid:
+      type: number
+      description: Tenant Reference number
+    userid:
+      type: number
+      description: User Reference number
+    regionid:
+      type: number
+      description: Region primary key
+    _accountid:
+      type: number
+      description: Account primary key
+    module:
+      type: string
+      description: Module name
+    cloudprovider:
+      type: string
+      description: Provider name
+    providerrefid:
+      type: string
+      description: Provider name
+    referenceid:
+      type: integer
+      description: Reference ID
+    referencetype:
+      type: string
+      description: Reference Type
+    eventtype:
+      type: string
+      description: Event Type
+    eventdate:
+      type: string
+      description: Event Date
+    severity:
+      type: string
+      description: Severity
+    notes:
+      type: string
+      description: Severity
+    sysinfo:
+      type: string
+      description: System information
+    meta:
+      type: string
+      description: Meta data
+    cost:
+      type: string
+      description: Cost
+    previouscost:
+      type: string
+      description: Previous cost
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+
+assethdr:
+  type: object
+  title: assethdr
+  properties:
+    tenantid:
+      type: number
+    crn:
+      type: string
+    resourcetype:
+      type: string
+    fieldname:
+      type: string
+    fieldtype:
+      type: string
+    showbydefault:
+      type: number
+    readonly:
+      type: number
+    prefix:
+      type: string
+    curseq:
+      type: string
+    status:
+      type: string
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+    lastupdateddt:
+      type: string
+    id:
+      type: number
+    ordernumber:
+      type: number
+
+assetdtl:
+  type: object
+  title: assetdtl
+  properties:
+    tenantid:
+      type: number
+    fieldkey:
+      type: string
+    fieldvalue:
+      type: string
+    fieldname:
+      type: string
+    status:
+      type: string
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+    lastupdateddt:
+      type: string
+    dtl_operationtype:
+      type: string
+    id:
+      type: number
+
+assetcomments:
+  type: object
+  title: assetcomments
+  properties:
+    id:
+      type: number
+    crn:
+      type: string
+    resourceid:
+      type: string
+    comment:
+      type: string
+    status:
+      type: string
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+    lastupdateddt:
+      type: string
+
+assethistory:
+  type: object
+  title: assethistory
+  properties:
+    id:
+      type: number
+    crn:
+      type: string
+    resourceid:
+      type: string
+    old:
+      type: string
+    new:
+      type: string
+    affectedattribute:
+      type: string
+    attributetype:
+      type: string
+    status:
+      type: string
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+    lastupdateddt:
+      type: string
+
+assetquery:
+  type: object
+  title: assetquery
+  properties:
+    id:
+      type: number
+    tenantid:
+      type: number
+    title:
+      type: string
+    query:
+      type: string
+    meta:
+      type: string
+    status:
+      type: string
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+    lastupdateddt:
+      type: string
+
+VMware:
+  type: object
+  title: Virtual machines
+  properties:
+    vmid:
+      type: number
+      description: ID
+    tenantid:
+      type: number
+      description: Tenant Reference number
+    customerid:
+      type: number
+      description: User Reference number
+    _accountid:
+      type: number
+      description: Account Reference number
+    cpucount:
+      type: number
+      description: CPU count
+    memorysize:
+      type: string
+      description: Size of the memory
+    region:
+      type: string
+      description: region
+    vmname:
+      type: string
+      description: VM name
+    powerstate:
+      type: string
+      description: Power status
+    vmrefid:
+      type: string
+      description: VM reference id
+    clusterid:
+      type: number
+      description: Cluster ID
+    metadata:
+      type: string
+      description: Network data
+    status:
+      type: string
+      description: Status
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+
+Clusters:
+  type: object
+  title: Clusters
+  properties:
+    clusterid:
+      type: number
+      description: ID
+    tenantid:
+      type: number
+      description: Tenant Reference number
+    customerid:
+      type: number
+      description: Customer ID
+    _accountid:
+      type: number
+      description: Account Reference number
+    dcid:
+      type: number
+      description: Datacenter ID
+    region:
+      type: string
+      description: region
+    clusterrefid:
+      type: string
+      description: Reference ID
+    drsstate:
+      type: string
+      description: DRS state
+    hastate:
+      type: string
+      description: HAS state
+    clustername:
+      type: string
+      description: Cluster name
+    status:
+      type: string
+      description: Status
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+
+Datacenter:
+  type: object
+  title: Datacenter
+  properties:
+    dcid:
+      type: number
+      description: ID
+    tenantid:
+      type: number
+      description: Tenant Reference number
+    customerid:
+      type: number
+      description: Tenant Reference number
+    _accountid:
+      type: number
+      description: Account Reference number
+    dcrefid:
+      type: string
+      description: Reference ID
+    region:
+      type: string
+      description: region
+    dcname:
+      type: string
+      description: DC name
+    status:
+      type: string
+      description: Status
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+
+VMHost:
+  type: object
+  title: VM hosts
+  properties:
+    hostid:
+      type: number
+      description: ID
+    tenantid:
+      type: number
+      description: Tenant Reference number
+    customerid:
+      type: number
+      description: Tenant Reference number
+    _accountid:
+      type: number
+      description: Account Reference
+    region:
+      type: string
+      description: region
+    hoststate:
+      type: string
+      description: Host state
+    hostrefid:
+      type: string
+      description: Ref ID
+    hostname:
+      type: string
+      description: Host name
+    powerstate:
+      type: string
+      description: Power status
+    status:
+      type: string
+      description: Status
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+
+dashboardconfigdetail:
+  type: object
+  title: dashboardconfig
+  properties:
+    configdtlid:
+      type: number
+    confighdrid:
+      type: number
+    tenantid:
+      type: number
+    customerid:
+      type: number
+    referenceid:
+      type: number
+    reportyn:
+      type: string
+    uptime:
+      type: number
+    dailyreportyn:
+      type: string
+    dailyreportconfig:
+      type: string
+    displayorder:
+      type: number
+    lastupdatedby:
+      type: string
+    lastupdateddt:
+      type: string
+
+dashboardconfigheader:
+  type: object
+  title: dashboardconfig
+  properties:
+    confighdrid:
+      type: number
+    tenantid:
+      type: number
+    customerid:
+      type: number
+    tagid:
+      type: number
+    tagvalue:
+      type: string
+    reportyn:
+      type: string
+    uptime:
+      type: number
+    displayorder:
+      type: number
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+    lastupdateddt:
+      type: string
+
+incidents:
+  type: object
+  title: incidents
+  properties:
+    id:
+      type: number
+    tenantid:
+      type: number
+    customerid:
+      type: number
+    caller_id:
+      type: string
+    u_environment:
+      type: string
+    snow_id:
+      type: string
+    refid:
+      type: number
+    reftype:
+      type: string
+    category:
+      type: string
+    subcategory:
+      type: string
+    incidentdate:
+      type: string
+    incidentclosedt:
+      type: string
+    response_ts:
+      type: string
+    resolution_ts:
+      type: string
+    incidentno:
+      type: string
+    impact:
+      type: string
+    urgency:
+      type: string
+    contacttype:
+      type: string
+    assignmentgroup:
+      type: string
+    assignmentto:
+      type: string
+    severity:
+      type: string
+    title:
+      type: string
+    displaytitle:
+      type: string
+    notes:
+      type: string
+    publishyn:
+      type: string
+    incidentstatus:
+      type: string
+    status:
+      type: string
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+    lastupdateddt:
+      type: string
+
+SLATemplates:
+  type: object
+  title: SLATemplates
+  properties:
+    slaname:
+      type: string
+      description: SLA Name
+    tenantid:
+      type: number
+    notes:
+      type: string
+    status:
+      type: string
+      description: Record status
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+
+KpiUptime:
+  type: object
+  title: KpiUptime
+  properties:
+    tenantid:
+      type: number
+    customerid:
+      type: number
+    tagid:
+      type: number
+    tagvalue:
+      type: string
+    slaid:
+      type: number
+    priority:
+      type: string
+    uptime:
+      type: number
+    status:
+      type: string
+      description: Record status
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+
+KpiTickets:
+  type: object
+  title: KpiTickets
+  properties:
+    tenantid:
+      type: number
+    customerid:
+      type: number
+    tagid:
+      type: number
+    tagvalue:
+      type: string
+    slaid:
+      type: number
+    priority:
+      type: string
+    response:
+      type: number
+    resolution:
+      type: number
+    working:
+      type: number
+    status:
+      type: string
+      description: Record status
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+
+ServiceCredits:
+  type: object
+  title: ServiceCredits
+  properties:
+    tenantid:
+      type: number
+    slaid:
+      type: number
+    utmin:
+      type: number
+    utmax:
+      type: number
+    servicecredit:
+      type: number
+    status:
+      type: string
+      description: Record status
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+
+IncidentSla:
+  type: object
+  title: IncidentSla
+  properties:
+    tenantid:
+      type: number
+    slaid:
+      type: number
+    priority:
+      type: string
+    responsetime:
+      type: number
+    resolutiontime:
+      type: number
+    notes:
+      type: string
+    status:
+      type: string
+      description: Record status
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+
+CustomerIncidentSla:
+  type: object
+  title: Customer IncidentSla
+  properties:
+    tenantid:
+      type: number
+    slatemplateid:
+      type: number
+    customerid:
+      type: number
+    incidentslaid:
+      type: number
+    responsetime:
+      type: number
+    resolutiontime:
+      type: number
+    tagid:
+      type: number
+    tagvalue:
+      type: string
+    notes:
+      type: string
+    status:
+      type: string
+      description: Record status
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+
+CustomerServiceCredits:
+  type: object
+  title: Customer ServiceCredits
+  properties:
+    tenantid:
+      type: number
+    slatemplateid:
+      type: number
+    customerid:
+      type: number
+    servicecreditid:
+      type: number
+    utmin:
+      type: number
+    utmax:
+      type: number
+    servicecredit:
+      type: number
+    tagid:
+      type: number
+    tagvalue:
+      type: string
+    status:
+      type: string
+      description: Record status
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+
+AvailabilitySla:
+  type: object
+  title: Availability Sla
+  properties:
+    tenantid:
+      type: number
+    slatemplateid:
+      type: number
+    customerid:
+      type: number
+    slaid:
+      type: number
+    uptimeprcnt:
+      type: number
+    notes:
+      type: string
+    status:
+      type: string
+      description: Record status
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+
+CommentsDoc:
+  type: object
+  title: CommentsDoc
+  properties:
+    id:
+      type: integer
+    tenantid:
+      type: integer
+    refid:
+      type: integer
+    reftype:
+      type: string
+    customerid:
+      type: integer
+    comments:
+      type: string
+    docname:
+      type: string
+    docpath:
+      type: string
+    status:
+      type: string
+      description: Record status
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+
+KPIReportConfigHdr:
+  type: object
+  title: KPIReportConfig
+  properties:
+    id:
+      type: integer
+    tenantid:
+      type: integer
+    refid:
+      type: integer
+    title:
+      type: string
+    description:
+      type: string
+    status:
+      type: string
+      description: Record status
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+
+KPIReportConfigDtl:
+  type: object
+  title: KPIReportConfig
+  properties:
+    id:
+      type: integer
+    tenantid:
+      type: integer
+    _confighdrid:
+      type: integer
+    reporttype:
+      type: string
+    seriesname:
+      type: string
+    savedqueryid:
+      type: integer
+    startdate:
+      type: string
+    enddate:
+      type: string
+    duration:
+      type: string
+    groupby:
+      type: string
+    charttype:
+      type: string
+    settings:
+      type: string
+    filterby:
+      type: string
+    status:
+      type: string
+      description: Record status
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+
+CustomerKPIReport:
+  type: object
+  title: CustomerKPIReport
+  properties:
+    id:
+      type: integer
+    tenantid:
+      type: integer
+    _customerid:
+      type: integer
+    _reportid:
+      type: integer
+    startdt:
+      type: string
+    enddt:
+      type: string
+    status:
+      type: string
+      description: Record status
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+workpackTemplate:
+  type: object
+  title: workpackTemplate
+  properties:
+    tenantid:
+      type: number
+    title:
+      type: string
+    description:
+      type: string
+    component:
+      type: string
+    category:
+      type: string
+    version:
+      type: string
+    reference:
+      type: string
+    prerequisites:
+      type: string
+    notes:
+      type: string
+    estimate:
+      type: number
+    tasks:
+      type: array
+      items:
+        type: object
+    status:
+      type: string
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    updatedby:
+      type: string
+      description: The user who updated the record last time
+    updateddt:
+      type: string
+      description: Record last updated timestamp
+referenceModelTbl:
+  type: object
+  title: referenceModelTbl
+  properties:
+    ref_id:
+      type: number
+    title:
+      type: string
+    parent_id:
+      type: number
+    tenantid:
+      type: number
+    key:
+      type: string
+    status:
+      type: string
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+    lastupdateddt:
+      type: string
+
+tnworkflow:
+  type: object
+  title: WorkFlow
+  properties:
+    wrkflowid:
+      type: integer
+      description: Primary Key
+    tenantid:
+      type: integer
+      description: Tenant ID
+    wrkflowname:
+      type: string
+      description: Workflow Name
+    status:
+      type: string
+      description: Status
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+
+tnworkflowApprover:
+  type: object
+  title: WorkFlow Approver
+  properties:
+    wrkflowaprvrid:
+      type: integer
+      description: Primary Key
+    wrkflowid:
+      type: integer
+      description: Workflow id
+    userid:
+      type: integer
+      description: User id
+    aprvrseqid:
+      type: integer
+      description: Approver sequence id
+    completion_status:
+      type: string
+      description: Completion Status
+    rejection_status:
+      type: string
+      description: Rejection Status
+    notes:
+      type: string
+      description: Notes
+    status:
+      type: string
+      description: Status
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+
+tnworkflowAction:
+  type: object
+  title: WorkFlow Action
+  properties:
+    actionsid:
+      type: integer
+      description: Primary Key
+    resourceid:
+      type: string
+      description: Resource id
+    resource_title:
+      type: string
+      description: Resource title
+    actiontype:
+      type: string
+      description: Action TYpe
+    fromuserid:
+      type: integer
+      description: From user id
+    touserid:
+      type: integer
+      description: From user id
+    duedate:
+      type: string
+      description: Due Date
+    to_duedate:
+      type: string
+      description: Due Date
+    workflow_status:
+      type: string
+      description: Workflow Status
+    approverlevel:
+      type: integer
+      description: Approval level
+    notes:
+      type: string
+      description: Notes
+    module:
+      type: string
+      description: module
+    tenantid:
+      type: number
+    status:
+      type: string
+      description: Status
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+MonitoringSSLHdr:
+  type: object
+  title: SSL Monitoring Hdr
+  properties:
+    id:
+      type: integer
+      description: Primary Key
+    tenantid:
+      type: integer
+      description: Tenant ID
+    name:
+      type: string
+      description: Name
+    notes:
+      type: string
+      description: Notes
+    status:
+      type: string
+      description: Status
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+MonitoringSSLDtl:
+  type: object
+  title: SSL Monitoring Dtl
+  properties:
+    id:
+      type: integer
+      description: Primary Key
+    tenantid:
+      type: integer
+      description: Tenant ID
+    sslhdrid:
+      type: integer
+      description: SSL Hdr ID
+    url:
+      type: string
+      description: URL
+    validity_from:
+      type: string
+      description: Valid from
+    validity_end:
+      type: string
+      description: Valid end
+    status:
+      type: string
+      description: Status
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+    instancerefid:
+      type: string
+      description: Record last updated timestamp
+
+tnworkpack:
+  type: object
+  title: Workpack
+  properties:
+    tenantid:
+      type: number
+    fieldkey:
+      type: string
+    fieldvalue:
+      type: string
+    fieldname:
+      type: string
+    status:
+      type: string
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+    lastupdateddt:
+      type: string
+    id:
+      type: number
+
+txnref:
+  type: object
+  title: txnref
+  properties:
+    id:
+      type: number
+    txnid:
+      type: number
+    refid:
+      type: number
+    txn:
+      type: string
+    reference:
+      type: string
+    refkey:
+      type: string
+    notes:
+      type: string
+    status:
+      type: string
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+    lastupdateddt:
+      type: string
+    module:
+      type: string
+
+tnworkpackexecute:
+  type: object
+  title: Workpack
+  properties:
+    tenantid:
+      type: number
+    fieldkey:
+      type: string
+    fieldvalue:
+      type: string
+    fieldname:
+      type: string
+    status:
+      type: string
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+    lastupdateddt:
+      type: string
+    id:
+      type: number
+
+Product:
+  type: object
+  title: product
+  properties:
+    productid:
+      type: number
+    productname:
+      type: string
+    productcode:
+      type: string
+    customerid:
+      type: number
+    tenantid:
+      type: number
+    servertype:
+      type: string
+    status:
+      type: string
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+    lastupdateddt:
+      type: string
+
+NutanixVM:
+  type: object
+  title: Virtual machines
+  properties:
+    instancerefid:
+      type: string
+      description: User Reference number
+    instancename:
+      type: string
+      description: User Reference number
+    platform:
+      type: string
+      description: User Reference number
+    privateipv4:
+      type: string
+      description: User Reference number
+    customername:
+      type: string
+      description: Customer name as per cloudmatiq
+    clustername:
+      type: string
+      description: Cluster name
+    ssmsgentid:
+      type: string
+      description: SSM agent ID
+
+NutanixDatacenter:
+  type: object
+  title: Datacenter
+  properties:
+    dcrefid:
+      type: string
+      description: Reference ID
+    dcname:
+      type: string
+      description: DC name
+    customername:
+      type: string
+      description: Customer name as per cloudmatiq
+
+NutanixClusters:
+  type: object
+  title: Clusters
+  properties:
+    clusterrefid:
+      type: string
+      description: Reference ID
+    drsstate:
+      type: string
+      description: DRS state
+    hastate:
+      type: string
+      description: HAS state
+    clustername:
+      type: string
+      description: Cluster name
+    customername:
+      type: string
+      description: Customer name as per cloudmatiq
+
+NutanixHost:
+  type: object
+  title: VM hosts
+  properties:
+    hoststate:
+      type: string
+      description: Host state
+    hostrefid:
+      type: string
+      description: Ref ID
+    hostname:
+      type: string
+      description: Host name
+    powerstate:
+      type: string
+      description: Power status
+    customername:
+      type: string
+      description: Customer name as per cloudmatiq
+
+workpackrelations:
+  type: object
+  title: txnref
+  properties:
+    relationid:
+      type: number
+    ref_key:
+      type: string
+    parentref_key:
+      type: string
+    relation_name:
+      type: string
+    positionno:
+      type: number
+    notes:
+      type: string
+    mode_function:
+      type: string
+    module:
+      type: string
+    tenantid:
+      type: number
+    status:
+      type: string
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+    lastupdateddt:
+      type: string
+
+notificationsResolve:
+  type: object
+  title: Notifications
+  description:
+  properties:
+    tenantid:
+      type: number
+      description: Reference Number from tenant model
+    notes:
+      type: string
+      description:
+    referenceno:
+      type: array
+      items:
+        type: string
+      description: referenceno
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+
+release-config:
+  type: object
+  title: releases
+  properties:
+    tenantid:
+      type: number
+
+release:
+  type: object
+  title: releases
+  properties:
+    tenantid:
+      type: number
+
+PipelineTemplate:
+  type: object
+  title: PipelineTemplate
+  description:
+  properties:
+    id:
+      type: number
+      description:
+    tenantid:
+      type: number
+      description:
+    pipelinename:
+      type: string
+      description:
+    runnerid:
+      type: number
+      description:
+    crn:
+      type: string
+      description: Cloudmatiq resource name
+    description:
+      type: string
+      description:
+    providerrepo:
+      type: string
+      description:
+    providerbranch:
+      type: string
+      description:
+    filename:
+      type: string
+      description:
+    pipelineflow:
+      type: object
+      description: TEXT, INT, BOOL, DATE, JSON, _TEXT, _INT
+    status:
+      type: string
+      description: Record status
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+
+TemplateDetails:
+  type: object
+  title: TemplateDetails
+  description:
+  properties:
+    id:
+      type: number
+      description:
+    tenantid:
+      type: number
+      description:
+    templateid:
+      type: number
+      description:
+    position:
+      type: number
+      description:
+    referencetype:
+      type: string
+      description:
+    referenceid:
+      type: number
+      description:
+    providerjobname:
+      type: string
+      description:
+    status:
+      type: string
+      description:
+    description:
+      type: string
+      description:
+    createdby:
+      type: string
+      description:
+    createddt:
+      type: string
+      description:
+    lastupdatedby:
+      type: string
+      description:
+    lastupdateddt:
+      type: string
+      description:
+
+TemplateConfig:
+  type: object
+  title: TemplateConfig
+  description:
+  properties:
+    id:
+      type: number
+      description:
+    tenantid:
+      type: number
+      description:
+    templatedetailid:
+      type: number
+      description:
+    setupdetails:
+      type: object
+      description:
+    variabledetails:
+      type: object
+      description:
+    scriptcontent:
+      type: string
+    status:
+      type: string
+      description:
+    description:
+      type: string
+      description:
+    meta:
+      type: array
+      items:
+        type: object
+      description:
+    createdby:
+      type: string
+      description:
+    createddt:
+      type: string
+      description:
+    lastupdatedby:
+      type: string
+      description:
+    lastupdateddt:
+      type: string
+      description:
+
+createHistory:
+  type: object
+  title: Configuration
+  properties:
+    id:
+      type: number
+    tenantid:
+      type: number
+    name:
+      type: string
+    templateid:
+      type: number
+    schedule:
+      type: string
+    scheduleon:
+      type: string
+    description:
+      type: string
+    status:
+      type: string
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+    lastupdateddt:
+      type: string
+
+pipelinelisttemplate:
+  type: object
+  title: Pipeline Template List
+  properties:
+    tenantid:
+      type: number
+pipelinesetupmaster:
+  type: object
+  title: Pipeline setup master List
+  properties:
+    tenantid:
+      type: number
+
+cicddashboard:
+  type: object
+  title: Dashboard count
+  properties:
+    tenantid:
+      type: number
+pipelinestatus:
+  type: object
+  title: Dashboard count
+  properties:
+    tenantid:
+      type: number
+    days:
+      type: number
+
+setupprovider:
+  type: object
+  title: Setup master provider
+  properties:
+    id:
+      type: number
+    tenantid:
+      type: number
+    type:
+      type: string
+    name:
+      type: string
+    username:
+      type: string
+    accesstoken:
+      type: string
+    url:
+      type: string
+    syncrepository:
+      type: boolean
+    lastsyncdate:
+      type: string
+    status:
+      type: string
+    createdby:
+      type: string
+    createddt:
+      type: string
+    lastupdatedby:
+      type: string
+    lastupdateddt:
+      type: string
+
+setupcontainerregistry:
+  type: object
+  title: Setup master containerregistry
+  properties:
+    id:
+      type: number
+    tenantid:
+      type: number
+    type:
+      type: string
+    name:
+      type: string
+    description:
+      type: string
+    status:
+      type: string
+    createdby:
+      type: string
+    createddt:
+      type: string
+    lastupdatedby:
+      type: string
+    lastupdateddt:
+      type: string
+
+setuptest:
+  type: object
+  title: Setup master test
+  properties:
+    id:
+      type: number
+    tenantid:
+      type: number
+    type:
+      type: string
+    name:
+      type: string
+    description:
+      type: string
+    status:
+      type: string
+    createdby:
+      type: string
+    createddt:
+      type: string
+    lastupdatedby:
+      type: string
+    lastupdateddt:
+      type: string
+
+setupenviroments:
+  type: object
+  title: Setup master enviroments
+  properties:
+    id:
+      type: number
+    tenantid:
+      type: number
+    type:
+      type: string
+    instancename:
+      type: string
+    ipaddressisvariable:
+      type: boolean
+    # ipaddressvariable:
+    #   type: string
+    # ipaddress:
+    #   type: string
+    usernameisvariable:
+      type: boolean
+    # usernamevariable:
+    #   type: string
+    # username:
+    #   type: string
+    passwordisvariable:
+      type: boolean
+    # passwordvariable:
+    #   type: string
+    # password:
+    #   type: string
+    authenticationtype:
+      type: string
+    keyfiledata:
+      type: blob
+    keyfilename:
+      type: string
+    ispasswordprotector:
+      type: boolean
+    passwordprotector:
+      type: string
+    status:
+      type: string
+    createdby:
+      type: string
+    createddt:
+      type: string
+    lastupdatedby:
+      type: string
+    lastupdateddt:
+      type: string
+
+pipelinestatusdaily:
+  type: object
+  title: Dashboard count
+  properties:
+    tenantid:
+      type: number
+    days:
+      type: number
+    months:
+      type: number
+
+setupcustomvariable:
+  type: object
+  title: Setup master customvariable
+  properties:
+    id:
+      type: number
+    tenantid:
+      type: number
+    environment:
+      type: string
+    keyname:
+      type: string
+    keyvalue:
+      type: string
+    description:
+      type: string
+    status:
+      type: string
+    createdby:
+      type: string
+    createddt:
+      type: string
+    lastupdatedby:
+      type: string
+    lastupdateddt:
+      type: string
+
+setupbuild:
+  type: object
+  title: Setup master build
+  properties:
+    id:
+      type: number
+    tenantid:
+      type: number
+    type:
+      type: string
+    ipaddress:
+      type: string
+    name:
+      type: string
+    username:
+      type: string
+    password:
+      type: string
+    buildscript:
+      type: string
+    status:
+      type: string
+    createdby:
+      type: string
+    createddt:
+      type: string
+    lastupdatedby:
+      type: string
+    lastupdateddt:
+      type: string
+
+orchestrationApproval:
+  type: object
+  title: mock api
+
+approval:
+  type: object
+  title: mock api
+
+releaseworkflow:
+  type: object
+  title: Configuration
+  properties:
+    id:
+      type: number
+    tenantid:
+      type: number
+    name:
+      type: string
+    templateid:
+      type: number
+    schedule:
+      type: string
+    scheduleon:
+      type: string
+    description:
+      type: string
+    status:
+      type: string
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+
+History:
+  type: object
+  title: History
+  properties:
+    id:
+      type: integer
+    _tenantid:
+      type: integer
+    _customerid:
+      type: integer
+    _accountid:
+      type: integer
+    action:
+      type: string
+    resourcetype:
+      type: string
+    resourcetypeid:
+      type: string
+    meta:
+      type: string
+    old:
+      type: string
+    new:
+      type: string
+    affectedattribute:
+      type: string
+    notes:
+      type: string
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    updatedby:
+      type: string
+    updateddt:
+      type: string
+
+TenantSettings:
+  type: object
+  title: TenantSettings
+  properties:
+    tnsettingid:
+      type: number
+      description: Tenant Settings Reference number    
+    tenantid:
+      type: number
+      description: Tenant Reference number
+    setting_name:
+      type: string
+      description: Name of the setting
+    setting_ref:
+      type: string
+      description: Setting Reference
+    setting_value:
+      type: object
+      description: Setting Reference
+    datatype:
+      type: string
+      description: Setting Reference
+    status:
+      type: string
+      description: Record status
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+
+TenantLicense:
+  type: object
+  title: TenantLicense
+  properties:
+    licenseid:
+      type: number
+      description: Tenant Settings Reference number    
+    tenantid:
+      type: number
+      description: Tenant Reference number
+    licensekey:
+      type: string
+      description: Name of the setting
+    costpermonth:
+      type: number
+    costperannual:
+      type: number
+    ccysymbol:
+      type: string
+      description: currency
+    plan_ref:
+      type: string
+      description: plan reference
+    valid_from:
+      type: string
+      description: License valid from
+    valid_till:
+      type: string
+      description: License valid till
+    status:
+      type: string
+      description: Record status
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby:
+      type: string
+      description: The user who updated the record last time
+    lastupdateddt:
+      type: string
+      description: Record last updated timestamp
+
+template:
+  type: object
+  title: Template
+  properties:
+    id:
+      type: number
+    tenantid: 
+      type: number
+    template: 
+      type: string
+    title: 
+      type: string
+    description: 
+      type: string
+    status: 
+      type: string
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby: 
+      type: string
+    lastupdateddt: 
+      type: string
+      description: Record last updated timestamp
+
+watchlist:
+  type: object
+  title: WatchList
+  properties:
+    id:
+      type: number
+    ntfcsetupid:
+      type: number
+    refid:
+      type: string
+    reftype:
+      type: string
+    tenantid: 
+      type: number
+    status: 
+      type: string
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby: 
+      type: string
+    lastupdateddt: 
+      type: string
+      description: Record last updated timestamp
+
+Resourcemapping:
+  type: object
+  title: ResourceMapping
+  properties:
+    id:
+      type: number
+    tenantid: 
+      type: number
+    referencetype: 
+      type: string
+    referenceid:
+      type: number
+    resource_type: 
+      type: string
+    crn: 
+      type: string
+    fieldname: 
+      type: array
+      items:
+        type: string
+    status: 
+      type: string
+    createdby:
+      type: string
+      description: The user who created the record
+    createddt:
+      type: string
+      description: Record created timestamp
+    lastupdatedby: 
+      type: string
+    lastupdateddt: 
+      type: string
+      description: Record last updated timestamp

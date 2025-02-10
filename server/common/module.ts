@@ -1,0 +1,61 @@
+export class Modules {
+  EVENTLOG = "Event Log";
+  NTF = "Notification";
+  LAMBDA = "LAMBDA";
+  ASSET_SYNC = "Asset-Sync";
+  AUTH = "Authentication";
+  CUSTOMER = "Customer";
+  CMDB = "CMDB";
+  CMDBHISTORY = "CMDB-HISTORY";
+  CMDBDOC = "CMDB-Documents";
+  CMDBCOM = "CMDB-Comments";
+  CMDBREPORT = "CMDB-Report Builder";
+  ALERTCONFIG = "Alert-Config";
+  INC = "Incidents";
+  SCREEN = "Screens";
+  SCREENACT = "Screen Actions";
+  LOOKUP = "Look up";
+  INSTANCE = "Instances";
+  ASSET_MANAGEMENT = "Asset Management";
+  CLOUD_ASSET = "Cloud Asset";
+  COMMENTDOCS = "Comments & Documents";
+  COSTVISUAL = "Cost Visual";
+  CUSTOMFIELD = "Custom Field";
+  CUSTOMER_DASHBOARD = "Customer Dashboard";
+  NOTIFICATION = "Notification";
+  TEMPLATES="NtfTemplate";
+  ORCHESTATION = "Orchestration";
+  ORCHESTATION_SCDL = "Orchestration-Schedule";
+  ROLES = "Roles";
+  TAG_GROUP = "Tag Group";
+  TAGS = "Tag";
+  TAG_VALUE = "Tag Value";
+  USERS = "Users";
+  USER_ROLE = "User Role";
+  WAZHU = "Wazhu";
+  ASSETMAP = "Asset Mapping";
+  DASHBOARD = "Dashboard";
+  KPIREPORT = "KPI Reporting";
+  SLA = 'SLA';
+  PATCHMANAGER: "PM-Dashboard";
+  IVDASHBOARD: "IV-Dashboard";
+  SSL_MONITORING: "SSL Monitoring";
+  TENANT_SETTINGS: "Tenant_settings";
+  TENANT_LICENSES: "Tenant_license"
+
+  PIPELINETEMPLATE:"PipelineTemplate";
+  TEMPLATECONFIG:"TemplateConfig";
+  TEMPLATEDETAILS:"TemplateDetails"
+  CICD_RELEASE: "ReleaseConfig";
+  SETUP_MASTER : "SetupMaster";
+  SETUP_PROVIDER: "Provider";
+  CICD_DASHBOARD : "Dashboard";
+  SETUP_CONTAINER_REGISTRY:  "ContainerRegistry";
+  SETUP_TESTING_TOOL:"TestingTool";
+  SETUP_EVIRONMENTS:"Environments";
+  SETUP_CUSTOMVARIABLE:"CustomVariable";
+  PROVIDER_RUNNER: "ProviderRunners";
+  SETUP_BUILD: "Build";
+  HISTORY: "History";
+}
+export const modules = new Modules();

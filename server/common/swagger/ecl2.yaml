@@ -1,0 +1,2003 @@
+swagger: "2.0"
+info:
+  version: 1.0.0
+  title: cloudmatiq-ecl2-api
+  description: CloudMatiq ECL2 API
+basePath: /cloudmatiq/ecl2
+tags:
+  - name: Examples
+    description: Simple example endpoints
+
+consumes:
+  - application/json
+produces:
+  - application/json
+
+definitions:
+  $ref: "definitions.yaml"
+
+paths:
+  /firewall/create:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Create a firewall
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2firewalls"
+      responses:
+        200:
+          description: Returns all examples
+  /firewall/update:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Update firewall
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2firewalls"
+      responses:
+        200:
+          description: Returns all examples
+  /firewall/list:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: List all firewalls
+      parameters:
+        - name: where
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2firewalls"
+      responses:
+        200:
+          description: Returns parameters
+  /firewall/{id}:
+    get:
+      tags:
+        - Deploymets-ECL2
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: The id of the entity to retrieve
+          type: integer
+      responses:
+        200:
+          description: Return the example with the specified id
+        404:
+          description: Example not
+  /firewall/delete:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Delete firewall
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2firewalls"
+      responses:
+        200:
+          description: Returns all examples
+  /gateway/create:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Create a gateway
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2internetgateways"
+      responses:
+        200:
+          description: Returns all examples
+  /gateway/update:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Update gateway
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2internetgateways"
+      responses:
+        200:
+          description: Returns all examples
+  /gateway/list:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: List all gateway
+      parameters:
+        - name: where
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2internetgateways"
+      responses:
+        200:
+          description: Returns parameters
+  /gateway/{id}:
+    get:
+      tags:
+        - Deploymets-ECL2
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: The id of the entity to retrieve
+          type: integer
+      responses:
+        200:
+          description: Return the example with the specified id
+        404:
+          description: Example not
+  /gateway/delete:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Delete gateway
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2internetgateways"
+      responses:
+        200:
+          description: Returns all examples
+  /network/create:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Create a network
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2networks"
+      responses:
+        200:
+          description: Returns all examples
+  /network/update:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Update network
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2networks"
+      responses:
+        200:
+          description: Returns all examples
+  /network/delete:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Delete network
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2networks"
+      responses:
+        200:
+          description: Returns all examples
+  /network/list:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: List all network
+      parameters:
+        - name: where
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2networks"
+      responses:
+        200:
+          description: Returns parameters
+  /network/{id}:
+    get:
+      tags:
+        - Deploymets-ECL2
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: The id of the entity to retrieve
+          type: integer
+      responses:
+        200:
+          description: Return the example with the specified id
+        404:
+          description: Example not
+
+  /port/create:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Create a port
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2ports"
+      responses:
+        200:
+          description: Returns all examples
+  /port/update:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Update port
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2ports"
+  /port/delete:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Delete port
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2ports"
+      responses:
+        200:
+          description: Returns all examples
+  /port/list:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: List all port
+      parameters:
+        - name: where
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2ports"
+      responses:
+        200:
+          description: Returns parameters
+  /port/{id}:
+    get:
+      tags:
+        - Deploymets-ECL2
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: The id of the entity to retrieve
+          type: integer
+      responses:
+        200:
+          description: Return the example with the specified id
+        404:
+          description: Example not
+
+  /subnet/create:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Create a subnet
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2subnets"
+      responses:
+        200:
+          description: Returns all examples
+  /subnet/update:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Update subnet
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2subnets"
+      responses:
+        200:
+          description: Returns all examples
+  /subnet/delete:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Delete subnet
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2subnets"
+      responses:
+        200:
+          description: Returns all examples
+  /subnet/list:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: List all subnet
+      parameters:
+        - name: where
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2subnets"
+      responses:
+        200:
+          description: Returns parameters
+  /subnet/{id}:
+    get:
+      tags:
+        - Deploymets-ECL2
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: The id of the entity to retrieve
+          type: integer
+      responses:
+        200:
+          description: Return the example with the specified id
+        404:
+          description: Example not
+
+  /loadbalancer/create:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Create a loadbalancer
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2loadbalancers"
+      responses:
+        200:
+          description: Returns all examples
+  /loadbalancer/update:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Update loadbalancer
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2loadbalancers"
+      responses:
+        200:
+          description: Returns all examples
+  /loadbalancer/delete:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Delete loadbalancer
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2loadbalancers"
+      responses:
+        200:
+          description: Returns all examples
+  /loadbalancer/list:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: List all loadbalancer
+      parameters:
+        - name: where
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2loadbalancers"
+      responses:
+        200:
+          description: Returns parameters
+  /loadbalancer/{id}:
+    get:
+      tags:
+        - Deploymets-ECL2
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: The id of the entity to retrieve
+          type: integer
+      responses:
+        200:
+          description: Return the example with the specified id
+        404:
+          description: Example not
+
+  /tags/create:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Create a tags
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2tags"
+      responses:
+        200:
+          description: Returns all examples
+  /tags/update:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Update tags
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2tags"
+      responses:
+        200:
+          description: Returns all examples
+  /tags/list:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: List all tags
+      parameters:
+        - name: where
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2tags"
+      responses:
+        200:
+          description: Returns parameters
+  /tags/{id}:
+    get:
+      tags:
+        - Deploymets-ECL2
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: The id of the entity to retrieve
+          type: integer
+      responses:
+        200:
+          description: Return the example with the specified id
+        404:
+          description: Example not
+
+  /solution/create:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Create a solution
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2solutions"
+      responses:
+        200:
+          description: Returns all examples
+  /solution/update:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Update solution
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2solutions"
+      responses:
+        200:
+          description: Returns all examples
+  /solution/list:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: List all solution
+      parameters:
+        - name: where
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2solutions"
+      responses:
+        200:
+          description: Returns parameters
+  /solution/{id}:
+    get:
+      tags:
+        - Deploymets-ECL2
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: The id of the entity to retrieve
+          type: integer
+      responses:
+        200:
+          description: Return the example with the specified id
+        404:
+          description: Example not
+
+  /image/create:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Create a image
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2images"
+      responses:
+        200:
+          description: Returns all examples
+  /image/update:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Update image
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2images"
+      responses:
+        200:
+          description: Returns all examples
+  /image/list:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: List all image
+      parameters:
+        - name: where
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2images"
+      responses:
+        200:
+          description: Returns parameters
+  /image/{id}:
+    get:
+      tags:
+        - Deploymets-ECL2
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: The id of the entity to retrieve
+          type: integer
+      responses:
+        200:
+          description: Return the example with the specified id
+        404:
+          description: Example not
+
+  /instancetype/create:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Create a instancetype
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2instancetype"
+      responses:
+        200:
+          description: Returns all examples
+  /instancetype/update:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Update instancetype
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2instancetype"
+      responses:
+        200:
+          description: Returns all examples
+  /instancetype/list:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: List all image
+      parameters:
+        - name: where
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2instancetype"
+      responses:
+        200:
+          description: Returns parameters
+  /instancetype/{id}:
+    get:
+      tags:
+        - Deploymets-ECL2
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: The id of the entity to retrieve
+          type: integer
+      responses:
+        200:
+          description: Return the example with the specified id
+        404:
+          description: Example not
+  /zone/create:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Create a Zone
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2zones"
+      responses:
+        200:
+          description: Returns all examples
+  /zone/update:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Update Zone
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2zones"
+      responses:
+        200:
+          description: Returns all examples
+  /zone/list:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: List all Zone
+      parameters:
+        - name: where
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2zones"
+      responses:
+        200:
+          description: Returns parameters
+  /zone/{id}:
+    get:
+      tags:
+        - Deploymets-ECL2
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: The id of the entity to retrieve
+          type: integer
+      responses:
+        200:
+          description: Return the example with the specified id
+        404:
+          description: Example not
+
+  /volume/create:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Create a Volume
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2volumes"
+      responses:
+        200:
+          description: Returns all examples
+  /volume/update:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Update Volume
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2volumes"
+      responses:
+        200:
+          description: Returns all examples
+  /volume/list:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: List all Volume
+      parameters:
+        - name: where
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2volumes"
+      responses:
+        200:
+          description: Returns parameters
+  /volume/{id}:
+    get:
+      tags:
+        - Deploymets-ECL2
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: The id of the entity to retrieve
+          type: integer
+      responses:
+        200:
+          description: Return the example with the specified id
+        404:
+          description: Example not
+
+  /key/create:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Create a key
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2keys"
+      responses:
+        200:
+          description: Returns all examples
+  /key/update:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Update key
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2keys"
+      responses:
+        200:
+          description: Returns all examples
+  /key/list:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: List all key
+      parameters:
+        - name: where
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2keys"
+      responses:
+        200:
+          description: Returns parameters
+  /key/{id}:
+    get:
+      tags:
+        - Deploymets-ECL2
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: The id of the entity to retrieve
+          type: integer
+      responses:
+        200:
+          description: Return the example with the specified id
+        404:
+          description: Example not
+
+  /firewallplans/create:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Create a Firewall plan
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/firewallplans"
+      responses:
+        200:
+          description: Returns all examples
+  /firewallplans/update:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Update firewallplans
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/firewallplans"
+      responses:
+        200:
+          description: Returns all examples
+  /firewallplans/list:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: List all firewallplans
+      parameters:
+        - name: where
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/firewallplans"
+      responses:
+        200:
+          description: Returns parameters
+  /firewallplans/{id}:
+    get:
+      tags:
+        - Deploymets-ECL2
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: The id of the entity to retrieve
+          type: integer
+      responses:
+        200:
+          description: Return the example with the specified id
+        404:
+          description: Example not
+
+  /internetservices/create:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Create a internetservices
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/internetservices"
+      responses:
+        200:
+          description: Returns all examples
+  /internetservices/update:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Update internetservices
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/internetservices"
+      responses:
+        200:
+          description: Returns all examples
+  /internetservices/list:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: List all internetservices
+      parameters:
+        - name: where
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/internetservices"
+      responses:
+        200:
+          description: Returns parameters
+  /internetservices/{id}:
+    get:
+      tags:
+        - Deploymets-ECL2
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: The id of the entity to retrieve
+          type: integer
+      responses:
+        200:
+          description: Return the example with the specified id
+        404:
+          description: Example not
+
+  /qosoptions/create:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Create a qosoptions
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/qosoptions"
+      responses:
+        200:
+          description: Returns all examples
+  /qosoptions/update:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Update qosoptions
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/qosoptions"
+      responses:
+        200:
+          description: Returns all examples
+  /qosoptions/list:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: List all qosoptions
+      parameters:
+        - name: where
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/qosoptions"
+      responses:
+        200:
+          description: Returns parameters
+  /qosoptions/{id}:
+    get:
+      tags:
+        - Deploymets-ECL2
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: The id of the entity to retrieve
+          type: integer
+      responses:
+        200:
+          description: Return the example with the specified id
+        404:
+          description: Example not
+  /gateway/interface/create:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Create a gateway interface
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2iginterface"
+      responses:
+        200:
+          description: Returns all examples
+  /gateway/interface/update:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Update gateway interface
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2iginterface"
+      responses:
+        200:
+          description: Returns all examples
+  /gateway/interface/list:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: List all gateway interface
+      parameters:
+        - name: where
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2iginterface"
+      responses:
+        200:
+          description: Returns parameters
+  /gateway/interface/{id}:
+    get:
+      tags:
+        - Deploymets-ECL2
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: The id of the entity to retrieve
+          type: integer
+      responses:
+        200:
+          description: Return the example with the specified id
+        404:
+          description: Example not
+  /gateway/interface/delete:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Delete gateway interface
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2iginterface"
+      responses:
+        200:
+          description: Returns all examples
+  /gateway/globalip/create:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Create a gateway globalip
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2igglobalip"
+      responses:
+        200:
+          description: Returns all examples
+  /gateway/globalip/update:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Update gateway globalip
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2igglobalip"
+      responses:
+        200:
+          description: Returns all examples
+  /gateway/globalip/list:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: List all gateway globalip
+      parameters:
+        - name: where
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2igglobalip"
+      responses:
+        200:
+          description: Returns parameters
+  /gateway/globalip/{id}:
+    get:
+      tags:
+        - Deploymets-ECL2
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: The id of the entity to retrieve
+          type: integer
+      responses:
+        200:
+          description: Return the example with the specified id
+        404:
+          description: Example not
+  /gateway/globalip/delete:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Delete gateway globalip
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2igglobalip"
+      responses:
+        200:
+          description: Returns all examples
+  /gateway/staticip/create:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Create a gateway staticip
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2igstaticip"
+      responses:
+        200:
+          description: Returns all examples
+  /gateway/staticip/update:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Update gateway staticip
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2igstaticip"
+      responses:
+        200:
+          description: Returns all examples
+  /gateway/staticip/list:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: List all gateway staticip
+      parameters:
+        - name: where
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2igstaticip"
+      responses:
+        200:
+          description: Returns parameters
+  /gateway/staticip/{id}:
+    get:
+      tags:
+        - Deploymets-ECL2
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: The id of the entity to retrieve
+          type: integer
+      responses:
+        200:
+          description: Return the example with the specified id
+        404:
+          description: Example not
+  /gateway/staticip/delete:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Delete gateway staticip
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2igstaticip"
+      responses:
+        200:
+          description: Returns all examples
+
+  /commonfunctiongateway/create:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Create a common function gateway
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2commonfunctiongateway"
+      responses:
+        200:
+          description: Returns all examples
+  /commonfunctiongateway/update:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Update common function gateway
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2commonfunctiongateway"
+      responses:
+        200:
+          description: Returns all examples
+  /commonfunctiongateway/list:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: List all common function gateways
+      parameters:
+        - name: where
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2commonfunctiongateway"
+      responses:
+        200:
+          description: Returns parameters
+  /commonfunctiongateway/{id}:
+    get:
+      tags:
+        - Deploymets-ECL2
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: Get a common function gateway
+          type: integer
+      responses:
+        200:
+          description: Return the example with the specified id
+        404:
+          description: Example not
+  /commonfunctiongateway/delete:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Delete common function gateway
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2commonfunctiongateway"
+      responses:
+        200:
+          description: Returns all examples
+
+  /commonfunctionpool/create:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Create a common function pool
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2commonfunctionpool"
+      responses:
+        200:
+          description: Returns all examples
+  /commonfunctionpool/update:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Update common function pool
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2commonfunctionpool"
+      responses:
+        200:
+          description: Returns all examples
+  /commonfunctionpool/list:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: List all common function pool
+      parameters:
+        - name: where
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2commonfunctionpool"
+      responses:
+        200:
+          description: Returns parameters
+  /commonfunctionpool/{id}:
+    get:
+      tags:
+        - Deploymets-ECL2
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: Get a common function pool
+          type: integer
+      responses:
+        200:
+          description: Return the example with the specified id
+        404:
+          description: Example not
+  /commonfunctionpool/delete:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Delete common function pool
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2commonfunctionpool"
+      responses:
+        200:
+          description: Returns all examples
+
+  /vsrx/create:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Create a vsrx
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2vsrx"
+      responses:
+        200:
+          description: Returns all examples
+  /vsrx/update:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Update vsrx
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2vsrx"
+      responses:
+        200:
+          description: Returns all examples
+  /vsrx/list:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: List all vsrx
+      parameters:
+        - name: where
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2vsrx"
+      responses:
+        200:
+          description: Returns parameters
+  /vsrx/{id}:
+    get:
+      tags:
+        - Deploymets-ECL2
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: Get a vsrx
+          type: integer
+      responses:
+        200:
+          description: Return the example with the specified id
+        404:
+          description: Example not
+  /vsrx/delete:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Delete vsrx
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2vsrx"
+      responses:
+        200:
+          description: Returns all examples
+
+  /vsrxplan/create:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Create a vsrxplan
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2vsrxplan"
+      responses:
+        200:
+          description: Returns all examples
+  /vsrxplan/update:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Update vsrxplan
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2vsrxplan"
+      responses:
+        200:
+          description: Returns all examples
+  /vsrxplan/list:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: List all vsrxplans
+      parameters:
+        - name: where
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2vsrxplan"
+      responses:
+        200:
+          description: Returns parameters
+  /vsrxplan/{id}:
+    get:
+      tags:
+        - Deploymets-ECL2
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: Get a vsrxplan
+          type: integer
+      responses:
+        200:
+          description: Return the example with the specified id
+        404:
+          description: Example not
+  /vsrxplan/delete:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Delete vsrxplan
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2vsrxplan"
+      responses:
+        200:
+          description: Returns all examples
+
+  /common/synchronization:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: ECL2 Data Synchronization
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2zones"
+      responses:
+        200:
+          description: Returns all examples
+
+  /lbplan/create:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Create a lbplan
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2lbplan"
+      responses:
+        200:
+          description: Returns all examples
+  /lbplan/update:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Update lbplan
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2lbplan"
+      responses:
+        200:
+          description: Returns all examples
+  /lbplan/list:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: List all lbplan
+      parameters:
+        - name: where
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2lbplan"
+      responses:
+        200:
+          description: Returns parameters
+  /lbplan/{id}:
+    get:
+      tags:
+        - Deploymets-ECL2
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: Get a lbplan
+          type: integer
+      responses:
+        200:
+          description: Return the example with the specified id
+        404:
+          description: Example not
+  /lbplan/delete:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Delete lbplan
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2lbplan"
+      responses:
+        200:
+          description: Returns all examples
+
+  /firewallinterface/create:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Create a firewallinterface
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2firewallinterface"
+      responses:
+        200:
+          description: Returns all examples
+  /firewallinterface/update:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Update firewallinterface
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2firewallinterface"
+      responses:
+        200:
+          description: Returns all examples
+  /firewallinterface/list:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: List all firewallinterface
+      parameters:
+        - name: where
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2firewallinterface"
+      responses:
+        200:
+          description: Returns parameters
+  /firewallinterface/{id}:
+    get:
+      tags:
+        - Deploymets-ECL2
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: Get a firewallinterface
+          type: integer
+      responses:
+        200:
+          description: Return the example with the specified id
+        404:
+          description: Example not
+  /firewallinterface/delete:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Delete firewallinterface
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2firewallinterface"
+      responses:
+        200:
+          description: Returns all examples
+
+  /lbinterface/create:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Create a lbinterface
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2lbinterface"
+      responses:
+        200:
+          description: Returns all examples
+  /lbinterface/update:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Update lbinterface
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2lbinterface"
+      responses:
+        200:
+          description: Returns all examples
+  /lbinterface/list:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: List all lbinterface
+      parameters:
+        - name: where
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2lbinterface"
+      responses:
+        200:
+          description: Returns parameters
+  /lbinterface/{id}:
+    get:
+      tags:
+        - Deploymets-ECL2
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: Get a lbinterface
+          type: integer
+      responses:
+        200:
+          description: Return the example with the specified id
+        404:
+          description: Example not
+  /lbinterface/delete:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Delete lbinterface
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2lbinterface"
+      responses:
+        200:
+          description: Returns all examples
+
+  /lbsyslogserver/create:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Create a lbsyslogserver
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2lbsyslogserver"
+      responses:
+        200:
+          description: Returns all examples
+  /lbsyslogserver/update:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Update lbsyslogserver
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2lbsyslogserver"
+      responses:
+        200:
+          description: Returns all examples
+  /lbsyslogserver/list:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: List all lbsyslogserver
+      parameters:
+        - name: where
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2lbsyslogserver"
+      responses:
+        200:
+          description: Returns parameters
+  /lbsyslogserver/{id}:
+    get:
+      tags:
+        - Deploymets-ECL2
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: Get a lbsyslogserver
+          type: integer
+      responses:
+        200:
+          description: Return the example with the specified id
+        404:
+          description: Example not
+  /lbsyslogserver/delete:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Delete lbsyslogserver
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2lbsyslogserver"
+      responses:
+        200:
+          description: Returns all examples
+
+  /vsrxinterface/create:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Create a vsrxinterface
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2vsrxinterface"
+      responses:
+        200:
+          description: Returns all examples
+  /vsrxinterface/update:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Update vsrxinterface
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2vsrxinterface"
+      responses:
+        200:
+          description: Returns all examples
+  /vsrxinterface/list:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: List all vsrxinterface
+      parameters:
+        - name: where
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2vsrxinterface"
+      responses:
+        200:
+          description: Returns parameters
+  /vsrxinterface/{id}:
+    get:
+      tags:
+        - Deploymets-ECL2
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: Get a vsrxinterface
+          type: integer
+      responses:
+        200:
+          description: Return the example with the specified id
+        404:
+          description: Example not
+  /vsrxinterface/delete:
+    post:
+      tags:
+        - Deploymets-ECL2
+      description: Delete vsrxinterface
+      parameters:
+        - name: body
+          in: body
+          description: number of items to skip
+          required: true
+          schema:
+            $ref: "#/definitions/ecl2vsrxinterface"
+      responses:
+        200:
+          description: Returns all examples

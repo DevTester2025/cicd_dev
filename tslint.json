@@ -1,0 +1,12 @@
+{
+  "extends": "tslint-config-standard",
+  "rules": {
+    "semicolon": [true, "always"],
+    "jsdoc-format": false,
+    "no-misused-new": true,
+    "class-name": true,
+    "no-unnecessary-initializer": true,
+    "max-line-length": false,
+    "align": false
+  }
+}

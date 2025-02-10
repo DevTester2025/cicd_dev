@@ -1,0 +1,47 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: cm-api
+  name: cm-api
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: cm-api
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: cm-api
+    spec:
+      hostAliases:
+        - ip: "10.225.182.100"
+          hostnames:
+          - "chi3vcenter.ad.bluesoftware.com"
+      containers:
+        - image: 337391043382.dkr.ecr.ap-south-1.amazonaws.com/cm-api:latest
+          name: apiapp
+          imagePullPolicy: Always
+          resources: {}
+          ports:
+            - containerPort: 3000
+status: {}
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: cm-api
+  labels:
+    run: cm-api
+spec:
+  ports:
+    - port: 80
+      targetPort: 3000
+      protocol: TCP
+  selector:
+    app: cm-api
+  type: LoadBalancer
