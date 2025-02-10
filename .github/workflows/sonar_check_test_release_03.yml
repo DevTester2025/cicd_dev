@@ -20,7 +20,9 @@
             environment:
               name: DEVELOPMENT
             steps:
-              - uses: actions/checkout@master
+              - uses: actions/checkout@v4
+                with:
+                 ref: cm_cicd_test    
               - name: SonarQube Scan
                 uses: sonarsource/sonarqube-scan-action@master
             env:
