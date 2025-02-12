@@ -61,4 +61,4 @@
                  uses: actions/checkout@v3
                - name: Deploy to Linux Server
                  run: |
-                     sshpass -p CmCICD#2024# ssh -o StrictHostKeyChecking=no ubuntu@13.51.7.24 "sudo docker pull devtester2025/cicd_dev:main && sudo docker run --rm -p 80:80 -d devtester2025/cicd_dev:main"
+                     sshpass -p CmCICD#2024# ssh -o StrictHostKeyChecking=no ubuntu@13.51.7.24 "sudo docker pull devtester2025/cicd_dev:main && sudo docker run --rm -p 90:90 -d devtester2025/cicd_dev:main"
