@@ -19,6 +19,7 @@
             runs-on: ubuntu-latest
             environment:
               name: DEVELOPMENT
+            if: github.ref == 'refs/heads/java_test'  
             steps:
               - uses: actions/checkout@v3
                 with:
