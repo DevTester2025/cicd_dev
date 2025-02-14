@@ -40,9 +40,9 @@
                       key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
                       restore-keys: ${{ runner.os }}-m2
                   - name: Build and analyze
-                env:
-                    SONAR_TOKEN: sqp_596b2487a7c863532724b2ea1203438f9d2edc85
-                    SONAR_HOST_URL: http://13.61.148.160:9000/
+                    env:
+                      SONAR_TOKEN: sqp_596b2487a7c863532724b2ea1203438f9d2edc85
+                      SONAR_HOST_URL: http://51.21.149.119:9000/
                     run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=CICD_TEST -Dsonar.projectName='CICD_TEST'
 
     #---------------- BUILD_SCRIPT
