@@ -1,6 +1,9 @@
         name: sonar_java_check_release_01
 
         on:
+          push:
+           branches:
+             - java_test
           workflow_dispatch:
 
 
