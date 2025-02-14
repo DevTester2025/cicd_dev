@@ -1,0 +1,77 @@
+        name: check_sonar_workflow_test_01
+
+        on:
+          workflow_dispatch:
+
+
+        jobs:
+          build:
+           name: GITHUB
+           runs-on: ubuntu-latest
+           steps:
+                - name: Check out the repo
+                  uses: actions/checkout@v3  
+            
+
+    #---------------- SONARQUBE
+          SONARQUBE:
+            needs: [build]
+            runs-on: ubuntu-latest
+            environment:
+              name: DEVELOPMENT
+            steps:
+              - uses: actions/checkout@v3
+              - name: SonarQube Scan
+                uses: sonarsource/sonarqube-scan-action@master
+            env:
+                SONAR_TOKEN: sqp_596b2487a7c863532724b2ea1203438f9d2edc85
+                SONAR_HOST_URL: http://51.21.149.119:9000/
+
+    #---------------- BUILD_SCRIPT
+          BUILD_SCRIPT:
+            needs: [SONARQUBE]
+            runs-on: ubuntu-latest
+            steps:
+               - name: Run script on the VM
+                 run: |
+                   sshpass -p "CmCICD#2024#" ssh -o StrictHostKeyChecking=no ubuntu@13.51.7.24 <<EOF
+                              cd ~/projects/script_test/javaproject/Spring-Boot-main
+                              sudo mvn clean
+                              sudo mvn install 
+                   EOF
+
+        #---------------- DOCKER
+          DOCKERHUB:
+           needs: [BUILD_SCRIPT]
+           runs-on: ubuntu-latest
+           environment:
+              name: DEVELOPMENT
+           steps:
+             - name: Checkout code
+               uses: actions/checkout@v2
+             - name: Set up Docker Buildx
+               uses: docker/setup-buildx-action@v3
+             - name: Login to Docker Hub
+               uses: docker/login-action@v2
+               with:
+                 username: devtester2025
+                 password: dckr_pat_W9cx0PiYuv_5BgW54h7oBv1viCU
+             - name: Build and push
+               uses: docker/build-push-action@v5
+               with:
+                  push: true
+                  tags: devtester2025/cicd_dev:main
+            
+
+      #---------------- VIRTUAL_MACHINE
+          VIRTUAL_MACHINE:
+            runs-on: ubuntu-latest
+            environment:
+              name: DEVELOPMENT
+            needs: [DOCKERHUB]
+            steps:
+               - name: Checkout code
+                 uses: actions/checkout@v3
+               - name: Deploy to Linux Server
+                 run: |
+                     sshpass -p CmCICD#2024# ssh -o StrictHostKeyChecking=no ubuntu@13.51.7.24 "sudo docker pull devtester2025/cicd_dev:main && sudo docker run --rm -p 80:80 -d devtester2025/cicd_dev:main"
