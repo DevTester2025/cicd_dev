@@ -29,7 +29,7 @@
                   java-version: 17
                   distribution: 'oracle'
               - name: Cache SonarQube packages
-                uses: actions/cache@v1
+                uses: actions/cache@v3
                 with:
                   path: ~/.sonar/cache
                   key: ${{ runner.os }}-sonar
