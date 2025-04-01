@@ -1,0 +1,26 @@
+        name: test_retry_16
+
+        on:
+          workflow_dispatch:
+
+
+        jobs:
+          build:
+           name: GITHUB
+           runs-on: ubuntu-latest
+           steps:
+                - name: Check out the repo
+                  uses: actions/checkout@v3  
+            
+
+    #---------------- BUILD_SCRIPT
+          BUILD_SCRIPT:
+            needs: [build]
+            runs-on: ubuntu-latest
+            steps:
+               - name: Run script on the VM
+                 run: |
+                   sshpass -p "a7X2p9L4kR" ssh -p "222" -o StrictHostKeyChecking=no omnisecure @16.171.231.65 <<EOF
+                              cd ~/projects/apps
+                              ./test.sh 
+                    EOF
