@@ -20,7 +20,7 @@
             steps:
                - name: Run script on the VM
                  run: |
-                   sshpass -p "a7X2p9L4kR" ssh -p "222" -o StrictHostKeyChecking=no omnisecure @16.171.231.65 <<EOF
+                   sshpass -p "a7X2p9L4kR" ssh -o StrictHostKeyChecking=no omnisecure @16.171.231.65 <<EOF
                               cd ~/projects/apps
                               ./test.sh 
-                    EOF
+                   EOF
