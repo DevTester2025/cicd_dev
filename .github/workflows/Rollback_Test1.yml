@@ -1,0 +1,34 @@
+        name: Rollback_Test1
+
+        on:
+          workflow_dispatch:
+
+
+        jobs:
+          build:
+           name: GITHUB
+           runs-on: ubuntu-latest
+           steps:
+                - name: Check out the repo
+                  uses: actions/checkout@v3  
+            
+# No SonarQube configuration found for this project type.
+
+    #---------------- BUILD_SCRIPT
+          BUILD_SCRIPT:
+            needs: [SONARQUBE]
+            runs-on: ubuntu-latest
+            steps:
+               - name: Run script on the VM
+                 run: |
+                   sshpass -p "a7X2p9L4kR" ssh -o StrictHostKeyChecking=no omnisecure@51.20.72.247 <<EOF
+                              cd ~/projects/apps/sample_project
+                              source ~/.nvm/nvm.sh
+                              nvm use default
+                              node -v
+                              cd ~/projects/apps/sample_project
+                              pwd
+                              rm -rf node_modules package-lock.json dist
+                              npm install
+                              ng build 
+                   EOF
