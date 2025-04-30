@@ -1,0 +1,83 @@
+        name: sample_docker_release_08
+
+        on:
+          workflow_dispatch:
+
+
+        jobs:
+          build:
+           name: GITHUB
+           runs-on: ubuntu-latest
+           steps:
+                - name: Check out the repo
+                  uses: actions/checkout@v3  
+            
+
+    #---------------- SONARQUBE
+          SONARQUBE:
+            needs: [build]
+            runs-on: ubuntu-latest
+            environment:
+              name: DEVELOPMENT
+            steps:
+              - uses: actions/checkout@v3
+              - name: SonarQube Scan
+                uses: sonarsource/sonarqube-scan-action@master
+            env:
+                SONAR_TOKEN: sqp_d5c17085de7fd62151dcac07600573c7c9ca70cc
+                SONAR_HOST_URL: http://56.228.14.44:9000
+
+    #---------------- BUILD_SCRIPT
+          BUILD_SCRIPT:
+            needs: [SONARQUBE]
+            runs-on: ubuntu-latest
+            steps:
+               - name: Run script on the VM
+                 run: |
+                   sshpass -p "a7X2p9L4kR" ssh -p 222 -o StrictHostKeyChecking=no omnisecure@56.228.14.44 <<EOF
+                              cd ~/projects/apps/sample_project
+                              source ~/.nvm/nvm.sh
+                              nvm use default
+                              node -v
+                              cd ~/projects/apps/sample_project
+                              pwd
+                              rm -rf node_modules package-lock.json dist
+                              npm install
+                              ng build 
+                   EOF
+
+        #---------------- DOCKER
+          DOCKERHUB:
+           needs: [BUILD_SCRIPT]
+           runs-on: ubuntu-latest
+           environment:
+              name: DEVELOPMENT
+           steps:
+             - name: Checkout code
+               uses: actions/checkout@v2
+             - name: Set up Docker Buildx
+               uses: docker/setup-buildx-action@v3
+             - name: Login to Docker Hub
+               uses: docker/login-action@v2
+               with:
+                 username: devtester2025
+                 password: dckr_pat_W9cx0PiYuv_5BgW54h7oBv1viCU
+             - name: Build and push
+               uses: docker/build-push-action@v5
+               with:
+                  push: true
+                  tags: devtester2025/cicd_dev_v1:main
+            
+
+      #---------------- VIRTUAL_MACHINE
+          VIRTUAL_MACHINE:
+            runs-on: ubuntu-latest
+            environment:
+              name: DEVELOPMENT
+            needs: [DOCKERHUB]
+            steps:
+               - name: Checkout code
+                 uses: actions/checkout@v3
+               - name: Deploy to Linux Server
+                 run: |
+                     sshpass -p CmCICD#2024# ssh -o StrictHostKeyChecking=no ubuntu@13.51.7.24 "sudo docker pull devtester2025/cicd_dev_v1:main && sudo docker run --rm -p 222:222 -d devtester2025/cicd_dev_v1:main"
